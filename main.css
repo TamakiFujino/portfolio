@@ -177,3 +177,10 @@ p {
   filter: grayscale(100%);
   text-align: center;
 }
+
+
+.SocialMedia {
+  position; relative;
+  float: left;
+  margin: 15px;
+}
