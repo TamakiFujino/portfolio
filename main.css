@@ -1,23 +1,23 @@
 body {
   background-color: #8d9cdf;
   font-family: 'Josefin Sans', sans-serif;
-box-sizing: border-box;
-width: 100%;
- /* display: flex; */
+  box-sizing: border-box;
+  width: 100%;
+  /* display: flex; */
   margin: 0px;
 }
 
 html {
   width: 100%;
-height: 100%;
-box-sizing: border-box;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #8d9cdf;
+  background-color: transparent;
   color: white;
   text-align: center;
 }
@@ -28,17 +28,16 @@ box-sizing: border-box;
 
 .contact {
   position: fixed;
-  bottom:0;
+  bottom: 0;
   text-align: left;
   padding: 30px;
 }
-
 
 h1 {
   font-family: 'Josefin Sans', sans-serif;
   color: white;
   font-size: 40px;
-  padding:35px;
+  padding: 35px;
   position: absolute;
   bottom: 0;
   opacity: 0.7;
@@ -48,7 +47,7 @@ h3 {
   font-family: 'Josefin Sans', sans-serif;
   color: white;
   text-align: left;
-  padding:30px;
+  padding: 30px;
   margin: 0px;
 }
 
@@ -65,7 +64,7 @@ h5 {
   color: white;
   text-align: left;
   font-size: 28px;
-  padding:30px;
+  padding: 30px;
 }
 
 h6 {
@@ -73,7 +72,7 @@ h6 {
   color: white;
   text-align: center;
   font-size: 18px;
-  padding:10px;
+  padding: 10px;
   line-height: 130%;
 }
 
@@ -82,10 +81,11 @@ h6 {
   color: white;
   text-align: left;
   font-size: 70px;
-  padding-top:250px;
+  padding-top: 250px;
   padding-left: 250px;
   opacity: 0.7;
 }
+
 .medium {
   font-family: 'Josefin Sans', sans-serif;
   color: white;
@@ -95,7 +95,7 @@ h6 {
   opacity: 0.7;
 }
 
-ul {
+.menu {
   list-style-type: none;
   margin: 10px;
   padding: 30px;
@@ -106,13 +106,13 @@ ul {
   right: 0;
 }
 
-li {
+.menuitem {
   float: right;
 }
 
-li a {
+.menuitem a {
   display: block;
-    font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   color: white;
   opacity: 0.7;
   text-align: center;
@@ -120,7 +120,7 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
+.menuitem a:hover {
   text-shadow: 0px 3px 10px white;
   transition: 0.5s;
   color: transparent;
@@ -140,26 +140,23 @@ li a:hover {
   transform: translate(-50%, -50%);
   letter-spacing: -5px;
 }
+
 svg {
-  width:100%;
+  width: 100%;
   height: 100%;
 }
 
-
 /* imageslider */
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box
+}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  width: 60%;
   position: relative;
   margin: auto;
   padding-top: 50px;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
 }
 
 /* Next & previous buttons */
@@ -198,7 +195,7 @@ svg {
 /* Caption text */
 .text {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 60px;
+  font-size: 80px;
   position: absolute;
   bottom: 45%;
   width: 100%;
@@ -215,13 +212,14 @@ svg {
 }
 
 a {
-    text-decoration: none;
-    padding: 10px;
+  text-decoration: none;
+  padding: 10px;
 }
 
 a:link {
-  color:rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
+
 a:hover {
   text-shadow: 0px 3px 10px white;
   transition: 0.5s;
@@ -235,7 +233,7 @@ a:visited {
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height:3px;
+  height: 3px;
   width: 30px;
   margin: 0 2px;
   background-color: rgba(255, 255, 255, 0.7);
@@ -244,13 +242,13 @@ a:visited {
 }
 
 .active {
-background-color: #8d9cdf;
+  background-color: transparent;
 }
+
 .dot:hover {
   background-color: #8d9cdf;
   transition: 0.5s;
 }
-
 
 /* Fading animation */
 .fade {
@@ -261,39 +259,84 @@ background-color: #8d9cdf;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 .videoWork {
-  text-align: center;
-  padding: 30px;
-  width: 50%;
+  width: 100%;
   height: 100%;
-  float: right;
+  position: relative;
+  top: 30px;
+text-align: center;
+padding-top: 30px;
+padding-bottom: 200px;
 }
 
-.sideWork {
+/* .sideWork {
   width: 60%;
   float: left;
   position: relative;
   padding-left: 300px;
   padding-top: 200px;
   padding-bottom: 300px;
-}
- .worktext {
-   width: 70%;
-   float: left;
- }
+} */
 
- .description {
-   position: relative;
-   padding-left: 250px;
-   color: white;
-   line-height: 130%;
- }
+.worktext {
+  width: 100%;
+  float: left;
+}
+
+.description {
+  position: relative;
+  padding-left: 250px;
+  color: white;
+  line-height: 130%;
+}
+
+.preview {
+  position: relative;
+  display: block;
+  padding: 50px;
+}
+
+.imageslider {
+  width: 100%;
+  text-align: center;
+  height: 300px;
+
+}
+
+.work {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 30px;
+text-align: center;
+padding-top: 30px;
+}
+
+.arrow {
+  color: white;
+  text-align: right;
+  padding-top: 30px;
+  padding-right: 250px;
+  padding-bottom: 0px;
+  font-size: 50px;
+  opacity: 0.5;
+}

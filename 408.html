@@ -7,10 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="main.css">
   <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+
   <div class="worktext">
     <div class="title">
       <p>408 (2019)</p>
@@ -19,14 +27,81 @@
       <p>Plexiglass, wood, inkjet print</p>
     </div>
     <div class="description">
-      <p>This is a memorial piece for the people who have passed away because of mass shootings in the US. The title “408” means the number of deaths so far in 2019 (January to November 14th). The number of purple bullets corresponds to the number “408.”
-When I decided to go to the US, the most concern my friends and family had was guns. I came to the US in July in 2017 and after a few months, there was a mass shooting in Las Vegas with a numerous number of victims. It has been two years, and more and more people have become the victim of mass shooting. <br>
-I wonder why it is so difficult to ban guns. The sphere created with 9 sheets of collage of purple bullets is designed to create “allium”, which has another name “onion flower.” I picked up allium as a main subject of this piece because its flower language in Japanese is deep sorrow while in English means prosperity. There is a description in Bill of Rights: “A well-regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.” This is the basic law that does not allow gun control. I wonder the government, society, or companies consider guns are the symbols of America’s or their prosperity, not the tool that can take away a lot of people’s life at a moment.
+      <p>This is a memorial piece for the people who have passed away because of mass shootings in the US. <br>
+        The title “408” means the number of deaths so far in 2019 (January to November 14th). The number of purple bullets corresponds to the number “408.”　<br>
+
+        <br>
+
+When I decided to go to the US, the most concern my friends and family had was guns. <br>
+I came to the US in July in 2017 and after a few months, there was a mass shooting in Las Vegas with a numerous number of victims. <br>
+It has been two years, and more and more people have become the victim of mass shooting. <br>
+I wonder why it is so difficult to ban guns. <br>
+The sphere created with 9 sheets of collage of purple bullets is designed to create “allium”, which has another name “onion flower.” <br>
+I picked up allium as a main subject of this piece because its flower language in Japanese is deep sorrow while in English means prosperity.<br>
+There is a description in Bill of Rights: <br>
+<br>
+“A well-regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.” <br>
+<br>
+This is the basic law that does not allow gun control. I wonder the government, society, or companies consider guns are the symbols of America’s or their prosperity, <br>
+not the tool that can take away a lot of people’s life at a moment.
 </p>
 </div>
-<div class="videoWork">
+<div class="work">
   <img src="images/408_2.jpg" style="width:800px" alt="">
 </div>
+
+<p class="arrow">&#8672; &#8674;</span>
+
+<style>
+    .horizontal-list {
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      /* width: 100%; */
+      padding-top: 0px;
+      padding-bottom: 200px;
+      position: absolute;
+      right: 250px;
+text-align: center;
+      width:70%;
+    }
+
+    .horizontal-list::-webkit-scrollbar {
+    display:none;
+}
+
+    .item {
+      /* 横スクロール用 */
+      display: inline-block;
+      width: 40%;
+      /* 見た目調整 */
+      padding: 0px;
+    }
+
+  </style>
+<body>
+  <div class="imageslider">
+    <ul class="horizontal-list">
+      <li class="item">
+        <div><img src="images/408/40800001.jpg" style="width:450px" alt="">
+        </div>
+      </li>
+      <li class="item">
+        <div><img src="images/408/40800002.jpg" style="width:450px" alt="">
+        </div>
+      </li>
+      <li class="item">
+        <div><img src="images/408/40800003.jpg" style="width:450px" alt="">
+        </div>
+      </li>
+      <li class="item">
+        <div><img src="images/408/40800004.jpg" style="width:450px" alt="">
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
 
   <div class="footer">
     <h1>TAMAKI FUJINO</h1>
@@ -35,10 +110,10 @@ I wonder why it is so difficult to ban guns. The sphere created with 9 sheets of
               <a href="https://www.instagram.com/instama_mm/">Instagram</a>
       <a href="https://vimeo.com/user15705724">Vimeo</a>
     </div>
-  <ul>
-      <li><a href="bio.html">Bio</a></li>
-      <li><a href="works.html">Works</a></li>
-      <li><a class="active" href="index.html">Home</a></li>
+  <ul class="menu">
+      <li class="menuitem"><a href="bio.html">Bio</a></li>
+      <li class="menuitem"><a href="works.html">Works</a></li>
+      <li class="menuitem"><a class="active" href="index.html">Home</a></li>
     </ul>
   </div>
 
