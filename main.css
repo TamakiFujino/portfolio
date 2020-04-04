@@ -343,7 +343,7 @@ padding-top: 30px;
 
 @media screen and (max-width:480px) {
   h1 {
-    font-size: 25px;
+    font-size: 23px;
     padding-bottom: 60px;
   }
 h6 {
@@ -354,14 +354,14 @@ h6 {
   margin: 5px;
 }
   .contact {
-    font-size: 10px;
-    opacity: 0.9;
-    padding-top: 20px;
+  display: none;
   }
 
   .menu {
     font-size: 13px;
+    padding: 10px;
     opacity: 0.9;
+    position: static;
   }
 
   .text {
@@ -380,17 +380,54 @@ h6 {
   }
 
   .dot {
-    height: 3px;
-    width: 10px;
-    margin-top: 320px;
+    height: 5px;
+    width: 5px;
   }
-  .navigate {
-    position: relative;
-    top: 300px;
+  .worktext {
+    width: 30%;
   }
   .title {
     font-size: 30px;
   }
+  .horizontal-list {
+    display: block
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    padding-top: 120px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev {
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    text-shadow: 0px 3px 10px white;
+    transition: 0.5s;
+    color: transparent;
+  }
+
+  .horizontal-list::-webkit-scrollbar {
+  display:none;
+}
+.slideshow-container {
+  width: 85%;
+  position: relative;
+  margin: auto;
+  padding-top: 50px;
+}
 }
 
 @media screen and (min-width:781px) {
