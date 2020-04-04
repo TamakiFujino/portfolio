@@ -382,8 +382,9 @@ a:visited {
   }
 
   h1 {
-    font-size: 23px;
-    padding-bottom: 60px;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
   }
 
   h6 {
@@ -495,6 +496,56 @@ a:visited {
     /* 見た目調整 */
     padding: 0px;
   }
-}
+
+  /* Dropdown Button */
+  .dropbtn {
+    background-color: transparent;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    opacity: 0.8;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: absolute;
+    top: auto;
+    right: 0px;
+    display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    max-width: 130px;
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: white;
+    text-align: right;
+    padding: 16px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: transpare;}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    text-shadow: 0px 3px 10px white;
+    transition: 0.5s;
+    color: transparent;
+  }
 
 @media screen and (min-width:781px) {}
