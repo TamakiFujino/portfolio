@@ -283,9 +283,9 @@ a:visited {
   height: 100%;
   position: relative;
   top: 30px;
-text-align: center;
-padding-top: 30px;
-padding-bottom: 200px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 200px;
 }
 
 /* .sideWork {
@@ -296,6 +296,30 @@ padding-bottom: 200px;
   padding-top: 200px;
   padding-bottom: 300px;
 } */
+.horizontal-list {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  /* width: 100%; */
+  padding-top: 0px;
+  padding-bottom: 200px;
+  position: absolute;
+  right: 250px;
+  text-align: center;
+  width: 70%;
+}
+
+.horizontal-list::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  /* 横スクロール用 */
+  display: inline-block;
+  width: 40%;
+  /* 見た目調整 */
+  padding: 0px;
+}
 
 .worktext {
   width: 100%;
@@ -319,7 +343,6 @@ padding-bottom: 200px;
   width: 100%;
   text-align: center;
   height: 300px;
-
 }
 
 .work {
@@ -327,8 +350,8 @@ padding-bottom: 200px;
   height: 100%;
   position: relative;
   top: 30px;
-text-align: center;
-padding-top: 30px;
+  text-align: center;
+  padding-top: 30px;
 }
 
 .arrow {
@@ -341,20 +364,39 @@ padding-top: 30px;
   opacity: 0.5;
 }
 
+.pc {
+  display: block !important;
+}
+
+.sp {
+  display: none !important;
+}
+
 @media screen and (max-width:480px) {
+  .pc {
+    display: none !important;
+  }
+
+  .sp {
+    display: block !important;
+  }
+
   h1 {
     font-size: 23px;
     padding-bottom: 60px;
   }
-h6 {
-  font-size: 13px;
-}
-.statement {
-  padding-bottom: 70px;
-  margin: 5px;
-}
+
+  h6 {
+    font-size: 13px;
+  }
+
+  .statement {
+    padding-bottom: 70px;
+    margin: 5px;
+  }
+
   .contact {
-  display: none;
+    display: none;
   }
 
   .menu {
@@ -369,11 +411,13 @@ h6 {
     position: absolute;
     top: 120px;
   }
+
   .jump {
     font-size: 17px;
     position: absolute;
     top: 170px;
   }
+
   .photo {
     position: absolute;
     top: 200px;
@@ -383,12 +427,15 @@ h6 {
     height: 5px;
     width: 5px;
   }
+
   .worktext {
-    width: 30%;
+    width: auto;
   }
+
   .title {
     font-size: 30px;
   }
+
   .horizontal-list {
     display: block
   }
@@ -419,18 +466,35 @@ h6 {
     color: transparent;
   }
 
+  .slideshow-container {
+    width: 85%;
+    position: relative;
+    margin: auto;
+    padding-top: 50px;
+  }
+
+  .horizontal-list {
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 200px;
+    position: absolute;
+    right: 250px;
+    text-align: center;
+    width: 70%;
+  }
+
   .horizontal-list::-webkit-scrollbar {
-  display:none;
-}
-.slideshow-container {
-  width: 85%;
-  position: relative;
-  margin: auto;
-  padding-top: 50px;
-}
+    display: none;
+  }
+
+  .item {
+    /* 横スクロール用 */
+    display: inline-block;
+    width: 40%;
+    /* 見た目調整 */
+    padding: 0px;
+  }
 }
 
-@media screen and (min-width:781px) {
-
-
-}
+@media screen and (min-width:781px) {}
