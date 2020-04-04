@@ -114,7 +114,7 @@ h6 {
   display: block;
   font-family: 'Josefin Sans', sans-serif;
   color: white;
-  opacity: 0.7;
+  opacity: 0.8;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -339,4 +339,52 @@ padding-top: 30px;
   padding-bottom: 0px;
   font-size: 50px;
   opacity: 0.5;
+}
+
+@media screen and (max-width:480px) {
+  h1 {
+    font-size: 25px;
+    padding-bottom: 60px;
+  }
+h6 {
+  font-size: 13px;
+}
+.statement {
+  padding-bottom: 70px;
+  margin: 5px;
+}
+  .contact {
+    font-size: 13px;
+    opacity: 0.9;
+  }
+
+  .menu {
+    font-size: 13px;
+    opacity: 0.9;
+  }
+
+  .text {
+    font-size: 30px;
+    position: absolute;
+    top: 0px;
+  }
+  .jump {
+    font-size: 20px;
+    position: absolute;
+    top: 170px;
+  }
+  .photo {
+    position: absolute;
+    top: 200px;
+  }
+  .dot {
+    height: 3px;
+    width: 13px;
+    margin-top: 300px;
+  }
+}
+
+@media screen and (min-width:781px) {
+
+
 }
