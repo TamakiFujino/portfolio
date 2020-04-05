@@ -11,144 +11,189 @@
 </head>
 
 <body>
-  <div class="worktext">
-  <div class="title">
-    <p>Forbidden Fruit (2019)</p>
-  </div>
-  <div class="medium">
-    <p>Artificial Tree, Test tube, Test tube stand, <br>
-       Acrylic paint, and Plastic figure </p>
-  </div>
-  <div class="description">
-    <p>This piece is made based on the process of selective breeding of apple and the story of Adam and Eve in order to criticize gene modification and designer babies.<br>
-       The idea of a designer baby is exactly the same idea as the selective breeding of apple to get sweeter, stronger, and more beautiful ones.<br>
-      <br>
-      Forbidden fruit often implies something you want to get more when you are prohibited to do so. <br>
-      Gene modification has been criticized but always the field that human is so curious about. <br>
-      Since I believe the nurture theory, the idea of a designer baby sounds crazy to me. <br>
-      I put different color in the test tubes, and based on that color, the color of apple changes in this work. <br>
-      <br>
-      However, by making an apple shape out of my body, I want to reflect on myself more deeply about the topic. <br>
-      What if gene modification could make me a better person physically and mentally? Do my kids in the future need that too?</p>
-  </div>
-  <div class="work">
-    <img src="images/forbitten_fruits.jpg" style="width:800px" alt="">
-  </div>
-<p class="arrow">&#8672; &#8674;</span>
-  <style>
-  .horizontal-list {
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    /* width: 100%; */
-    padding-top: 0px;
-    padding-bottom: 200px;
-    position: absolute;
-    right: 250px;
-text-align: center;
-    width:70%;
+  <div class="pc">
+    <div class="worktext">
+    <div class="title">
+      <p>Forbidden Fruit (2019)</p>
+    </div>
+    <div class="medium">
+      <p>Artificial Tree, Test tube, Test tube stand, <br>
+         Acrylic paint, and Plastic figure </p>
+    </div>
+    <div class="description">
+      <p>This piece is made based on the process of selective breeding of apple and the story of Adam and Eve in order to criticize gene modification and designer babies.<br>
+         The idea of a designer baby is exactly the same idea as the selective breeding of apple to get sweeter, stronger, and more beautiful ones.<br>
+        <br>
+        Forbidden fruit often implies something you want to get more when you are prohibited to do so. <br>
+        Gene modification has been criticized but always the field that human is so curious about. <br>
+        Since I believe the nurture theory, the idea of a designer baby sounds crazy to me. <br>
+        I put different color in the test tubes, and based on that color, the color of apple changes in this work. <br>
+        <br>
+        However, by making an apple shape out of my body, I want to reflect on myself more deeply about the topic. <br>
+        What if gene modification could make me a better person physically and mentally? Do my kids in the future need that too?</p>
+    </div>
+    <div class="work">
+      <img src="images/forbitten_fruits.jpg" style="width:800px" alt="">
+    </div>
+  <p class="arrow">&#8672; &#8674;</span>
+    <style>
+    .horizontal-list {
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      /* width: 100%; */
+      padding-top: 0px;
+      padding-bottom: 200px;
+      position: absolute;
+      right: 250px;
+  text-align: center;
+      width:70%;
+    }
+
+    .horizontal-list::-webkit-scrollbar {
+    display:none;
   }
 
-  .horizontal-list::-webkit-scrollbar {
-  display:none;
-}
+    .item {
+      /* 横スクロール用 */
+      display: inline-block;
+      width: 40%;
+      /* 見た目調整 */
+      padding: 0px;
+    }
 
-  .item {
-    /* 横スクロール用 */
-    display: inline-block;
-    width: 40%;
-    /* 見た目調整 */
-    padding: 0px;
-  }
+      </style>
+    <body>
+      <div class="imageslider">
+        <ul class="horizontal-list">
+          <li class="item">
+            <div><img src="images/forbidden/Forbidden00001.jpg" style="width:450px" alt="">
+            </div>
+          </li>
+          <li class="item">
+            <div><img src="images/forbidden/Forbidden00002.jpg" style="width:450px" alt="">
+            </div>
+          </li>
+          <li class="item">
+            <div><img src="images/forbidden/Forbidden00006.jpg" style="width:450px" alt="">
+            </div>
+          </li>
+          <li class="item">
+            <div><img src="images/forbidden/Forbidden00007.jpg" style="width:450px" alt="">
+            </div>
+          </li>
+        </ul>
+      </div>
 
-    </style>
-  <body>
-    <div class="imageslider">
-      <ul class="horizontal-list">
-        <li class="item">
-          <div><img src="images/forbidden/Forbidden00001.jpg" style="width:450px" alt="">
-          </div>
-        </li>
-        <li class="item">
-          <div><img src="images/forbidden/Forbidden00002.jpg" style="width:450px" alt="">
-          </div>
-        </li>
-        <li class="item">
-          <div><img src="images/forbidden/Forbidden00006.jpg" style="width:450px" alt="">
-          </div>
-        </li>
-        <li class="item">
-          <div><img src="images/forbidden/Forbidden00007.jpg" style="width:450px" alt="">
-          </div>
-        </li>
+
+
+
+    <!--
+    We will make a slider with stylized thumbnails using CSS3
+    The markup is very simple:
+    Radio Inputs
+    Labels with thumbnails to detect click event
+    Main Image
+    -->
+
+    <!-- <div class="preview">
+      <div class="slider">
+      	<input type="radio" name="slide_switch" id="id1"/>
+      	<label for="id1">
+      		<img src="images/forbidden/Forbidden00001.jpg" width="100"/>
+      	</label>
+      	<img src="images/forbidden/Forbidden00001.jpg"/>
+
+      	<!--Lets show the second image by default on page load-->
+      	<!-- <input type="radio" name="slide_switch" id="id2" checked="checked"/>
+      	<label for="id2">
+      		<img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" width="100"/>
+      	</label>
+      	<img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg"/>
+
+      	<input type="radio" name="slide_switch" id="id3"/>
+      	<label for="id3">
+      		<img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg" width="100"/>
+      	</label>
+      	<img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg"/>
+
+      	<input type="radio" name="slide_switch" id="id4"/>
+      	<label for="id4">
+      		<img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg" width="100"/>
+      	</label>
+      	<img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg"/>
+
+      	<input type="radio" name="slide_switch" id="id5"/>
+      	<label for="id5">
+      		<img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg" width="100"/>
+      	</label>
+      	<img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg"/>
+      </div>
+    </div> -->
+
+    <!-- We will use PrefixFree - a script that takes care of CSS3 vendor prefixes
+    You can download it from http://leaverou.github.com/prefixfree/ -->
+    <!-- <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script> -->
+
+
+
+    <div class="footer">
+      <h1>TAMAKI FUJINO</h1>
+      <div class="contact">
+        <a href="mailto:tamaki.fujino@sjsu.edu">Mail</a>
+                <a href="https://www.instagram.com/instama_mm/">Instagram</a>
+        <a href="https://vimeo.com/user15705724">Vimeo</a>
+      </div>
+    <ul class="menu">
+        <li class="menuitem"><a href="bio.html">Bio</a></li>
+        <li class="menuitem"><a href="works.html">Works</a></li>
+        <li class="menuitem"><a class="active" href="index.html">Home</a></li>
       </ul>
     </div>
-
-
-
-
-  <!--
-  We will make a slider with stylized thumbnails using CSS3
-  The markup is very simple:
-  Radio Inputs
-  Labels with thumbnails to detect click event
-  Main Image
-  -->
-
-  <!-- <div class="preview">
-    <div class="slider">
-    	<input type="radio" name="slide_switch" id="id1"/>
-    	<label for="id1">
-    		<img src="images/forbidden/Forbidden00001.jpg" width="100"/>
-    	</label>
-    	<img src="images/forbidden/Forbidden00001.jpg"/>
-
-    	<!--Lets show the second image by default on page load-->
-    	<!-- <input type="radio" name="slide_switch" id="id2" checked="checked"/>
-    	<label for="id2">
-    		<img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" width="100"/>
-    	</label>
-    	<img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg"/>
-
-    	<input type="radio" name="slide_switch" id="id3"/>
-    	<label for="id3">
-    		<img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg" width="100"/>
-    	</label>
-    	<img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg"/>
-
-    	<input type="radio" name="slide_switch" id="id4"/>
-    	<label for="id4">
-    		<img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg" width="100"/>
-    	</label>
-    	<img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg"/>
-
-    	<input type="radio" name="slide_switch" id="id5"/>
-    	<label for="id5">
-    		<img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg" width="100"/>
-    	</label>
-    	<img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg"/>
-    </div>
-  </div> -->
-
-  <!-- We will use PrefixFree - a script that takes care of CSS3 vendor prefixes
-  You can download it from http://leaverou.github.com/prefixfree/ -->
-  <!-- <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script> -->
-
-
-
-  <div class="footer">
-    <h1>TAMAKI FUJINO</h1>
-    <div class="contact">
-      <a href="mailto:tamaki.fujino@sjsu.edu">Mail</a>
-              <a href="https://www.instagram.com/instama_mm/">Instagram</a>
-      <a href="https://vimeo.com/user15705724">Vimeo</a>
-    </div>
-  <ul class="menu">
-      <li class="menuitem"><a href="bio.html">Bio</a></li>
-      <li class="menuitem"><a href="works.html">Works</a></li>
-      <li class="menuitem"><a class="active" href="index.html">Home</a></li>
-    </ul>
   </div>
+</div>
+
+<div class="sp">
+  <div class="head">
+    <h2>TAMAKI FUJINO</h2>
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="works.html">Works</a>
+        <a href="bio.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="work_content">
+    <img src="images/forbitten_fruits.jpg" style="padding-left: 22px;">
+    <h4 style="padding: 0px;">Forbidden Fruits (2019)</h4>
+    <h5 style="font-size: 20px; text-align: center; margin: 0px; padding: 0px;">
+      Artificial Tree, Test tube, Test tube stand, <br>
+         Acrylic paint, and Plastic figure
+    </h5>
+    <h6 style="text-align: left;">
+      This piece is made based on the process of selective breeding of apple and the story of Adam and Eve in order to criticize gene modification and designer babies.<br>
+         The idea of a designer baby is exactly the same idea as the selective breeding of apple to get sweeter, stronger, and more beautiful ones.<br>
+        <br>
+        Forbidden fruit often implies something you want to get more when you are prohibited to do so. <br>
+        Gene modification has been criticized but always the field that human is so curious about. <br>
+        Since I believe the nurture theory, the idea of a designer baby sounds crazy to me. <br>
+        I put different color in the test tubes, and based on that color, the color of apple changes in this work. <br>
+        <br>
+        However, by making an apple shape out of my body, I want to reflect on myself more deeply about the topic. <br>
+        What if gene modification could make me a better person physically and mentally? Do my kids in the future need that too?
+    </h6>
+
+      <img src="images/forbidden/Forbidden00001.jpg" style="padding-left: 22px;">
+    <img src="images/forbidden/Forbidden00002.jpg" style="padding-left: 22px;">
+    <img src="images/forbidden/Forbidden00006.jpg" style="padding-left: 22px;">
+    <img src="images/forbidden/Forbidden00007.jpg" style="padding-left: 22px;">
+  </div>
+
+</div>
+
 </body>
 
 </html>
