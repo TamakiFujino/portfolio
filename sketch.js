@@ -11,7 +11,7 @@ var img;
 
 function preload() {
   // you will need to change this to the file path to your image
-  img = loadImage('images/rain.png');
+  img = loadImage('images/rain2.png');
 }
 
 var drops = [];
