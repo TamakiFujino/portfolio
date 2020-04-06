@@ -17,6 +17,11 @@ body {
   box-sizing: inherit;
 }
 
+.contact2 {
+text-align:center;
+padding: 20%;
+}
+
 .child {
   position: absolute;
   top: 50%;
@@ -38,7 +43,7 @@ html {
 
 h1 {
   font-family: 'Josefin Sans', sans-serif;
-  color: white;
+  color: #dfd08d;
   font-size: 40px;
   padding: 35px;
   position: absolute;
@@ -418,6 +423,11 @@ a:visited {
   .contact {
     display: none;
   }
+
+.contact2 {
+text-align:center;
+padding: 20%;
+}
 
   .menu {
     font-size: 13px;
