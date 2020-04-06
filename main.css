@@ -379,6 +379,14 @@ a:visited {
   opacity: 0.5;
 }
 
+.statement {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 22%;
+  padding-right: 22%;
+  text-align: center;
+}
+
 .pc {
   display: block !important;
 }
