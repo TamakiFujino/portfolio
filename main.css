@@ -58,7 +58,7 @@ h4 {
   font-family: 'Josefin Sans', sans-serif;
   color: white;
   text-align: center;
-  font-size: 32px;
+  font-size: 18px;
   padding: 10px;
 }
 
@@ -73,12 +73,18 @@ h5 {
 h6 {
   font-family: 'Josefin Sans', sans-serif;
   color: white;
-  text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   padding: 10px;
-  line-height: 130%;
+  line-height: 150%;
+  text-align: left;
 }
 
+hr {
+  height: 2px;
+  background-color: white;
+  border: none;
+  opacity: 0.5;
+}
 /* footer-setting */
 .footer {
   position: fixed;
@@ -137,9 +143,7 @@ h6 {
   padding-left: 250px;
   opacity: 0.7;
 }
-.statement {
-  height: 50%;
-}
+
 
 .title {
   font-family: 'Josefin Sans', sans-serif;
@@ -149,6 +153,10 @@ h6 {
   padding-top: 250px;
   padding-left: 250px;
   opacity: 0.7;
+}
+
+.work {
+  padding: 30px;
 }
 
 
@@ -212,7 +220,7 @@ h6 {
   color: #f2f2f2;
   font-size: 20px;
   position: absolute;
-  bottom: -10%;
+  bottom: -12%;
   width: 100%;
   text-align: center;
 }
@@ -335,6 +343,7 @@ a:visited {
 .description {
   position: relative;
   padding-left: 250px;
+  padding-right: 250px;
   color: white;
   line-height: 130%;
 }
@@ -394,13 +403,8 @@ a:visited {
   }
 
   h6 {
-    font-size: 13px;
+    font-size: 18px;
     font-family: 'Karla', sans-serif;
-  }
-
-  .statement {
-    padding-bottom: 70px;
-    margin: 5px;
   }
 
   .contact {

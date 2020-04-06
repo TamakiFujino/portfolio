@@ -27,4 +27,6 @@ function Drop() {
     stroke(225, 255, 255);
     line(this.x, this.y, this.x, this.y + this.len);
   };
+
+  
 }

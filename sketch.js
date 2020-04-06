@@ -7,10 +7,18 @@
 // (138, 43, 226)
 // (230, 230, 250) // background
 
+var img;
+
+function preload() {
+  // you will need to change this to the file path to your image
+  img = loadImage('images/rain.png');
+}
+
 var drops = [];
 
 function setup() {
 createCanvas (windowWidth, windowHeight)
+noCursor();
   for (var i = 0; i < 500; i++) {
     drops[i] = new Drop();
   }
@@ -25,4 +33,5 @@ function draw() {
     drops[i].fall();
     drops[i].show();
   }
+  image(img, mouseX, mouseY, 100, 100);
 }
