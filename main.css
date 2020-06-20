@@ -3,6 +3,12 @@
 @font-face {
 	font-family: 'senobi gothic';
 	src: url(images/Senobi-Gothic-Bold.ttf);
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+	src: local('myfont Regular'), /* フォントがローカルにインストールされている場合に有効 */
+	     url('webfont.eot?#iefix') format('embedded-opentype'), /* eof - IE6-IE8 */
+	     url('webfont.woff') format('woff'), /* woff - Modern Browsers */
+	     url('webfont.ttf')  format('truetype'), /* ttf - Safari, Android, iOS */
+	     url('webfont.svg#svgFontName') format('svg'); /* svg - Legacy iOS */
 }
 
 html {
