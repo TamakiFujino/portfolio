@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'MyFont';
-   src: url('Senobi-Gothic-Bold.ttf') format('truetype');
+   src: url('/fonts/Senobi-Gothic-Medium.tiff') format('truetype');
 }
 
 html {
