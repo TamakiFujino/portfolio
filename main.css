@@ -52,7 +52,7 @@ body {
 }
 
 h1 {
-  font-family: 'senobi gothic';
+  font-family: 'MyFont';
   color: rgba(0, 0, 0, 0.8);
   font-size: 80px;
   position: absolute;
@@ -65,7 +65,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'senobi gothic';
+  font-family: 'MyFont';
   color: black;
   font-size: 30px;
   text-align: left;
