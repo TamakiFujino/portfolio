@@ -2,13 +2,29 @@
 
 @font-face {
     font-family: 'Senobi Gothic';
-    src: url('Senobi-Gothic-Bold.woff2') format('woff2'),
-        url('Senobi-Gothic-Bold.woff') format('woff');
-    font-weight: bold;
+    src: url('Senobi-Gothic-Regular.eot');
+    src: url('Senobi-Gothic-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Senobi-Gothic-Regular.woff2') format('woff2'),
+        url('Senobi-Gothic-Regular.woff') format('woff'),
+        url('Senobi-Gothic-Regular.ttf') format('truetype'),
+        url('Senobi-Gothic-Regular.svg#Senobi-Gothic-Regular') format('svg');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Senobi Gothic';
+    src: url('Senobi-Gothic-Bold.eot');
+    src: url('Senobi-Gothic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Senobi-Gothic-Bold.woff2') format('woff2'),
+        url('Senobi-Gothic-Bold.woff') format('woff'),
+        url('Senobi-Gothic-Bold.ttf') format('truetype'),
+        url('Senobi-Gothic-Bold.svg#Senobi-Gothic-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 html {
