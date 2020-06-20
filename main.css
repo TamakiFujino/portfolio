@@ -1,397 +1,480 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=PT+Sans+Narrow&display=swap');
 
-/* Base_settings */
-body {
-  background-color: #8d9cdf;
-  font-family: 'Josefin Sans', sans-serif;
-  box-sizing: border-box;
-  width: 100%;
-  /* display: flex; */
-  margin: 0px;
-}
-
-/* 背景のアニメーション */
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-.contact2 {
-text-align:center;
-padding: 20%;
-}
-
-.child {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  letter-spacing: -5px;
-}
-
-svg {
-  width: 100%;
-  height: 100%;
-}
-
 html {
-  width: 100%;
   height: 100%;
-  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+.carousel {
+  margin-top: 20px;
+}
+
+.col-sm-6 {
+  padding-top: 0%;
+  width: 300px;
+  height: 500px;
+  overflow: scroll;
+}
+
+.item .thumb {
+  width: 25%;
+  cursor: pointer;
+  float: left;
+}
+
+.item .thumb img {
+  width: 100%;
+  margin: 2px;
+}
+
+.item img {
+  width: 100%;
+}
+
+.title {
+  position: absolute;
+  top: 10%;
+  left: 15%;
 }
 
 h1 {
-  font-family: 'Josefin Sans', sans-serif;
-  color: #dfd08d;
-  font-size: 40px;
-  padding: 35px;
+  font-family: senobi gothic;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 80px;
   position: absolute;
+  top: 40%;
+  right: 0;
   bottom: 0;
-  opacity: 0.7;
+  left: 0;
+  margin: auto;
+  font-style: italic;
+}
+
+h2 {
+  font-family: Argio;
+  color: black;
+  font-size: 30px;
+  text-align: left;
 }
 
 h3 {
+  color: black;
   font-family: 'Josefin Sans', sans-serif;
-  color: white;
   text-align: left;
-  padding: 30px;
-  margin: 0px;
 }
 
 h4 {
+  color: black;
   font-family: 'Josefin Sans', sans-serif;
-  color: white;
-  text-align: center;
-  font-size: 18px;
-  padding: 10px;
-}
-
-h5 {
-  font-family: 'Josefin Sans', sans-serif;
-  color: white;
-  text-align: left;
-  font-size: 28px;
-  padding: 30px;
-}
-
-h6 {
-  font-family: 'Josefin Sans', sans-serif;
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  line-height: 150%;
   text-align: left;
 }
 
-hr {
-  height: 2px;
-  background-color: white;
-  border: none;
-  opacity: 0.5;
-}
-/* footer-setting */
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: transparent;
-  color: white;
-  text-align: center;
-}
-
-.contact {
-  position: fixed;
-  bottom: 0;
+p {
+  font-size: 19px;
+  color: black;
   text-align: left;
-  padding: 30px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.menu {
-  list-style-type: none;
-  margin: 10px;
-  padding: 30px;
+/* Add a black background color to the top navigation */
+.topnav {
   overflow: hidden;
-  background-color: none;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-.menuitem {
-  float: right;
-}
-
-.menuitem a {
-  display: block;
   font-family: 'Josefin Sans', sans-serif;
-  color: white;
-  opacity: 0.8;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  font-size: 100px;
+  color: #black;
+  writing-mode: vertical-lr;
+  position: absolute;
+  bottom: 50px;
+  padding: 50px;
+  z-index: 2;
 }
 
-.menuitem a:hover {
-  text-shadow: 0px 3px 10px white;
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: black;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  text-shadow: 0px 3px 10px #B39BC8;
   transition: 0.5s;
   color: transparent;
 }
 
-/* work_settings */
+/* Add a color to the active/current link */
+.topnav a.active {
+  /* border-bottom: 3px solid #e64398;
+    writing-mode: vertical-lr; */
+}
 
-.medium {
+/* Add a black background color to the top navigation */
+.topnav2 {
+  overflow: hidden;
   font-family: 'Josefin Sans', sans-serif;
-  color: white;
-  text-align: left;
-  font-size: 40px;
-  padding-left: 250px;
-  opacity: 0.7;
+  font-size: 100px;
+  color: black;
+  writing-mode: vertical-lr;
+  position: absolute;
+  right: 0px;
+  top: 50px;
+  padding: 50px;
+  z-index: 2;
 }
 
+/* Style the links inside the navigation bar */
+.topnav2 a {
+  float: left;
+  color: black;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 18px;
+}
 
-.title {
+/* Change the color of links on hover */
+.topnav2 a:hover {
+  text-shadow: 0px 3px 10px #B39BC8;
+  transition: 0.5s;
+  color: transparent;
+}
+
+/* Add a color to the active/current link */
+.topnav2 a.active {
+  border-bottom: 3px solid #e64398;
+  background: #B39BC8;
+}
+
+.topnav3 {
+  overflow: hidden;
   font-family: 'Josefin Sans', sans-serif;
-  color: white;
-  text-align: left;
-  font-size: 70px;
-  padding-top: 250px;
-  padding-left: 250px;
-  opacity: 0.7;
+  font-size: 100px;
+  color: black;
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
 }
 
-.work {
-  padding: 30px;
+/* Style the links inside the navigation bar */
+.topnav3 a {
+  float: left;
+  color: black;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* Change the color of links on hover */
+.topnav3 a:hover {
+  text-shadow: 0px 3px 10px #B39BC8;
+  transition: 0.5s;
+  color: transparent;
+}
+
+/* Add a color to the active/current link */
+.topnav3 a.active {
+  /* border-bottom: 3px solid #e64398;
+    writing-mode: vertical-lr; */
 }
 
 
-/* imageslider */
-* {
-  box-sizing: border-box
+/* image gallery */
+.container {
+  display: flex;
+  text-align: center;
+  width: 80%;
+  padding: 10% 15%;
+  box-sizing: border-box;
+  height: 70vh;
 }
 
-/* Slideshow container */
-.slideshow-container {
-  width: 60%;
-  position: relative;
-  margin: auto;
-  padding-top: 50px;
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  /* box-shadow: 0 20px 30px rgba(0,0,0,.1); */
+  line-height: 0;
 }
 
-/* Next & previous buttons */
-.prev, .next {
+.box>img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: .5s;
+}
+
+.box>span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover {
+  flex: 1 1 50%;
+}
+
+.box:hover>img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: none;
+  background-color: none;
+  width: 80%;
+  vertical-align: middle;
+  position: absolute;
+  top: 10%;
+  left: 45%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
   cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 20px;
+  color: #e64398;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  text-shadow: 0px 3px 10px #B39BC8;
+  transition: 0.5s;
+  color: transparent;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  /* padding: 20px 20px; */
+  border-top: none;
+  width: 65%;
+  margin: 0 auto;
+  background-color: none;
+}
+
+.content {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  padding-top: 30px;
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  width: 75%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 60%;
+  margin: auto;
   position: absolute;
   top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+}
+
+.box>img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: .5s;
+}
+
+.box>span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover {
+  flex: 1 1 50%;
+}
+
+.box:hover>img {
+  width: 100%;
+  height: 100%;
+}
+
+.scanlines {
+  overflow: hidden;
+  mix-blend-mode: difference;
+  z-index: -3;
+}
+
+.scanlines::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: repeating-linear-gradient(to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) .5%,
+    transparent 1%);
+  animation: fudge 7s ease-in-out alternate infinite;
+}
+
+@keyframes noise {
+  0% {
+    background-position: 1000px;
+  }
+}
+
+body, html {
+  overflow: hidden;
+  animation: noise 20ms linear infinite;
+}
+
+/* .glitch-wrapper{
+padding-top:180px;
+width:100vw;
+text-align:center;
+animation:glitch 2s linear infinite;
+margin-bottom:110px;
+} */
+.glitch-text::before {
+  /* content:' 五月蝿く生きる'; */
+  color: none;
+  text-shadow: 0px 0px 5px 10px black !IMPORTANT;
+  -webkit-filter: blur(7px);
+  -moz-filter: blur(7px);
+  -o-filter: blur(7x);
+  -ms-filter: blur(7px);
+  filter: blur(7px);
+  display: block;
+  z-index: -1;
+  font-size: 80px;
+  opacity: .8;
+}
+
+.glitch-text {
+  z-index: 2;
+  opacity: .9;
+  margin: 0 auto;
+  animation: glitch 3s infinite;
+  cursor: pointer;
+  font-size: 80px;
   color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: -10%;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev {
-  left: -10%;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  text-shadow: 0px 3px 10px white;
-  transition: 0.5s;
-  color: transparent;
-}
-
-/* Caption text */
-.text {
-  color: rgba(255, 255, 255, 0.7);
+  font-family: senobi gothic;
+  color: rgba(0, 0, 0, 0.8);
   font-size: 80px;
   position: absolute;
-  bottom: 45%;
-  width: 100%;
-  text-align: center;
+  top: 40%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  font-style: italic;
 }
 
-.jump {
-  color: #f2f2f2;
-  font-size: 20px;
-  position: absolute;
-  bottom: -12%;
-  width: 100%;
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-  padding: 10px;
-}
-
-a:link {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-a:hover {
-  text-shadow: 0px 3px 10px white;
-  transition: 0.5s;
-  color: transparent;
-}
-
-a:visited {
-  color: white;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 3px;
-  width: 30px;
-  margin: 0 2px;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: transparent;
-}
-
-.dot:hover {
-  background-color: #8d9cdf;
-  transition: 0.5s;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .4
+/* JUST RANDOM VALUES HERE! */
+@keyframes glitch {
+  3% {
+    text-shadow: 7px 7px 0px purple;
   }
 
-  to {
-    opacity: 1
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: .4
+  6% {
+    text-shadow: -9px 4px 0px pink;
+    transform: translate(4px, -10px) skewX(3240deg);
   }
 
-  to {
-    opacity: 1
+  7% {
+    text-shadow: 3px -4px 0px yellow;
+  }
+
+  9% {
+    text-shadow: 0px 0px 3px white;
+    transform: translate(0px, 0px) skewX(0deg);
+  }
+
+  2%, 54% {
+    transform: translateX(0px) skew(0deg);
+  }
+
+  55% {
+    transform: translate(-2px, 6px) skew(-5530deg);
+  }
+
+  56% {
+    text-shadow: 0px 0px 3px white;
+    transform: translate(0px, 0px) skew(0deg);
+  }
+
+  57% {
+    text-shadow: 7px 7px 0px purple;
+    transform: translate(4px, -10px) skew(-70deg);
+  }
+
+  58% {
+    text-shadow: 0px 0px 3px white;
+    transform: translate(0px, 0px) skew(0deg);
+  }
+
+  62% {
+    text-shadow: 3px -4px 0px yellow;
+    transform: translate(0px, 20px) skew(0deg);
+  }
+
+  63% {
+    text-shadow: 0px 0px 3px white;
+    transform: translate(4px, -2px) skew(0deg);
+  }
+
+  64% {
+    transform: translate(1px, 3px);
+    skew(-230deg);
+  }
+
+  65% {
+    transform: translate(-7px, 2px);
+    skew(120deg);
+  }
+
+  66% {
+    transform: translate(0px, 0px) skew(0deg);
   }
 }
 
-.videoWork {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 30px;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 200px;
-}
-
-/* .sideWork {
-  width: 60%;
-  float: left;
-  position: relative;
-  padding-left: 300px;
-  padding-top: 200px;
-  padding-bottom: 300px;
-} */
-.horizontal-list {
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  /* width: 100%; */
-  padding-top: 0px;
-  padding-bottom: 200px;
-  position: absolute;
-  right: 250px;
-  text-align: center;
-  width: 70%;
-}
-
-.horizontal-list::-webkit-scrollbar {
-  display: none;
-}
-
-.item {
-  /* 横スクロール用 */
-  display: inline-block;
-  width: 40%;
-  /* 見た目調整 */
-  padding: 0px;
-}
-
-.worktext {
-  width: 100%;
-  float: left;
-}
-
-.description {
-  position: relative;
-  padding-left: 250px;
-  padding-right: 250px;
-  color: white;
-  line-height: 130%;
-}
-
-.preview {
-  position: relative;
-  display: block;
-  padding: 50px;
-}
-
-.imageslider {
-  width: 100%;
-  text-align: center;
-  height: 300px;
-}
-
-.work {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 30px;
-  text-align: center;
-  padding-top: 30px;
-}
-
-.arrow {
-  color: white;
-  text-align: right;
-  padding-top: 30px;
-  padding-right: 250px;
-  padding-bottom: 0px;
-  font-size: 50px;
-  opacity: 0.5;
-}
-
-.statement {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding-left: 8%;
-  padding-right: 8%;
-  text-align: center;
-}
-
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
 .pc {
   display: block !important;
 }
@@ -400,7 +483,8 @@ a:visited {
   display: none !important;
 }
 
-@media screen and (max-width:1024px) {
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media only screen and (max-width: 1300px) {
   .pc {
     display: none !important;
   }
@@ -408,234 +492,54 @@ a:visited {
   .sp {
     display: block !important;
   }
-
-  h1 {
-    font-size: 18px;
-    text-align: center;
-    padding: 20px;
-  }
-
-  h6 {
-    font-size: 18px;
-    font-family: 'Karla', sans-serif;
-  }
-
-  .contact {
-    display: none;
-  }
-
-.contact2 {
-text-align:center;
-padding: 20%;
 }
 
-  .menu {
-    font-size: 13px;
-    padding: 10px;
-    opacity: 0.9;
-    position: static;
-  }
-
-  .text {
-    font-size: 25px;
-    position: absolute;
-    top: 120px;
-  }
-
-  .jump {
-    font-size: 17px;
-    position: absolute;
-    top: 170px;
-  }
-
-  .photo {
-    position: absolute;
-    top: 200px;
-  }
-
-  .dot {
-    height: 5px;
-    width: 5px;
-  }
-
-  .worktext {
-    width: auto;
-  }
-
-  .title {
-    font-size: 30px;
-  }
-
-  .horizontal-list {
-    display: block
-  }
-
-  .prev, .next {
-    cursor: pointer;
-    padding-top: 120px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    border-radius: 3px 0 0 3px;
-  }
-
-  .prev {
-    border-radius: 3px 0 0 3px;
-  }
-
-  .prev:hover, .next:hover {
-    text-shadow: 0px 3px 10px white;
-    transition: 0.5s;
-    color: transparent;
-  }
-
-  .slideshow-container {
-    width: 85%;
-    position: relative;
-    margin: auto;
-    padding-top: 50px;
-  }
-
-  .horizontal-list {
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-    padding-top: 0px;
-    padding-bottom: 200px;
-    position: absolute;
-    right: 250px;
-    text-align: center;
-    width: 70%;
-  }
-
-  .horizontal-list::-webkit-scrollbar {
-    display: none;
-  }
-
-  .item {
-    /* 横スクロール用 */
-    display: inline-block;
-    width: 40%;
-    /* 見た目調整 */
-    padding: 0px;
-  }
-
-  .head {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 8%;
-  background-color: rgba(141, 156, 223, 100);
-  color: white;
+h5 {
+  font-size: 17px;
+  font-family: senobi gothic;
   text-align: center;
-  z-index: 2;
 }
 
-  /* Dropdown Button */
-  .dropbtn {
-    background-color: transparent;
-    font-family: 'Josefin Sans', sans-serif;
-    color: white;
-    opacity: 0.8;
-    padding: 20px;
-    font-size: 16px;
-    border: none
-  }
-
-  .dropbtn a {
-    border: none;
-  }
-
-  .dropbtn a:hover {
-    border: none;
-  }
-
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    display: inline-block;
-    border: none;
-    position: absolute;
-    right:0px;
-    top: 3px;
-  }
-
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: transparent;
-    max-width: 130px;
-    z-index: 1;
-    border: none;
-  }
-
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: white;
-    text-align: right;
-    padding: 13px 8px;
-    text-decoration: none;
-    display: block;
-    background-color: rgba(141, 156, 223, 10);
-
-  }
-
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: transparent;
-    border: none;
-  }
-
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-    border: none;
-  }
-
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-    text-shadow: 0px 3px 10px white;
-    transition: 0.5s;
-    color: transparent;
-    border: none;
-  }
-  img {
-    position: relative;
-    width: 95%;
-    margin-top:10px;
-  }
-
-  h2 {
-    color: white;
-    padding:0px;
-    margin-left: 12px;
-    opacity: 0.8;
-    position: static;
-    text-align: center;
-  }
+/*
   hr {
     height: 2px;
-    background-color: white;
+    background-color: black;
     border: none;
     opacity: 0.5;
-  }
-  .work_content {
-    padding-top: 60px;
-  }
-
-  .statement {
-    padding-top: 60px;
-  }
+  } */
+.work_sp {
+  height: 100vh;
+  overflow: scroll;
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
-  @media screen and (max-width:781px) {
+hr {
+  width: 90%;
+  border-width: 3px 0px 0px 0px;
+  /* 太さ */
+  border-style: solid;
+  /* 線種 */
+  border-color: black;
+  /* 線色 */
+}
 
+.social {
+  font-family: senobi gothic;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  position: absolute;
+  top: 35%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-decoration: none;
+}
 
-  }
+.sp_work {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  width: 90%;
+  text-align: center;
+}
