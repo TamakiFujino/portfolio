@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=PT+Sans+Narrow&display=swap');
 
+@font-face {
+	font-family: 'senobi gothic';
+	src: url(images/Senobi-Gothic-Bold.ttf);
+}
+
 html {
   height: 100%;
 }
