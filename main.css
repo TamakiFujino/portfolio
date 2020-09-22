@@ -40,6 +40,12 @@ body {
   background-size: cover;
 }
 
+/* .jpav {
+  position: absolute;
+  bottom: 30px;
+  right: 15%;
+} */
+
 /* CSS used here will be applied after bootstrap.css */
 .carousel {
   margin-top: 20px;
