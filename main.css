@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
 @font-face {
     font-family: 'Senobi Gothic';
@@ -26,9 +27,9 @@
     font-display: swap;
 }
 
-/* body {
-  background: #fff;
-} */
+body {
+  background: #adb4a8;
+}
 
 
 .preloader-1 {
@@ -98,15 +99,13 @@
 
 html {
   height: 100%;
+
 }
 
 body {
   text-align: center;
   height: 100%;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
 
 /* .jpav {
@@ -117,13 +116,19 @@ body {
 
 /* CSS used here will be applied after bootstrap.css */
 .carousel {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .col-sm-6 {
-  padding-top: 0%;
-  width: 300px;
-  height: 500px;
+  padding-top: 10px;
+  width: 40%;
+}
+
+.col-sm-6b {
+  padding-top: 0;
+  padding-left: 20px;
+  width: 50%;
+  height: 100%;
   overflow: scroll;
 }
 
@@ -150,7 +155,7 @@ body {
 
 h1 {
   font-family: 'Senobi Gothic';
-  color: rgba(0, 0, 0, 0.8);
+  color: white;
   font-size: 80px;
   position: absolute;
   top: 40%;
@@ -163,28 +168,28 @@ h1 {
 
 h2 {
   font-family: 'Senobi Gothic';
-  color: black;
+  color: white;
   font-size: 30px;
   text-align: left;
 }
 
 h3 {
-  color: black;
+  color: white;
   font-family: 'Josefin Sans', sans-serif;
   text-align: left;
 }
 
 h4 {
-  color: black;
+  color: white;
   font-family: 'Josefin Sans', sans-serif;
   text-align: left;
 }
 
 p {
-  font-size: 19px;
-  color: black;
+  font-size: 15px;
+  color: white;
   text-align: left;
-  font-family: 'Josefin Sans', sans-serif;
+font-family: 'Cabin', sans-serif;
 }
 
 /* Add a black background color to the top navigation */
@@ -192,7 +197,7 @@ p {
   overflow: hidden;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 100px;
-  color: #black;
+  color: black;
   writing-mode: vertical-lr;
   position: absolute;
   bottom: 50px;
@@ -203,22 +208,23 @@ p {
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  color: black;
+  color: white;
   padding: 20px 20px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
 }
+
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  text-shadow: 0px 3px 10px #B39BC8;
+  text-shadow: 0px 3px 10px white;
   transition: 0.5s;
   color: transparent;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  /* border-bottom: 3px solid #e64398;
+  /* border-bottom: 3px solid white;
     writing-mode: vertical-lr; */
 }
 
@@ -239,7 +245,7 @@ p {
 /* Style the links inside the navigation bar */
 .topnav2 a {
   float: left;
-  color: black;
+  color: white;
   padding: 20px 20px;
   text-decoration: none;
   font-size: 14px;
@@ -247,14 +253,13 @@ p {
 
 /* Change the color of links on hover */
 .topnav2 a:hover {
-  text-shadow: 0px 3px 10px #B39BC8;
+  text-shadow: 0px 3px 10px white;
   transition: 0.5s;
   color: transparent;
 }
 
 /* Add a color to the active/current link */
 .topnav2 a.active {
-  border-bottom: 3px solid #e64398;
   background: #B39BC8;
 }
 
@@ -262,7 +267,7 @@ p {
   overflow: hidden;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 100px;
-  color: black;
+  color: white;
   position: absolute;
   z-index: 2;
   width: 100%;
@@ -271,7 +276,7 @@ p {
 /* Style the links inside the navigation bar */
 .topnav3 a {
   float: left;
-  color: black;
+  color: white;
   padding: 20px 20px;
   text-decoration: none;
   font-size: 12px;
@@ -279,14 +284,47 @@ p {
 
 /* Change the color of links on hover */
 .topnav3 a:hover {
-  text-shadow: 0px 3px 10px #B39BC8;
+  text-shadow: 0px 3px 10px white;
   transition: 0.5s;
   color: transparent;
 }
 
 /* Add a color to the active/current link */
 .topnav3 a.active {
-  /* border-bottom: 3px solid #e64398;
+  /* border-bottom: 3px solid white;
+    writing-mode: vertical-lr; */
+}
+
+.topnav4 {
+  overflow: hidden;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 100px;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav4 a {
+  float: left;
+  color: white;
+  padding: 0px 10px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* Change the color of links on hover */
+.topnav4 a:hover {
+  text-shadow: 0px 3px 10px white;
+  transition: 0.5s;
+  color: transparent;
+}
+
+/* Add a color to the active/current link */
+.topnav4 a.active {
+  /* border-bottom: 3px solid white;
     writing-mode: vertical-lr; */
 }
 
@@ -402,10 +440,10 @@ p {
   width: 75%;
   padding: 4% 2%;
   box-sizing: border-box;
-  height: 60%;
+  height: 77%;
   margin: auto;
   position: absolute;
-  top: 52%;
+  top: 55%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   -webkit- transform: translateY(-50%) translateX(-50%);
@@ -502,7 +540,7 @@ margin-bottom:110px;
   animation: glitch 3s infinite;
   cursor: pointer;
   font-size: 80px;
-  color: white;
+  color: #331a38;
   font-family: senobi gothic;
   color: rgba(0, 0, 0, 0.8);
   font-size: 80px;
@@ -593,7 +631,7 @@ margin-bottom:110px;
 }
 
 /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 768px) {
   .pc {
     display: none !important;
   }
@@ -629,7 +667,7 @@ hr {
   /* 太さ */
   border-style: solid;
   /* 線種 */
-  border-color: black;
+  border-color: white;
   /* 線色 */
 }
 
