@@ -402,14 +402,14 @@ font-family: 'Cabin', sans-serif;
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 20px;
-  color: #e64398;
+  color: white;
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  text-shadow: 0px 3px 10px #B39BC8;
+  text-shadow: 0px 3px 10px white;
   transition: 0.5s;
   color: transparent;
 }
