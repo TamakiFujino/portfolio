@@ -50,8 +50,8 @@
 class Drop{
 
     constructor(){
-        this.x = random(0,width);
-        this.y = random(-200,-100);
+        this.x = random(mouseX,width);
+        this.y = random(mouseY,-100);
         this.z = random(0,20);
         this.yspeed = map(this.z,0,10,2,10);
     }
@@ -60,8 +60,8 @@ class Drop{
         var g = map(this.z,0,20,0,0.2);
         this.yspeed = this.yspeed + g;
         if(this.y > height){
-            this.y = random(-200,-100);
-            this.yspeed = random(2,10);
+            this.y = random(mouseX,mouseY);
+            this.yspeed = random(mouseX,mouseY);
         }
     }
     show(){
@@ -93,4 +93,17 @@ function draw()
         drops[i].fall();
         drops[i].show();
     }
+    if (keyIsPressed === true) {
+    // nested if statement checks to see what key is pressed
+    if (key === 'a') {
+      fill(0);
+    } else if (key === 'b') {
+      fill(255);
+    }
+  } else {
+    fill(100);
+  }
+
+  // draw rectangle
+  ellipse(mouseX, mouseY, 30, 30);
 }
