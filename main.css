@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=PT+Sans+Narrow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
 @font-face {
     font-family: 'Senobi Gothic';
@@ -28,7 +30,7 @@
 }
 
 body {
-  background: #adb4a8;
+  background: #cecece;
 }
 
 
@@ -154,7 +156,7 @@ body {
 }
 
 h1 {
-  font-family: 'Senobi Gothic';
+  font-family: 'Josefin Sans', sans-serif;
   color: white;
   font-size: 80px;
   position: absolute;
@@ -167,7 +169,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Senobi Gothic';
+  font-family: 'Josefin Sans', sans-serif;
   color: white;
   font-size: 30px;
   text-align: left;
@@ -388,7 +390,7 @@ font-family: 'Cabin', sans-serif;
   width: 80%;
   vertical-align: middle;
   position: absolute;
-  top: 10%;
+  top: 8%;
   left: 45%;
 }
 
@@ -541,7 +543,7 @@ margin-bottom:110px;
   cursor: pointer;
   font-size: 80px;
   color: #331a38;
-  font-family: senobi gothic;
+font-family: 'Bebas Neue', cursive;
   color: rgba(0, 0, 0, 0.8);
   font-size: 80px;
   position: absolute;
@@ -643,7 +645,7 @@ margin-bottom:110px;
 
 h5 {
   font-size: 17px;
-  font-family: senobi gothic;
+  font-family: 'Bebas Neue', cursive;
   text-align: center;
 }
 
@@ -672,7 +674,7 @@ hr {
 }
 
 .social {
-  font-family: senobi gothic;
+  font-family: 'Bebas Neue', cursive;
   color: rgba(0, 0, 0, 0.8);
   font-size: 30px;
   position: absolute;

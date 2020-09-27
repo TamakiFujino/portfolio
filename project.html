@@ -11,8 +11,8 @@
   <link rel="stylesheet" type="text/css" href="main.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
-  <script type="text/javascript" src="sketch.js"></script>
-  <script type="text/javascript" src="drop.js"></script>
+  <!-- <script type="text/javascript" src="sketch.js"></script>
+  <script type="text/javascript" src="drop.js"></script> -->
   <script src="script.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
   <meta charset="utf-8">
@@ -25,35 +25,11 @@
 </head>
 
 <body>
-
-  <!-- <div class="preloader-2">
-    <span class="line line-1"></span>
-    <span class="line line-2"></span>
-    <span class="line line-3"></span>
-    <span class="line line-4"></span>
-    <span class="line line-5"></span>
-    <span class="line line-6"></span>
-    <span class="line line-7"></span>
-    <span class="line line-8"></span>
-    <span class="line line-9"></span>
-    <div></div>
-  </div> -->
-
-
   <div class="pc">
-    <!-- <div class="scanlines"></div> -->
-
-    <!-- <div class="glitch-wrapper">
-      <div class="glitch-text">
-          <b>五月蝿く生きる。</b>
-      </div>
-    </div> -->
-
-
     <div class="topnav">
-      <a class="active"href="index.html">HOME</a>
+      <a class="active" href="index.html">HOME</a>
       <a href="bio.html">BIO</a>
-      <a href="bio.html">PROJECT</a>
+      <a href="project.html">CV</a>
       <a href="work.html">GALLERY</a>
     </div>
 
@@ -61,40 +37,128 @@
       <a href="mailto:tamaki.fujino@sjsu.edu"> <img src="images/mail.png" width="20px" alt="">
       </a>
       <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
-     </a>
+      </a>
       <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="20px" alt="">
       </a>
       <a href="https://www.instagram.com/instama_mm/"><img src="images/insta.png" width="20px" alt="">
       </a>
     </div>
+
+
+  <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
+
+</div>
+
+  <style>
+    .tablink {
+      background-color: transparent;
+      color: white;
+      float: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 50px;
+      margin-top: 50px;
+
+    }
+
+    .tablink:hover {
+      background-color: transparent;
+    }
+
+    .tablink a {
+      background-color: transparent;
+    }
+
+    .tablink:hover {
+      text-shadow: 0px 3px 10px #B39BC8;
+      transition: 0.5s;
+      color: transparent;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      background-color: none;
+      display: none;
+      padding: 0px;
+      text-align: center;
+      line-height: 1.5;
+      width: 80%;
+      height: 75%;
+      overflow: scroll;
+    }
+
+    #EN {
+      background-color: transparent;
+    }
+
+    #JP {
+      background-color: transparent;
+    }
+  </style>
+
+  <button class="tablink" onclick="openCity('EN')" id="defaultOpen">EN</button>
+  <button class="tablink" onclick="openCity('JP')">JP</button>
+
+  <div id="EN" class="tabcontent">
+    <!-- <div class="content"> -->
+    <p>CV in english</p>
+
+
+    <!-- </div> -->
   </div>
 
-    <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
-
-
-    <div class="sp">
-      <div class="topnav3">
-        <a class="active"href="index.html">HOME</a>
-        <a href="bio.html">BIO</a>
-        <a href="project.html">PROJECT</a>
-        <a href="work.html">GALLERY</a>
-      </div>
-
-      <div class="topnav4">
-        <a href="mailto:tamaki.fujino@sjsu.edu"> <img src="images/mail.png" width="18px" alt="">
-        </a>
-        <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="18px" alt="">
-       </a>
-        <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="18px" alt="">
-        </a>
-        <a href="https://www.instagram.com/instama_mm/"><img src="images/insta.png" width="18px" alt="">
-        </a>
-      </div>
-
-      <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
-
-
+  <div id="JP" class="tabcontent">
+    <p>レジュメ</p>
   </div>
+
+
+
+
+  <script>
+    function openCity(cityName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(cityName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
+
+  <div class="sp">
+    <div class="topnav3" style="position:absolute; top:1%;">
+      <a class="active" href="index.html">HOME</a>
+      <a href="bio.html">BIO</a>
+      <a href="project.html">CV</a>
+      <a href="work.html">GALLERY</a>
+    </div>
+
+
+    <div class="topnav4">
+      <a href="mailto:tamaki.fujino@sjsu.edu"> <img src="images/mail.png" width="18px" alt="">
+      </a>
+      <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="18px" alt="">
+      </a>
+      <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="18px" alt="">
+      </a>
+      <a href="https://www.instagram.com/instama_mm/"><img src="images/insta.png" width="18px" alt="">
+      </a>
+    </div>
+<p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
+  </div>
+
 
 </body>
 

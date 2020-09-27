@@ -87,7 +87,7 @@ function setup() {
 
 function draw()
 {
-    background(173,180,168);
+    background(206,206,206);
     for(var i=0;i<drops.length;i++)
     {
         drops[i].fall();
