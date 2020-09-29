@@ -16,11 +16,33 @@
   <script type="text/javascript" src="drop.js"></script>
   <script src="script.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
 
 <body>
 
   <div class="pc">
+
+    <div class="loader-wrap">
+      <div class="loader"></div>
+    </div>
+
+    <script type="text/javascript">
+    $(function(){
+  var loader = $('.loader-wrap');
+
+  //ページの読み込みが完了したらアニメーションを非表示
+  $(window).on('load',function(){
+    loader.fadeOut();
+  });
+
+  //ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+  setTimeout(function(){
+    loader.fadeOut();
+  },3000);
+  });
+    </script>
+
 
 
         <div class="topnav">
@@ -46,46 +68,59 @@
 
     <div class="container">
 
+      <style media="screen">
+        .acc_img {
+          filter: gray;
+    filter: grayscale(100%);
+
+        }
+        .acc-img:hover {
+          filter: gray;
+    filter: grayscale(0%);
+
+        }
+      </style>
+
       <div class="box">
         <a href="panda.html">
-          <img src="images/panda0.jpg" height="500">
+          <img src="images/panda0.jpg" class="acc_img" height="500">
         </a>
       </div>
 
       <div class="box">
         <a href="plastic.html">
-          <img src="images/plastic.jpg" height="500">
+          <img src="images/plastic.jpg" class="acc_img" height="500" >
         </a>
       </div>
 
       <div class="box">
         <a href="digit.html">
-          <img src="images/digit.jpg" height="500">
+          <img src="images/digit.jpg" class="acc_img" height="500">
         </a>
       </div>
 
 
             <div class="box">
               <a href="circle.html">
-                <img src="images/encircle.jpg" height="500">
+                <img src="images/encircle.jpg" class="acc_img" height="500">
               </a>
             </div>
 
       <div class="box">
         <a href="408.html">
-          <img src="images/408_2.jpg" height="500">
+          <img src="images/408_2.jpg" class="acc_img" height="500">
         </a>
       </div>
 
       <div class="box">
         <a href="fish.html">
-          <img src="images/fishschool.jpg" height="500">
+          <img src="images/fishschool.jpg" class="acc_img" height="500">
         </a>
       </div>
 
       <div class="box">
         <a href="flow.html">
-          <img src="images/flow.jpg" height="500">
+          <img src="images/flow.jpg" class="acc_img" height="500">
         </a>
       </div>
 
@@ -97,7 +132,7 @@
 
       <div class="box">
         <a href="poop.html">
-          <img src="images/poop.jpg" height="500">
+          <img src="images/poop.jpg"  class="acc_img" height="500">
         </a>
       </div>
 <!--
@@ -115,13 +150,13 @@
 
       <div class="box">
         <a href="oilnwater.html">
-          <img src="images/oil_water.jpg" height="500">
+          <img src="images/oil_water.jpg" class="acc_img" height="500">
         </a>
       </div>
 
       <div class="box">
         <a href="you.html">
-          <img src="images/you.jpg" height="500">
+          <img src="images/you.jpg"  class="acc_img" height="500" >
         </a>
       </div>
 

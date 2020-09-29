@@ -82,7 +82,7 @@ function setup() {
     {
         drops[i] = new Drop();
     }
-
+noCursor();
 }
 
 function draw()
@@ -95,15 +95,33 @@ function draw()
     }
     if (keyIsPressed === true) {
     // nested if statement checks to see what key is pressed
-    if (key === 'a') {
-      fill(0);
-    } else if (key === 'b') {
-      fill(255);
-    }
+    // if (key === 'a') {
+    //   ellipse(mouseX, mouseY, 50, 50);
+    //   stroke(206,206)
+    // } else if (key === 's') {
+    //   ellipse(mouseX, mouseY, 75, 75);
+    //   stroke(206,206)
+    // }
+    // else if (key === 'd') {
+    //   ellipse(mouseX, mouseY, 90, 90);
+    //   stroke(206,206)
+    // }
+    // else if (key === 'f') {
+    //   ellipse(mouseX, mouseY, 115, 115);
+    //   stroke(206,206)
+    // }
+    // else if (key === 'g') {
+    //   ellipse(mouseX, mouseY, 130, 130);
+    //   stroke(206,206)
+    // }
+    // else if (key === 'h') {
+    //   ellipse(mouseX, mouseY, 155, 155);
+    //   stroke(206,206)
+    // }
   } else {
-    fill(100);
+    fill(206,206,206);
   }
 
   // draw rectangle
-  ellipse(mouseX, mouseY, 30, 30);
+  ellipse(mouseX, mouseY, 35, 35);
 }
