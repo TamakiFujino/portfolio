@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 
 @font-face {
     font-family: 'Senobi Gothic';
@@ -591,7 +592,7 @@ margin-bottom:110px;
 .glitch-text::before {
   /* content:' 五月蝿く生きる'; */
   color: none;
-  text-shadow: 0px 0px 5px 10px black !IMPORTANT;
+  text-shadow: 0px 0px 5px 10px white !IMPORTANT;
   -webkit-filter: blur(7px);
   -moz-filter: blur(7px);
   -o-filter: blur(7x);
@@ -610,9 +611,9 @@ margin-bottom:110px;
   animation: glitch 3s infinite;
   cursor: pointer;
   font-size: 80px;
-  color: #331a38;
-font-family: 'Bebas Neue', cursive;
-  color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+font-family: 'Sawarabi Mincho', sans-serif;
+  color: rgba(255,255,255, 0.5);
   font-size: 80px;
   position: absolute;
   top: 40%;
@@ -620,22 +621,21 @@ font-family: 'Bebas Neue', cursive;
   bottom: 0;
   left: 0;
   margin: auto;
-  font-style: italic;
 }
 
 /* JUST RANDOM VALUES HERE! */
 @keyframes glitch {
   3% {
-    text-shadow: 7px 7px 0px purple;
+    text-shadow: 7px 7px 0px "cecece";
   }
 
   6% {
-    text-shadow: -9px 4px 0px pink;
+    text-shadow: -9px 4px 0px #cecece;
     transform: translate(4px, -10px) skewX(3240deg);
   }
 
   7% {
-    text-shadow: 3px -4px 0px yellow;
+    text-shadow: 3px -4px 0px #cecece;
   }
 
   9% {
@@ -657,7 +657,7 @@ font-family: 'Bebas Neue', cursive;
   }
 
   57% {
-    text-shadow: 7px 7px 0px purple;
+    text-shadow: 7px 7px 0px #cecece;
     transform: translate(4px, -10px) skew(-70deg);
   }
 
@@ -667,7 +667,7 @@ font-family: 'Bebas Neue', cursive;
   }
 
   62% {
-    text-shadow: 3px -4px 0px yellow;
+    text-shadow: 3px -4px 0px #cecece;
     transform: translate(0px, 20px) skew(0deg);
   }
 
