@@ -75,9 +75,14 @@ class Drop{
 
 
 var drops=[];
+let osc, playing, freq, amp;
+let osc1, playing1, freq1, amp1;
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    let cnv = createCanvas(windowWidth, windowHeight);
+    cnv.mousePressed(playOscillator);
+ osc = new p5.Oscillator('triangle');
+ osc1 = new p5.Oscillator('sine');
     for(var i=0;i<480;i++)
     {
         drops[i] = new Drop();
@@ -93,6 +98,24 @@ function draw()
         drops[i].fall();
         drops[i].show();
     }
+
+    freq = constrain(map(mouseX, 0, width, 100, 500), 100, 500);
+  amp = constrain(map(mouseY, height, 0, 0, 0.2), 0.01, 0.05);
+  freq1 = constrain(map(mouseX, 0, width, 100, 500), 100, 500);
+amp1 = constrain(map(mouseY, height, 0, 0, 0.2), 0, 0.2);
+
+  // text('tap to play', 20, 20);
+  // text('freq: ' + freq, 20, 40);
+  // text('amp: ' + amp, 20, 60);
+
+  if (playing) {
+    // smooth the transitions by 0.1 seconds
+    osc.freq(freq, 0.1);
+    osc.amp(amp, 0.1);
+    osc1.freq(freq, 0.1);
+    osc1.amp(amp, 0.1);
+  }
+
     if (keyIsPressed === true) {
     // nested if statement checks to see what key is pressed
     // if (key === 'a') {
@@ -124,4 +147,22 @@ function draw()
 
   // draw rectangle
   ellipse(mouseX, mouseY, 35, 35);
+}
+
+function playOscillator() {
+  // starting an oscillator on a user gesture will enable audio
+  // in browsers that have a strict autoplay policy.
+  // See also: userStartAudio();
+  osc.start();
+  playing = true;
+  osc1.start();
+  playing1 = true;
+}
+
+function mouseReleased() {
+  // ramp amplitude to 0 over 0.5 seconds
+  osc.amp(0, 0.3);
+  playing = false;
+  osc1.amp(0, 0.3);
+  playing1 = false;
 }

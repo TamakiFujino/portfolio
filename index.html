@@ -44,6 +44,10 @@ setTimeout(function(){
   loader.fadeOut();
 },3000);
 });
+
+$('body').bind('copy paste',function(e) {
+    e.preventDefault(); return false;
+});
   </script>
 
   <!-- <div class="preloader">
@@ -74,6 +78,8 @@ setTimeout(function(){
 </script> -->
 
 
+
+<div class="noSelect">
 
 
   <div class="pc">
@@ -107,7 +113,7 @@ setTimeout(function(){
 
     <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
 
-
+</div>
   <div class="sp">
     <div class="topnav3">
       <a class="active"href="index.html">HOME</a>
