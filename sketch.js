@@ -81,8 +81,8 @@ let osc1, playing1, freq1, amp1;
 function setup() {
     let cnv = createCanvas(windowWidth, windowHeight);
     cnv.mousePressed(playOscillator);
- osc = new p5.Oscillator('triangle');
- osc1 = new p5.Oscillator('sine');
+ osc = new p5.Oscillator('sine');
+ osc1 = new p5.Oscillator('triangle');
     for(var i=0;i<480;i++)
     {
         drops[i] = new Drop();
@@ -112,8 +112,8 @@ amp1 = constrain(map(mouseY, height, 0, 0, 0.2), 0, 0.2);
     // smooth the transitions by 0.1 seconds
     osc.freq(freq, 0.1);
     osc.amp(amp, 0.1);
-    osc1.freq(freq, 0.1);
-    osc1.amp(amp, 0.1);
+    osc1.freq(freq1, 0.1);
+    osc1.amp(amp1, 0.1);
   }
 
     if (keyIsPressed === true) {
