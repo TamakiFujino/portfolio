@@ -47,7 +47,7 @@
 //  }
 // }
 
-class Drop{
+class Drop {
 
     constructor(){
         this.x = random(mouseX,width);
