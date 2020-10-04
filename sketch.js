@@ -99,9 +99,9 @@ function draw()
         drops[i].show();
     }
 
-    freq = constrain(map(mouseX, 0, width, 100, 500), 100, 500);
-  amp = constrain(map(mouseY, height, 0, 0, 0.2), 0.01, 0.05);
-  freq1 = constrain(map(mouseX, 0, width, 100, 500), 100, 500);
+    freq = constrain(map(mouseX, 0, width, 100, 800), 100, 800);
+  amp = constrain(map(mouseY, height, 0, 0, 0.2), 0.4, 0.05);
+  freq1 = constrain(map(mouseX, 0, width, 30, 500), 100, 500);
 amp1 = constrain(map(mouseY, height, 0, 0, 0.2), 0, 0.2);
 
   // text('tap to play', 20, 20);
@@ -161,8 +161,8 @@ function playOscillator() {
 
 function mouseReleased() {
   // ramp amplitude to 0 over 0.5 seconds
-  osc.amp(0, 0.3);
+  osc.amp(0, 0.5);
   playing = false;
-  osc1.amp(0, 0.3);
+  osc1.amp(0, 0.5);
   playing1 = false;
 }
