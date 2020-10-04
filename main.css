@@ -63,6 +63,10 @@ body {
   background: #cecece;
 }
 
+b {
+  font-family: Hiragino Kaku Gothic Std;
+}
+
 /*
 .preloader {
     display:block;
