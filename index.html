@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tamaki Fujino</title>
+    <link rel="icon" href="images/favicon.png" sizes="16x16">
+    <meta name="description" content="description in 50–300 characters (letters).">
+  <meta name="keywords" content="artist, tamaki fujino, tama, digital media art, tamaki, 藤野珠輝, たま, アート, デジタルメディアアート, new media art">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
+  <script type="text/javascript" src="sketch.js"></script>
+  <script type="text/javascript" src="drop.js"></script>
+  <script src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, noarchive">
+  <meta name="format-detection" content="telephone=no">
+  <link href="stylesheet.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+
+
+
+  <div class="loader-wrap">
+  	<div class="loader"></div>
+  </div>
+
+  <script type="text/javascript">
+  $(function(){
+var loader = $('.loader-wrap');
+
+//ページの読み込みが完了したらアニメーションを非表示
+$(window).on('load',function(){
+  loader.fadeOut();
+});
+
+//ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+setTimeout(function(){
+  loader.fadeOut();
+},3000);
+});
+
+$('body').bind('copy paste',function(e) {
+    e.preventDefault(); return false;
+});
+
+
+  </script>
+
+  <!-- <div class="preloader">
+    <span class="line line-1"></span>
+    <span class="line line-2"></span>
+    <span class="line line-3"></span>
+    <span class="line line-4"></span>
+    <span class="line line-5"></span>
+    <span class="line line-6"></span>
+    <span class="line line-7"></span>
+    <span class="line line-8"></span>
+    <span class="line line-9"></span>
+    <div></div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(window).load(function() {
+            function Preloader() {
+                var preloader = $ ('.loader');
+                preloader.delay(1000) .fadeOut (500);
+                var preloader = $('.preloader');
+                preloader.delay (1500) .slideUp(500);
+            }
+            Preloader();
+        });
+    });
+</script> -->
+
+
+
+<div class="noSelect">
+
+
+  <div class="pc">
+      <img class="ring" src="images/ring2.png" width=500 alt="">
+    <!-- <div class="scanlines"></div> -->
+
+    <div class="glitch-wrapper">
+      <div class="glitch-text">
+          <b style="font-size:25px;">五月蝿く生きる。</b>
+      </div>
+    </div>
+    <p class="play">CLICK AND DRAG ANYWHERE</p>
+
+
+    <div class="topnav">
+      <a class="active"href="index.html">HOME</a>
+      <a href="bio.html">ABOUT</a>
+      <a href="project.html">CV</a>
+      <a href="work.html">GALLERY</a>
+    </div>
+
+    <div class="topnav2">
+      <a href="mailto:tamaki.fujino@sjsu.edu"> <img src="images/mail.png" width="20px" alt="">
+      </a>
+      <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
+     </a>
+      <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="20px" alt="">
+      </a>
+      <a href="https://www.instagram.com/instama_mm/"><img src="images/insta.png" width="20px" alt="">
+      </a>
+    </div>
+  </div>
+
+    <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
+
+
+
+
+  <div class="sp">
+
+      <!-- <img class="ring" src="images/ring2.png" width=400 alt=""> -->
+
+    <div class="topnav3">
+      <a class="active"href="index.html">HOME</a>
+      <a href="bio.html">ABOUT</a>
+      <a href="project.html">CV</a>
+      <a href="work.html">GALLERY</a>
+    </div>
+
+    <div class="glitch-wrapper">
+      <div class="glitch-text">
+          <b style="font-size:25px;">五月蝿く生きる。</b>
+      </div>
+    </div>
+
+      <div class="topnav4">
+        <a href="mailto:tamaki.fujino@sjsu.edu"> <img src="images/mail.png" width="18px" alt="">
+        </a>
+        <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="18px" alt="">
+       </a>
+        <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="18px" alt="">
+        </a>
+        <a href="https://www.instagram.com/instama_mm/"><img src="images/insta.png" width="18px" alt="">
+        </a>
+      </div>
+
+      <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
+
+
+  </div>
+  </div>
+
+</body>
+
+</html>

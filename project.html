@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tamaki Fujino</title>
+    <link rel="icon" href="images/favicon.png" sizes="16x16">
+    <meta name="description" content="description in 50–300 characters (letters).">
+  <meta name="keywords" content="artist, tamaki fujino, tama, digital media art, tamaki, 藤野珠輝, たま, アート, デジタルメディアアート, new media art">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
+  <!-- <script type="text/javascript" src="sketch.js"></script>
+  <script type="text/javascript" src="drop.js"></script> -->
+  <script src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, noarchive">
+  <meta name="format-detection" content="telephone=no">
+  <title>Transfonter demo</title>
+  <link href="stylesheet.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <div class="loader-wrap">
+    <div class="loader"></div>
+  </div>
+
+  <script type="text/javascript">
+  $(function(){
+var loader = $('.loader-wrap');
+
+//ページの読み込みが完了したらアニメーションを非表示
+$(window).on('load',function(){
+  loader.fadeOut();
+});
+
+//ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+setTimeout(function(){
+  loader.fadeOut();
+},3000);
+});
+  </script>
+  <div class="pc">
+    <div class="topnav">
+      <a class="active" href="index.html">HOME</a>
+      <a href="bio.html">ABOUT</a>
+      <a href="project.html">CV</a>
+      <a href="work.html">GALLERY</a>
+    </div>
+
+    <div class="topnav2">
+      <a href="mailto:tamaki.fujino@sjsu.edu"> <img src="images/mail.png" width="20px" alt="">
+      </a>
+      <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
+      </a>
+      <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="20px" alt="">
+      </a>
+      <a href="https://www.instagram.com/instama_mm/"><img src="images/insta.png" width="20px" alt="">
+      </a>
+    </div>
+
+
+  <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
+
+</div>
+
+  <style>
+    .tablink {
+      background-color: transparent;
+      color: white;
+      float: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 50px;
+      margin-top: 50px;
+
+    }
+
+    .tablink:hover {
+      background-color: transparent;
+    }
+
+    .tablink a {
+      background-color: transparent;
+    }
+
+    .tablink:hover {
+      text-shadow: 0px 3px 10px white;
+      transition: 0.5s;
+      color: transparent;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      background-color: none;
+      display: none;
+      padding: 0px;
+      text-align: center;
+      line-height: 1.5;
+      width: 80%;
+      height: 75%;
+      overflow: scroll;
+    }
+
+    #EN {
+      background-color: transparent;
+    }
+
+    #JP {
+      background-color: transparent;
+    }
+  </style>
+
+  <button class="tablink" onclick="openCity('EN')" id="defaultOpen">EN</button>
+  <button class="tablink" onclick="openCity('JP')">JP</button>
+
+  <div id="EN" class="tabcontent">
+    <!-- <div class="content"> -->
+    <h2>Contact</h2>
+<p><b>Tamaki Fujino</b> <br>
+  Email: tamaki.fujino@sjsu.edu <br>
+Web: tamakifujino.com </p>
+
+    <h2>Education</h2>
+    <p>2021 BFA, Digital Media Art, San Jose State University (expected)</p>
+    <h2>Projects</h2>
+    <p>2020 Artist, Hidden Histories of San Jose Japantown <br>
+    https://www.hiddenhistoriesjtown.org/ <br><br>
+    2020 Staff Member, Meatspace Magazine
+  </p>
+
+  <h2>Skills</h2>
+  <p>Photoshop / Premiere / Illustrator / AfterEffect <br>
+  MAYA / MAX MSP / Ardurino <br>
+HTML / CSS / p5 </p>
+
+<!-- <h2>Exhibition</h2>
+<h3>Group Exhibition</h3>
+2019 Documentary About Housing & My Life, My, Place, For You, Gallery 5, San Jose State University, San Jose, CA -->
+    <!-- <h2>Work Experience</h2>
+<p></p> -->
+
+    <!-- </div> -->
+  </div>
+
+  <div id="JP" class="tabcontent">
+    <h3>藤野珠輝  |  tamaki.fujino@sjsu.edu</h3>
+    <h2>学歴</h2>
+    <!-- <p>平成26年4月　堺市立月州中学校 入学</p>
+    <p>平成26年3月　堺市立月州中学校 卒業</p> -->
+    <p>2014年4月 大阪府立三国丘高校普通科 入学</p>
+    <p>2017年3月 大阪府立三国丘高校普通科 卒業</p>
+    <p>2017年8月　カリフォルニア州立大学　芸術学部 入学</p>
+    <p>2020年5月 カリフォルニア州立大学　芸術学部 デジタルメディアアート学科　卒業見込み</p>
+
+    <h2>経験</h2>
+    <p>2020年3月〜 ARアーティストのTamiko Thielさんとのコラボレーションプロジェクト, <br>
+      Hidden Histories of San Jose Japantown<br>
+    https://www.hiddenhistoriesjtown.org/ </p>
+  <p>2020年9月〜 大学生によるアートマガジンの秋期スタッフ、<br>
+    Meatspace Magazine</p>
+  <p>2020年6月〜 レストラン宣伝用のSNSとメルマガ用の画像編集、<br>
+    Curry Life Santa Clara <br>
+    https://www.instagram.com/currylife_sc/</p>
+
+    <!-- <h2>展示</h2> -->
+
+    <h2>使用可能ツール</h2>
+    <p>Adobe Photoshop / Premiere / AfterEffect <br>
+    Maya / MAX MSP / Ardurino <br>
+  HTML / CSS / p5 </p>
+
+
+
+
+  </div>
+
+
+
+
+  <script>
+    function openCity(cityName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(cityName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
+
+  <div class="sp">
+    <div class="topnav3" style="position:absolute; top:1%;">
+      <a class="active" href="index.html">HOME</a>
+      <a href="bio.html">ABOUT</a>
+      <a href="project.html">CV</a>
+      <a href="work.html">GALLERY</a>
+    </div>
+
+
+    <div class="topnav4">
+      <a href="mailto:tamaki.fujino@sjsu.edu"> <img src="images/mail.png" width="18px" alt="">
+      </a>
+      <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="18px" alt="">
+      </a>
+      <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="18px" alt="">
+      </a>
+      <a href="https://www.instagram.com/instama_mm/"><img src="images/insta.png" width="18px" alt="">
+      </a>
+    </div>
+<p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
+  </div>
+
+
+</body>
+
+</html>

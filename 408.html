@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>408</title>
+  <meta name="description" content="description in 50–300 characters (letters).">
+<meta name="keywords" content="artist, tamaki fujino, tama, digital media art, tamaki, 藤野珠輝, たま, アート, デジタルメディアアート, new media art">
+    <link rel="icon" href="images/favicon.png" sizes="16x16">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
+  <script type="text/javascript" src="sketch.js"></script>
+  <script type="text/javascript" src="drop.js"></script>
+  <script src="script.js"></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="loader-wrap">
+  	<div class="loader"></div>
+  </div>
+
+  <script type="text/javascript">
+  $(function(){
+var loader = $('.loader-wrap');
+
+//ページの読み込みが完了したらアニメーションを非表示
+$(window).on('load',function(){
+  loader.fadeOut();
+});
+
+//ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+setTimeout(function(){
+  loader.fadeOut();
+},3000);
+});
+  </script>
+
+
+
+
+  <div class="pc">
+    <style media="screen">
+      body {
+        background-color:  #cecece;
+      }
+    </style>
+
+          <div class="topnav">
+            <a class="active"href="index.html">HOME</a>
+            <a href="bio.html">ABOUT</a>
+            <a href="project.html">CV</a>
+            <a href="work.html">GALLERY</a>
+          </div>
+
+          <div class="topnav2">
+            <a href="mailto:tamaki.fujino@sjsu.edu"> <img src="images/mail.png" width="20px" alt="">
+            </a>
+            <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
+           </a>
+            <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="20px" alt="">
+            </a>
+            <a href="https://www.instagram.com/instama_mm/"><img src="images/insta.png" width="20px" alt="">
+            </a>
+          </div>
+
+
+          <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
+
+
+
+    <div class="title">
+      <h2 style="font-size:35px; color:white;">408 (2019)</h2>
+      <h3 style="font-size:18px; color:white;">Plexiglass, wood, inkjet print</h3>
+      <h4 style="font-size:11px; color:white;">
+        Gun control / Mass Shooting / Allium / Memorial</h4>
+    </div>
+
+
+    <div class="container2">
+      <div class="row">
+        <div class="col-sm-6">
+          <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="images/408_2.jpg">
+              </div>
+              <div class="item">
+                <img src="images/408/40800001.jpg">
+              </div>
+              <div class="item">
+                <img src="images/408/40800002.jpg">
+              </div>
+              <div class="item">
+                <img src="images/408/40800003.jpg">
+              </div>
+              <div class="item">
+                <img src="images/408/40800004.jpg">
+              </div>
+            </div>
+          </div>
+          <div class="clearfix">
+            <div id="thumbcarousel" class="carousel slide" data-interval="false">
+              <div class="carousel-inner">
+                <div class="item active">
+                  <div data-target="#carousel" data-slide-to="0" class="thumb"><img src="images/408_2.jpg"></div>
+                  <div data-target="#carousel" data-slide-to="1" class="thumb"><img src="images/408/40800001.jpg"></div>
+                  <div data-target="#carousel" data-slide-to="2" class="thumb"><img src="images/408/40800002.jpg"></div>
+                  <div data-target="#carousel" data-slide-to="3" class="thumb"><img src="images/408/40800003.jpg"></div>
+                </div><!-- /item -->
+                <div class="item">
+                  <div data-target="#carousel" data-slide-to="4" class="thumb"><img src="images/408/40800004.jpg"></div>
+                  <!-- <div data-target="#carousel" data-slide-to="5" class="thumb"><img src="http://placehold.it/100/00ffcc/000&amp;text=Product+Image+6"></div>
+                    <div data-target="#carousel" data-slide-to="6" class="thumb"><img src="http://placehold.it/100/db371b/fff&amp;text=Product+Image+7"></div>
+                    <div data-target="#carousel" data-slide-to="7" class="thumb"><img src="http://placehold.it/100/feb8aa/000&amp;text=Product+Image+8"></div> -->
+                </div><!-- /item -->
+              </div><!-- /carousel-inner -->
+              <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div> <!-- /thumbcarousel -->
+          </div><!-- /clearfix -->
+        </div> <!-- /col-sm-6 -->
+        <div class="col-sm-6b" style="padding-top:20px;">
+
+          <p style="font-size: 15px;  width:95%;">
+            This is a memorial piece for the people who have passed away because of mass shootings in the US. The title “408” means the number of deaths so far in 2019 (January to November 14th). The number of purple bullets corresponds to the
+            number “408.”　
+
+            When I decided to go to the US, the biggest concern my friends and family had was guns. I came to the United States in July in 2017, and after a few months, there was a big mass shooting in Las Vegas with a numerous number of
+            victims. It has been two years since that, but more and more people have become the victim of mass shooting. I wonder why it is so difficult to ban guns.
+
+            The sphere created with 9 sheet collages of purple bullets is designed to create “allium”, which has another name “onion flower.” I picked up allium as the main subject of this piece because its flower language in Japanese is deep
+            sorrow while in English means prosperity. I created the piece about the issue of gun control with a perspective from here and Japan.
+
+            There is the description in Bill of Rights:
+
+            “A well-regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.”
+
+            This is the basic law that does not allow gun control. I wonder the government, society, or companies consider guns as the symbols of America’s or their prosperity,
+            not the harmful weapon that takes away a lot of people’s life at a moment.</p>
+<hr>
+            <p style="color:white;  width:95%;">
+            この作品はアメリカで起こった銃による無差別殺人の被害者の方々を追悼するための作品です。タイトルの「408」は2019年(1月から11月14日)の銃による無差別殺人で命を落とされた方の数です。<br>
+            私がアメリカに来るのを決意したとき私の周りの人が抱えていたアメリカで生活をすることへの不安要因の一番大きなものはアメリカが銃社会であることでした。私がアメリカにきてから数ヶ月後ラスベガスで大規模な銃による無差別殺人がありました。<br>
+            それから2年以上経過しますが一向に銃が規制される様子はなく、それどころか犠牲者は増えるばかりです。なぜそんなに銃を規制するのが難しいのかと考える様になりました。<br>
+            アメリカの権利章典には「規律ある民兵は、自由な国家の安全にとって必要であるから、人民が武器を保有し、また携帯する権利は、これを侵してはならない。」という記述があり、これは個人が武器を所有するのを保護する権利であり、これこそがアメリカで銃規制が行われない理由です。<br>
+
+            紫色の弾丸を使い９つの透明なシートのコラージュを作り、それを組み合わせ立体的な球に見せることでアリウムと呼ばれる花を制作しました。アリウムは別名玉ねぎの花とも呼ばれます。私がこの花をこの作品の題材にした理由は、日本語での花言葉が『深い悲しみ』であるのに対し、
+            英語での花言葉が『繁栄』であるからです。この花を使うことで日本人である私の銃に対する考え方とアメリカの銃に対する考え方を対比させようと考えました。<br>
+            アメリカでは銃が一瞬で無実の人の命を奪う武器というよりは、アメリカの繁栄のシンボルとして政府や社会、会社で捉えられているのではないかという考えを表しました。
+            </p>
+
+        </div> <!-- /col-sm-6 -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </div>
+</div>
+
+  <div class="sp">
+    <div class="sp">
+      <div class="topnav3">
+        <a class="active"href="index.html">HOME</a>
+        <a href="bio.html">ABOUT</a>
+        <a href="project.html">CV</a>
+        <a href="work.html">GALLERY</a>
+      </div>
+
+    <div class="sp_work" style="width:100%; height:100vh; overflow: scroll;">
+      <img src="images/408_2.jpg" style="width:90%">
+      <h2 style="text-align: center; color:white;">408 (2019)</h2>
+      <h5 style="color:white;">Plexiglass, wood, inkjet print</h5>
+      <hr><br>
+      <h5 style="color:white;">Gun control / Mass Shooting / Allium / Memorial</h5>
+      <hr><br>
+      <p style="font-size:15px; width:80%; margin: auto;">This is a memorial piece for the people who have passed away because of mass shootings in the US. The title “408” means the number of deaths so far in 2019 (January to November 14th). The
+        number of purple bullets corresponds to the number “408.”　
+
+        When Tamaki decided to go to the US, the biggest concern her friends and family had was guns. She came to the United States in July in 2017, and after a few months, there was a big mass shooting in Las Vegas with a numerous number of
+        victims. It has been two years since that, but more and more people have become the victim of mass shooting. I wonder why it is so difficult to ban guns.
+
+        The sphere created with 9 sheet collages of purple bullets is designed to create “allium”, which has another name “onion flower.” She picked up allium as the main subject of this piece because its flower language in Japanese is deep sorrow
+        while in English means prosperity. She created the piece about the issue of gun control with a perspective from here and Japan.
+
+        There is the description in Bill of Rights:
+
+        “A well-regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.”
+
+        This is the basic law that does not allow gun control. I wonder the government, society, or companies consider guns as the symbols of America’s or their prosperity,
+        not the harmful weapon that takes away a lot of people’s life at a moment.</p>
+<hr>
+        <p style="color:white; width:80%; margin: auto;">
+        この作品はアメリカで起こった銃による無差別殺人の被害者の方々を追悼するための作品です。タイトルの「408」は2019年(1月から11月14日)の銃による無差別殺人で命を落とされた方の数です。<br>
+        私がアメリカに来るのを決意したとき私の周りの人が抱えていたアメリカで生活をすることへの不安要因の一番大きなものはアメリカが銃社会であることでした。私がアメリカにきてから数ヶ月後ラスベガスで大規模な銃による無差別殺人がありました。<br>
+        それから2年以上経過しますが一向に銃が規制される様子はなく、それどころか犠牲者は増えるばかりです。なぜそんなに銃を規制するのが難しいのかと考える様になりました。<br>
+        アメリカの権利章典には「規律ある民兵は、自由な国家の安全にとって必要であるから、人民が武器を保有し、また携帯する権利は、これを侵してはならない。」という記述があり、これは個人が武器を所有するのを保護する権利であり、これこそがアメリカで銃規制が行われない理由です。<br>
+
+        紫色の弾丸を使い９つの透明なシートのコラージュを作り、それを組み合わせ立体的な球に見せることでアリウムと呼ばれる花を制作しました。アリウムは別名玉ねぎの花とも呼ばれます。私がこの花をこの作品の題材にした理由は、日本語での花言葉が『深い悲しみ』であるのに対し、
+        英語での花言葉が『繁栄』であるからです。この花を使うことで日本人である私の銃に対する考え方とアメリカの銃に対する考え方を対比させようと考えました。<br>
+        アメリカでは銃が一瞬で無実の人の命を奪う武器というよりは、アメリカの繁栄のシンボルとして政府や社会、会社で捉えられているのではないかという考えを表しました。
+        </p>
+
+        <img src="images/408/40800001.jpg" style="width:100%; padding:5%;">
+            <img src="images/408/40800002.jpg" style="width:100%; padding:5%;">
+                <img src="images/408/40800003.jpg" style="width:100%; padding:5%;">
+                    <img src="images/408/40800004.jpg" style="width:100%; padding:5%;">
+    </div>
+
+
+
+    <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
+
+
+  </div>
+
+
+</body>
+
+</html>

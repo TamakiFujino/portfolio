@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Poop Ribbon</title>
+    <link rel="icon" href="images/favicon.png" sizes="16x16">
+    <meta name="description" content="description in 50–300 characters (letters).">
+  <meta name="keywords" content="artist, tamaki fujino, tama, digital media art, tamaki, 藤野珠輝, たま, アート, デジタルメディアアート, new media art">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
+  <script type="text/javascript" src="sketch.js"></script>
+  <script type="text/javascript" src="drop.js"></script> -->
+  <script src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="loader-wrap">
+    <div class="loader"></div>
+  </div>
+
+  <script type="text/javascript">
+  $(function(){
+var loader = $('.loader-wrap');
+
+//ページの読み込みが完了したらアニメーションを非表示
+$(window).on('load',function(){
+  loader.fadeOut();
+});
+
+//ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+setTimeout(function(){
+  loader.fadeOut();
+},3000);
+});
+  </script>
+
+
+<div class="pc">
+  <style media="screen">
+    body {
+      background-color:  #cecece;
+    }
+  </style>
+
+
+      <div class="topnav">
+        <a class="active"href="index.html">HOME</a>
+        <a href="bio.html">ABOUT</a>
+        <a href="project.html">CV</a>
+        <a href="work.html">GALLERY</a>
+      </div>
+
+      <div class="topnav2">
+        <a href="mailto:tamaki.fujino@sjsu.edu"> <img src="images/mail.png" width="20px" alt="">
+        </a>
+        <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
+       </a>
+        <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="20px" alt="">
+        </a>
+        <a href="https://www.instagram.com/instama_mm/"><img src="images/insta.png" width="20px" alt="">
+        </a>
+      </div>
+
+      <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
+
+  <div class="title">
+    <h2 style="font-size:35px; color:white;">Poop Ribbon (2019)</h2>
+    <h3 style="font-size:18px; color:white;">Installation on the wall of stairhall with ribbons</h3>
+    <h4 style="font-size:11px; color:white;">
+    Slacktivism / Awareness Ribbon</h4>
+  </div>
+
+  <div class="container2">
+<div class="row">
+<div class="col-sm-6">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/poop.jpg">
+            </div>
+            <div class="item">
+                <img src="images/poop/poop00002.jpg">
+            </div>
+            <div class="item">
+                <img src="images/poop/poop00003.jpg">
+            </div>
+            <div class="item">
+                <img src="images/poop/poop00004.jpg">
+            </div>
+            <div class="item">
+                <img src="images/poop/poop00005.jpg">
+            </div>
+            <div class="item">
+                <img src="images/poop/poop00006.jpg">
+            </div>
+            <div class="item">
+                <img src="images/poop/poop00007.jpg">
+            </div>
+        </div>
+    </div>
+<div class="clearfix">
+    <div id="thumbcarousel" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div data-target="#carousel" data-slide-to="0" class="thumb"><img src="images/poop.jpg"></div>
+                <div data-target="#carousel" data-slide-to="1" class="thumb"><img src="images/poop/poop00002.jpg"></div>
+                <div data-target="#carousel" data-slide-to="2" class="thumb"><img src="images/poop/poop00003.jpg"></div>
+                <div data-target="#carousel" data-slide-to="3" class="thumb"><img src="images/poop/poop00004.jpg"></div>
+            </div><!-- /item -->
+            <div class="item">
+                <div data-target="#carousel" data-slide-to="4" class="thumb"><img src="images/poop/poop00005.jpg"></div>
+                 <div data-target="#carousel" data-slide-to="5" class="thumb"><img src="images/poop/poop00006.jpg"></div>
+                <div data-target="#carousel" data-slide-to="6" class="thumb"><img src="images/poop/poop00007.jpg"></div>
+                <!-- <div data-target="#carousel" data-slide-to="7" class="thumb"><img src="http://placehold.it/100/feb8aa/000&amp;text=Product+Image+8"></div>  -->
+            </div><!-- /item -->
+        </div><!-- /carousel-inner -->
+        <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div> <!-- /thumbcarousel -->
+</div><!-- /clearfix -->
+</div> <!-- /col-sm-6 -->
+<div class="col-sm-6b">
+
+    <p style="font-size: 15px;  width:95%;">
+      This project starts with the critisizm towards awareness ribbon made by a comedian, George Denis Patrick Carlin. He critisized awarenessas as one of the form of "slacktivism." The term was created by combining slacker and activism. It is a term to explain superfacial activities that do not require money, time, and effort. Carlin even stated that the people who just put awareness ribbons should have brown-colored ribbon, indicating the color of poop, instead.
+
+  As an artist, we often deal with social issue as the subject of work. Without a deep understanding of the issue, we would just use the issue just as the subject; it is almost a fascinating prey to artists. This piece was installed in the Art Building of San Jose State Univeristy. I would like to see the future artists to be away from slacktivism because art has such a big power to change the world.
+  <br><br>
+
+  <b>Instruction</b><br>
+  (1) Pick one poop ribbon(or more if you want!) See the list of awareness ribbon.<br><br>
+
+  (2) Remove the paperbase inside and straighten your ribbon. Please put your paper base into plastic bag below.<br><br>
+
+  (3) Research about your ribbon color and write down what you did not know, you want to remember, or you want to tell to other people.<br><br>
+
+  (4) Hang your ribbon! You can put your name if you want to. You can hang your own ribbon.<br><br>
+
+  <b>List of Ribbon Awareness</b><br>
+  Pink: Breast Cancer <br><br>
+  Blue: Freedom Speech, Press, and Association Online / Parkinson Disease<br><br>
+  Red: HIV and AIDS / Substance abuse<br><br>
+  Purple: Domestic Violence / Homophobia<br><br>
+  Orange: Multiple Sclerosis / Leukemia<br><br>
+  White: Ending Male Violence against Women and Girls<br><br>
+  Yellow: Suicide / Millitaly Force / Endometriosis<br><br>
+  Green: Cerebral Palsy / Mental Health / Kidney Disease<br><br>
+
+  <b>Examples</b><br>
+  Yellow Ribon - Suicide awareness <br>
+  (1) Basic Information "Suicide is the most common over age of 70" <br><br>
+  (2) Numbers "828,000 (1.5% worldwide in 2015)"<br><br>
+  (3) Your Experience "I sometime feel like I do not wanna feel anything"<br><br>
+  (4) Your Opinion "Suicide of an entire family is the saddest thing in aging societies"<br><br>
+  (5) Artpiece Related to The Topic "The Suicide By Edward Manet"<br><br>
+  (6) Finding After Research "US is the only country that gun-related sucide is over non-gun-related"<br><br>
+  (7) Incident/Related Issue "Jonestown (mass suicide in 1978) - 909 death"<br><br>
+  (8) Useful Link/Resource "Call:1-800-273-8255"<br><br>
+</p>
+<hr>
+<p style="font-size: 15px;  width:95%;">
+  このプロジェクト、「ウンチのリボン」はコメディアンであるジョージ・カーリンがアウェアネスリボンに対して行った批判のアイデアをもとにしたものです。彼はアウェアネスリボンを「スラックティビズム」だと批判しました。スラックティビズムとは怠け者などを示すSlackerとアクティビズムから生まれた造語です。<br>
+  アーティストは社会問題を自分の作品のテーマとして取り上げることが多いです。その問題に対する深い理解を持たずに、ただただアート作品の題材として、魅力的な餌食として映ってしまうこともあります。<br>
+  この作品はアーティストの卵たちが毎日通う、サンノゼ州立大学のアートの建物中に展示され、アーティストとして将来スラックティビズムの様な見た目だけの簡単な活動をして欲しく無いという思いを込めて作られました。<br>
+<br>
+＜参加の方法＞<br>
+1.壁に飾られたウンチの形をしたリボンを一つ選び、その色がアウェアネスリボンとしてどの様な啓発活動に関連しているのか調べます。<br>
+2.リボンの中にある紙の土台を外し、リボンをまっすぐにします。紙の土台は下に貼り付けられたプラスチックの袋に入れてください。<br>
+3.選んだリボンについて調べてその中から自分が知らなかったこと、覚えておきたいこと、人に伝えたいことをリボンに書き残します。<br>
+4. リボンを階段を登る人たちに見える様に階段にくくり付けます。名前は書いても書かなくてもどちらでも構いません。もし自分の伝えたい活動を示すリボンの色がなければ、自分のリボンを使っていただいても構いません。<br>
+
+<br><br>
+＜アウェアネスリボンの例のリスト＞<br>
+桃:乳がん<br>
+青:言論、出版、オンライン集会の自由/パーキンソン病<br>
+赤:HIVとエイズ/薬物乱用<br>
+紫:家庭内暴力/同性愛嫌悪<br>
+橙:多発性硬化症/白血病<br>
+白:女性に対する男性の暴力の断絶<br>
+黄:自殺/軍事力/子宮内膜症<br>
+緑:脳性麻痺/メンタルヘルス/腎臓病<br>
+
+<br><br>
+＜自殺防止に対する黄色いリボンへの記入例＞<br>
+1.基本的な情報:自殺は70歳以上の世代で最も多い<br>
+2.数字:828,000(1.5% worldwide in 2015)<br>
+3.自分の経験:時々どんな感情も感じたく無いと思う時がある<br>
+4.自分の意見:一家心中は高齢化社会の中で最も悲しいことである<br>
+5.自殺に関連したアート作品: The Suicide by Edward Manet<br>
+6.調べた後初めて知ったこと:アメリカは世界中で唯一銃関連の自殺が銃に関連していない自殺件数を上回っている<br>
+7.自殺に関連した事件や問題:1978年に起こったJonetownと呼ばれる集団自殺の事件では909人が亡くなった<br>
+8.自殺防止に有益なリンク:自殺防止ホットライン(アメリカ)1-800-273-8255<br>
+
+
+</P>
+
+</div> <!-- /col-sm-6 -->
+</div> <!-- /row -->
+</div> <!-- /container -->
+
+  </div>
+
+</div>
+
+<div class="sp">
+  <div class="topnav3">
+    <a class="active"href="index.html">HOME</a>
+    <a href="bio.html">ABOUT</a>
+    <a href="project.html">CV</a>
+    <a href="work.html">GALLERY</a>
+  </div>
+
+  <div class="sp_work" style="width:100%; height:100vh; overflow: scroll;">
+<img src="images/poop.jpg" style="width:90%">
+  <h2 style="text-align: center; color:white;">Poop Ribbon (2019)</h2>
+  <h5 style="color:white;">Installation on the wall of stairhall with ribbons</h5>
+  <hr><br>
+  <h5 style="color:white;"> Depression/ Anxiety / Flow / Hourglass</h5><hr><br>
+  <p style="font-size:15px; color:white; width:80%; margin: auto;">
+    This project starts with the critisizm towards awareness ribbon made by a comedian, George Denis Patrick Carlin. He critisized awarenessas as one of the form of "slacktivism." The term was created by combining slacker and activism. It is a term to explain superfacial activities that do not require money, time, and effort. Carlin even stated that the people who just put awareness ribbons should have brown-colored ribbon, indicating the color of poop, instead.
+
+  As an artist, we often deal with social issue as the subject of work. Without a deep understanding of the issue, we would just use the issue just as the subject; it is almost a fascinating prey to artists. I have seen some of artwork taking a social issue got a lot of criticizm even though the artist is working on the issue with a strong passion. This piece was installed in the Art Building of San Jose State Univeristy. I would like to see the future artists to be away from slacktivism because art has such a big power to change the world.
+  <br><br>
+<hr>
+<p style="font-size:15px; color:white; width:80%; margin: auto;">
+  <b>Instruction</b><br><br>
+
+  (1) Pick one poop ribbon(or more if you want!) See the list of awareness ribbon.<br>
+
+  (2) Remove the paperbase inside and straighten your ribbon. Please put your paper base into plastic bag below.<br>
+
+  (3) Research about your ribbon color and write down what you did not know, you want to remember, or you want to tell to other people.<br>
+
+  (4) Hang your ribbon! You can put your name if you want to. You can hang your own ribbon.<br><br>
+<hr>
+<p style="font-size:15px; color:white; width:80%; margin: auto;">
+  <b>List of Ribbon Awareness</b><br><br>
+  Pink: Breast Cancer <br><br>
+  Blue: Freedom Speech, Press, and Association Online / Parkinson Disease<br>
+  Red: HIV and AIDS / Substance abuse<br>
+  Purple: Domestic Violence / Homophobia<br>
+  Orange: Multiple Sclerosis / Leukemia<br>
+  White: Ending Male Violence against Women and Girls<br>
+  Yellow: Suicide / Millitaly Force / Endometriosis<br>
+  Green: Cerebral Palsy / Mental Health / Kidney Disease<br><br>
+<hr>
+<p style="font-size:15px; color:white; width:80%; margin: auto;">
+  <b>Examples</b><br><br>
+  Yellow Ribon - Suicide awareness <br>
+  (1) Basic Information "Suicide is the most common over age of 70" <br><br>
+  (2) Numbers "828,000 (1.5% worldwide in 2015)"<br><br>
+  (3) Your Experience "I sometime feel like I do not wanna feel anything"<br><br>
+  (4) Your Opinion "Suicide of an entire family is the saddest thing in aging societies"<br><br>
+  (5) Artpiece Related to The Topic "The Suicide By Edward Manet"<br><br>
+  (6) Finding After Research "US is the only country that gun-related sucide is over non-gun-related"<br><br>
+  (7) Incident/Related Issue "Jonestown (mass suicide in 1978) - 909 death"<br><br>
+  (8) Useful Link/Resource "Call:1-800-273-8255"<br><br>
+
+</p>
+<hr>
+
+<p style="font-size: 15px; width:80%; margin:auto;">
+  このプロジェクト、「ウンチのリボン」はコメディアンであるジョージ・カーリンがアウェアネスリボンに対して行った批判のアイデアをもとにしたものです。彼はアウェアネスリボンを「スラックティビズム」だと批判しました。スラックティビズムとは怠け者などを示すSlackerとアクティビズムから生まれた造語です。<br>
+  アーティストは社会問題を自分の作品のテーマとして取り上げることが多いです。その問題に対する深い理解を持たずに、ただただアート作品の題材として、魅力的な餌食として映ってしまうこともあります。<br>
+  この作品はアーティストの卵たちが毎日通う、サンノゼ州立大学のアートの建物中に展示され、アーティストとして将来スラックティビズムの様な見た目だけの簡単な活動をして欲しく無いという思いを込めて作られました。<br>
+<br>
+＜参加の方法＞<br>
+1.壁に飾られたウンチの形をしたリボンを一つ選び、その色がアウェアネスリボンとしてどの様な啓発活動に関連しているのか調べます。<br>
+2.リボンの中にある紙の土台を外し、リボンをまっすぐにします。紙の土台は下に貼り付けられたプラスチックの袋に入れてください。<br>
+3.選んだリボンについて調べてその中から自分が知らなかったこと、覚えておきたいこと、人に伝えたいことをリボンに書き残します。<br>
+4. リボンを階段を登る人たちに見える様に階段にくくり付けます。名前は書いても書かなくてもどちらでも構いません。もし自分の伝えたい活動を示すリボンの色がなければ、自分のリボンを使っていただいても構いません。<br>
+
+<br><br>
+＜アウェアネスリボンの例のリスト＞<br>
+桃:乳がん<br>
+青:言論、出版、オンライン集会の自由/パーキンソン病<br>
+赤:HIVとエイズ/薬物乱用<br>
+紫:家庭内暴力/同性愛嫌悪<br>
+橙:多発性硬化症/白血病<br>
+白:女性に対する男性の暴力の断絶<br>
+黄:自殺/軍事力/子宮内膜症<br>
+緑:脳性麻痺/メンタルヘルス/腎臓病<br>
+
+<br><br>
+＜自殺防止に対する黄色いリボンへの記入例＞<br>
+1.基本的な情報:自殺は70歳以上の世代で最も多い<br>
+2.数字:828,000(1.5% worldwide in 2015)<br>
+3.自分の経験:時々どんな感情も感じたく無いと思う時がある<br>
+4.自分の意見:一家心中は高齢化社会の中で最も悲しいことである<br>
+5.自殺に関連したアート作品: The Suicide by Edward Manet<br>
+6.調べた後初めて知ったこと:アメリカは世界中で唯一銃関連の自殺が銃に関連していない自殺件数を上回っている<br>
+7.自殺に関連した事件や問題:1978年に起こったJonetownと呼ばれる集団自殺の事件では909人が亡くなった<br>
+8.自殺防止に有益なリンク:自殺防止ホットライン(アメリカ)1-800-273-8255<br>
+
+
+</P>
+<img src="images/poop/poop00002.jpg" style="width:100%; padding:5%;">
+<img src="images/poop/poop00003.jpg" style="width:100%; padding:5%;">
+<img src="images/poop/poop00004.jpg" style="width:100%; padding:5%;">
+<img src="images/poop/poop00005.jpg" style="width:100%; padding:5%;">
+<img src="images/poop/poop00006.jpg" style="width:100%; padding:5%;">
+<img src="images/poop/poop00007.jpg" style="width:100%; padding:5%;">
+
+<p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
+  </div>
+</body>
+
+</html>
