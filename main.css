@@ -69,7 +69,7 @@ b {
 
 .ring {
   position: absolute;
-  top: 0;
+  top: 0px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -660,12 +660,12 @@ margin-bottom:110px;
   display: block;
   z-index: -1;
   font-size: 80px;
-  opacity: .8;
+  opacity: 1;
 }
 
 .glitch-text {
   z-index: 2;
-  opacity: .9;
+  opacity: 1;
   margin: 0 auto;
   animation: glitch 3s infinite;
   cursor: pointer;
@@ -675,7 +675,7 @@ font-family: 'Sawarabi Mincho', sans-serif;
   color: rgba(255,255,255, 0.5);
   font-size: 80px;
   position: absolute;
-  top: 40%;
+  top: 39%;
   right: 0;
   bottom: 0;
   left: 0;
