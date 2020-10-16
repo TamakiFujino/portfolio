@@ -5,40 +5,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 
 @font-face {
-    font-family: 'Senobi Gothic';
-    src: url('Senobi-Gothic-Regular.eot');
-    src: url('Senobi-Gothic-Regular.eot?#iefix') format('embedded-opentype'),
-        url('Senobi-Gothic-Regular.woff2') format('woff2'),
-        url('Senobi-Gothic-Regular.woff') format('woff'),
-        url('Senobi-Gothic-Regular.ttf') format('truetype'),
-        url('Senobi-Gothic-Regular.svg#Senobi-Gothic-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Senobi Gothic';
+  src: url('Senobi-Gothic-Regular.eot');
+  src: url('Senobi-Gothic-Regular.eot?#iefix') format('embedded-opentype'),
+    url('Senobi-Gothic-Regular.woff2') format('woff2'),
+    url('Senobi-Gothic-Regular.woff') format('woff'),
+    url('Senobi-Gothic-Regular.ttf') format('truetype'),
+    url('Senobi-Gothic-Regular.svg#Senobi-Gothic-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Senobi Gothic';
-    src: url('Senobi-Gothic-Bold.eot');
-    src: url('Senobi-Gothic-Bold.eot?#iefix') format('embedded-opentype'),
-        url('Senobi-Gothic-Bold.woff2') format('woff2'),
-        url('Senobi-Gothic-Bold.woff') format('woff'),
-        url('Senobi-Gothic-Bold.ttf') format('truetype'),
-        url('Senobi-Gothic-Bold.svg#Senobi-Gothic-Bold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Senobi Gothic';
+  src: url('Senobi-Gothic-Bold.eot');
+  src: url('Senobi-Gothic-Bold.eot?#iefix') format('embedded-opentype'),
+    url('Senobi-Gothic-Bold.woff2') format('woff2'),
+    url('Senobi-Gothic-Bold.woff') format('woff'),
+    url('Senobi-Gothic-Bold.ttf') format('truetype'),
+    url('Senobi-Gothic-Bold.svg#Senobi-Gothic-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 .noSelect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-
 
 ::-webkit-scrollbar {
   width: 4px;
@@ -75,21 +74,24 @@ b {
   left: 0;
   margin: auto;
   z-index: 1;
-  user-select: none; /* CSS3 */
--moz-user-select: none; /* Firefox */
--webkit-user-select: none; /* Safari、Chromeなど */
--ms-user-select: none; /* IE10かららしい */
--webkit-user-drag: none;
-
+  user-select: none;
+  /* CSS3 */
+  -moz-user-select: none;
+  /* Firefox */
+  -webkit-user-select: none;
+  /* Safari、Chromeなど */
+  -ms-user-select: none;
+  /* IE10かららしい */
+  -webkit-user-drag: none;
 }
 
 .play {
   font-size: 10px;
   position: absolute;
-   top: 5%;
-   left: 50%;
-   transform: translateY(-50%) translateX(-50%);
-   -webkit- transform: translateY(-50%) translateX(-50%);
+  top: 5%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
 }
 
 /*
@@ -103,77 +105,86 @@ b {
     z-index:99;
     margin:0 auto;
 } */
-
 /*▼▼ ここから追加する ▼▼*/
 .loader-wrap {
-	position: fixed;
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background: #cecece;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #cecece;
 }
-/*▲▲ ここまで追加する ▲▲*/
 
+/*▲▲ ここまで追加する ▲▲*/
 .loader,
 .loader:before,
 .loader:after {
-	background: #ffffff;
-	-webkit-animation: load1 1s infinite ease-in-out;
-	animation: load1 1s infinite ease-in-out;
-	width: 1em;
-	height: 4em;
+  background: #ffffff;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
 }
+
 .loader {
-	color: #ffffff;
-	text-indent: -9999em;
-	margin: 88px auto;
-	position: relative;
-	font-size: 10px;
-	-webkit-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	transform: translateZ(0);
-	-webkit-animation-delay: -0.16s;
-	animation-delay: -0.16s;
+  color: #ffffff;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 10px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
 }
+
 .loader:before,
 .loader:after {
-	position: absolute;
-	top: 0;
-	content: '';
+  position: absolute;
+  top: 0;
+  content: '';
 }
+
 .loader:before {
-	left: -1.5em;
-	-webkit-animation-delay: -0.32s;
-	animation-delay: -0.32s;
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
 }
+
 .loader:after {
-	left: 1.5em;
+  left: 1.5em;
 }
+
 @-webkit-keyframes load1 {
-	0%,
-	80%,
-	100% {
-		box-shadow: 0 0;
-		height: 4em;
-	}
-	40% {
-		box-shadow: 0 -2em;
-		height: 5em;
-	}
+
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
 }
+
 @keyframes load1 {
-	0%,
-	80%,
-	100% {
-		box-shadow: 0 0;
-		height: 4em;
-	}
-  	40% {
-		box-shadow: 0 -2em;
-		height: 5em;
-	}
+
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
 }
 
 /* .loader {
@@ -225,16 +236,13 @@ b {
     height: 15px;
   }
 } */
-
 html {
   height: 100%;
-
 }
 
 body {
   text-align: center;
   height: 100%;
-
 }
 
 /* .jpav {
@@ -242,7 +250,6 @@ body {
   bottom: 30px;
   right: 15%;
 } */
-
 /* CSS used here will be applied after bootstrap.css */
 .carousel {
   margin-top: 30px;
@@ -259,7 +266,6 @@ body {
   width: 50%;
   height: 100%;
   overflow: scroll;
-
 }
 
 .item .thumb {
@@ -319,7 +325,7 @@ p {
   font-size: 15px;
   color: white;
   text-align: left;
-font-family: 'Cabin', sans-serif;
+  font-family: 'Cabin', sans-serif;
 }
 
 /* Add a black background color to the top navigation */
@@ -343,7 +349,6 @@ font-family: 'Cabin', sans-serif;
   text-decoration: none;
   font-size: 12px;
 }
-
 
 /* Change the color of links on hover */
 .topnav a:hover {
@@ -457,7 +462,6 @@ font-family: 'Cabin', sans-serif;
   /* border-bottom: 3px solid white;
     writing-mode: vertical-lr; */
 }
-
 
 /* image gallery */
 .container {
@@ -671,8 +675,8 @@ margin-bottom:110px;
   cursor: pointer;
   font-size: 80px;
   color: #ffffff;
-font-family: 'Sawarabi Mincho', sans-serif;
-  color: rgba(255,255,255, 0.5);
+  font-family: 'Sawarabi Mincho', sans-serif;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 80px;
   position: absolute;
   top: 39%;
@@ -815,7 +819,7 @@ hr {
 
 .sp_work {
   padding-top: 80px;
-  padding-bottom: 80px;
+  margin-bottom: 7%;
   width: 90%;
   text-align: center;
 }
