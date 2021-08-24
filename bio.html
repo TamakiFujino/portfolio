@@ -9,11 +9,6 @@
   <link rel="icon" href="images/favicon.png" sizes="16x16">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <link rel="stylesheet" type="text/css" href="main.css">
-  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
-
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
-  <script type="text/javascript" src="sketch.js"></script>
-  <script type="text/javascript" src="drop.js"></script> -->
   <script src="script.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -21,50 +16,53 @@
 
 <body>
 
+  <!-- loader animation -->
   <div class="loader-wrap">
-  	<div class="loader"></div>
+    <div class="loader"></div>
   </div>
 
   <script type="text/javascript">
-  $(function(){
-var loader = $('.loader-wrap');
+    $(function() {
+      var loader = $('.loader-wrap');
 
-//ページの読み込みが完了したらアニメーションを非表示
-$(window).on('load',function(){
-  loader.fadeOut();
-});
+      $(window).on('load', function() {
+        loader.fadeOut();
+      });
 
-//ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
-setTimeout(function(){
-  loader.fadeOut();
-},3000);
-});
+      setTimeout(function() {
+        loader.fadeOut();
+      }, 3000);
+    });
   </script>
+  <!-- loader animation -->
 
 
+  <!-- laptop width design -->
   <div class="pc">
+    <!-- navigation bar right -->
     <div class="topnav">
-      <a class="active" href="index.html">HOME</a>
-      <a href="bio.html">ABOUT</a>
-      <a href="project.html">CV</a>
-      <a href="work.html">GALLERY</a>
+      <a href="index.html">HOME</a>
+      <a class="active" href="bio.html">ABOUT</a>
+      <a href="work.html">WORKS</a>
     </div>
 
+    <!-- navigation bar left -->
     <div class="topnav2">
-      <a href="mailto:tamaki.fujino@sjsu.edu"> <img src="images/mail.png" width="20px" alt="">
+      <a href="mailto:tamakifujino526@gmail.com"> <img src="images/mail.png" width="20px" alt="">
       </a>
       <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
       </a>
       <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="20px" alt="">
       </a>
-      <a href="https://www.instagram.com/instama_mm/"><img src="images/insta.png" width="20px" alt="">
+      <a href="https://www.instagram.com/tama_arttube/"><img src="images/insta.png" width="20px" alt="">
       </a>
     </div>
 
+    <!-- credit text -->
+    <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2021 TAMAKI FUJINO</p>
+  </div>
+  <!-- laptop width design -->
 
-  <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
-
-</div>
 
   <style>
     .tablink {
@@ -120,57 +118,90 @@ setTimeout(function(){
   <button class="tablink" onclick="openCity('JP')">JP</button>
 
   <div id="EN" class="tabcontent">
-    <!-- <div class="content"> -->
-    <p style="width:95%; margin:auto;">Tamaki Fujino was born in 1998 in Osaka, Japan.
-      She spent 18 years of her life and moved to San Jose to seek her career of Performance Art.
-      She has been interested in Hip-Hop dancing. She started learning Hip-hop dancing when she was 15 years old.
-      While she pursues a beauty of dancing, she confronts the forces of people against street culture.
-      More than being a performer, then she found a meaning of being a director by learning technical and technology aspect of a stage,
-      in order to elevate street culture as high as other performance arts such as ballet.
-      Exploring the possibilities of performance art, she found that art installation is a place where the viewers can be a part of artwork share the experience.
-      Then, she started working on the field of digital media art, especially focusing on AR field.
-      She is currently San Jose State University Digital Media Art BFA candidate in 2021.</p>
-
-    <p style="width:95%; margin:auto;">Her main inspirations are researches of psychology and abstract concepts we cannot see physically but exist in every culture. Psychology has been her biggest interest. She started being fascinated with psychology when she asked herself "Why
-      am I crying?!"
-
-      A baby does not have much understanding in emotions. Because they cannot distinguish the difference between sad, angry, jealous, umcomfortable, and any other emotions. Therefore, those emotion all come out as "crying" and that is why a baby
-      cries a lot. Even after she grew up over twenty years old, she cannot bear crying when she sees someone gets extremely mad or she get scolded by someone, especilly by her mother. At that moment, she is not sad, mad, scared, or uncomfortable,
-      and if so, why does she need to cry? She hates being in that ambiguous emotional state.
-
-      Emotions come from inside of us but we do not own them. As a result, we can barely control them. We do not know exactly what the all emotions are and where they come from. She often does not know why she is having a certain emotion and does
-      not know what the emotion is.
-      She considers it is because her branches of emotions have not developed enough just like a baby, or she does not have enough vocabrary to describe this mind status. Therefore, She uses her art to explore the unknown emotions within us and
-      connection between them and the incidents that trigger them.
-
-      Exploring the abstract concepts we cannot see physically but exist in every culture is also a part of understanding unknow piece of herself.
-      The examples would be "love" "god" "dream" "ghost" "luck" and "time." Those words can be traslated into almost all languages.
-      Therefore, those are not cultural, geological, and racial. They are purely about human; they exist within us, so she believes examining those would lead better understanding of human.
-
-      Her goal is to make the experience of your emotions are flooding out and think what they are and why they appear. She is currently working on digital video, net art, 3D modeling, projection mapping, and sound visualization.</p>
 
 
-    <!-- </div> -->
+    <h2 style="text-align:center;">BIO</h2>
+    <hr>
+    <div class="about_content">
+      <p>Born in Osaka, Japan in 1998 <br>
+        Resides in San Jose, CA <br><br>
+        Tamaki Fujino explores the possibilities of art to express indescribable and opaque emotions, situations, relationships, and phenomena with interactive digital media, especially using projection mapping, coding art, and digital video as a replacement of language. Her main influence is psychological researches. She started being attracted by psychology when she found one question to herself: Why am I crying?! Our feelings and behaviors come from our body, but we often do not know what the feeling is, where it came from, and how to control it. In addition, to explore psychological findings, exploring the abstract concepts that exist in every culture is another theme of her art. God, love, dream, ghost, luck, and, time: Those concepts are intangible, but shared in almost every culture. Therefore, examining those concepts reveals the pure elements of humans. In contrast, she examines human under an influence of cultures as well. She often uses conflicted ideas as she nurtured in the United States, after spending 19 years in Japan.　
+      </p>
+    </div>
+
+
+    <h2 style="text-align:center;">CV</h2>
+    <hr>
+    <div class="about_content">
+      <h3><b>[ Contact ]</b></h3>
+      <p>Tamaki Fujino<br>
+        Email: tamakifujino526@gmail.com <br>
+        Web: tamakifujino.com </p>
+
+      <h3><b>[ Education ]</b></h3>
+      <p>2021 BFA, Digital Media Art, San Jose State University</p>
+
+      <h3><b>[ Exhibition ]</b></h3>
+      <p>2021 Hidden Histories of San Jose Japantown, Group installation of Augmented Reality in San Jose Japantown, Japanese American Museum of San Jose, CA</p>
+      <p>2021 Yamaori Taniori, interactive installation, Jo Farb Hernandez Gallery, San Jose, CA</p>
+
+
+      <h3><b>[ Projects ]</b></h3>
+      <p>2020 Artist, Hidden Histories of San Jose Japantown <br>
+        https://www.hiddenhistoriesjtown.org/ <br><br>
+        2020 Staff Member, Meatspace Magazine
+      </p>
+
+      <h3><b>[ Skills ]</b></h3>
+      <p>Photoshop / Premiere / Illustrator / AfterEffect <br>
+        MAYA / Fusion 360/ MAX MSP / Ardurino <br>
+        HTML / CSS / p5 </p>
+    </div>
+    <!-- end of about content -->
   </div>
+  <!-- end of english tab -->
 
   <div id="JP" class="tabcontent">
-    <p style="width:95%; margin:auto;">藤野珠輝は1998年に大阪で生まれ、18年を過ごし、アメリカ、カリフォルニア州のシリコンバレーに位置するサンノゼ州立大学にパフォーマンスアートを学ぶため入学します。
-      ヒップホップダンスに興味があった彼女は高校生の時からヒップホップのダンスを習い始めました。その間に社会がストリート文化を受け入れていないことを実感します。
-      そこでダンサーというパフォーマーであることよりも、ステージの技術的な面や最新の技術を学ぶことで、もっとストリート文化の発展、またはよりアーティストが活躍できる社会につながるのではと考えました。
-      大学でパフォーマンスアートの可能性を追求する中で、インスタレーションに出会い、観客がアート作品の一部となり、人々が体験を共有できる環境に魅了されます。
-      そして、彼女はデジタルメディアアートの学びを初め、特に拡張現実に焦点をおいて可能性を追求しています。彼女は現在サンノゼ州立大学でデジタルメディアアートを専攻し
-      2021年の春に美術学士を取得予定です。
-    </p>
+    <h2 style="text-align:center;">BIO</h2>
+    <hr>
+    <div class="about_content">
+      <p>
+        1998年 大阪生まれ <br>
+        現在カリフォルニア州サンノゼに居住 <br>
+        <br>
+        プロジェクションマッピング、コーディングアート、デジタルビデオなどのインタラクティブデジタルメディアを使用し、言葉で説明しにくい透明な感情や状況、関係や現象を表現するアートの可能性を探っています。彼女を主に影響したのは心理学のリサーチで、彼女が心理学に興味を持ち始めたのは自分自身に「なんで私は泣いているんだ？」と問いかけたところからでした。私たちの感情や行動は私たちの内側から生まれる物ですが、それがなんなのか、なぜその感情が芽生えたのか、どうやってコントロールすればいいのか知らないことがほとんどです。
+心理学的な学びを探究するのと同時にどの文化にも存在する抽象的な概念についてアートで表現することも彼女のアートの主な焦点です。神、愛、夢、幽霊、運、時間などこれらの概念は形で表しにくい概念ですがほとんど全ての文化に存在しています。これらについて考えることによって文化の影響を受けていないピュアな人間の部分を見つけることができると考えています。対して、それと同時に人間と文化の影響についても探究しています。日本で19年間過ごした後、アメリカに渡航してから生まれたそれらの対立するアイデアをアートで表現しています。　
+      </p>
+    </div>
 
-    <p style="width:95%; margin:auto;">彼女の作品の主なテーマは心理学の研究結果や、物体として存在しないのに、どの文化にも存在する抽象的な概念です。
-      心理学は以前から彼女の関心があるものの一つで、彼女が関心を持ち始めた理由は彼女がいつも泣き虫で、それであるのになぜ自分が泣いているのかわからない時が多々あったからです。
-      赤ちゃんは自身の感情を分類することができないのでそれぞれの感情の理解がありません。なのでその結果、全てのネガティブな感情は泣くという行為として表現されます。
-      大人になっても自分の感情に全て説明がつくわけではありません。感情は私たちの中から発生しているものなのに、それらをコントロールする方法を知らず、その感情が何で、何が原因となってその感情が発生
-      しているのか理解できず、さらに言葉でそれを表現することはさらに難しいことです。
-      このようなことから、彼女はそのような名前のつけることが難しい感情であったりを説明するため、またその感情とそれを引き出している原因との関係を探るため、作品を制作しています。
-    </p>
-    <p style="width:95%; margin:auto;">どの文化にも存在する抽象的な概念を探ることも彼女の未知の領域を探るための方法です。そのような概念の例として、愛や神、幽霊や運、または時間など、これらの言葉はどの文化にも存在しどの言語にも訳すことができます。
-      なので、これらの概念は文化や地理、人種の垣根を越えるため、これらを調べるこそ純粋な人間について知り、人間かつ自分自身のより深い理解につながるのではないかと考えます。</p>
+
+    <h2 style="text-align:center;">CV</h2>
+    <hr>
+    <div class="about_content">
+      <h3><b>[ コンタクト ]</b></h3>
+      <p>Tamaki Fujino<br>
+        Eメール: tamakifujino526@gmail.com <br>
+        ウェブサイト: tamakifujino.com </p>
+
+      <h3><b>[ 学歴 ]</b></h3>
+      <p>2021 美術学士, デジタルメディアアート, サンノゼ州立大学</p>
+
+      <h3><b>[ 展示 ]</b></h3>
+      <p>2021 Hidden Histories of San Jose Japantown, ARグループインスタレーション, サンノゼ日本街, 同時にJapanese American Museum of San Jose, カリフォルニア</p>
+      <p>2021 Yamaori Taniori, インタラクティブインスタレーション, Jo Farb Hernandez Gallery, サンノゼ, カリフォルニア</p>
+
+
+      <h3><b>[ プロジェクト ]</b></h3>
+      <p>2020 アーティスト, Hidden Histories of San Jose Japantown <br>
+        https://www.hiddenhistoriesjtown.org/ <br><br>
+        2020 スタッフメンバー, Meatspace Magazine
+      </p>
+
+      <h3><b>[ スキル ]</b></h3>
+      <p>Photoshop / Premiere / Illustrator / AfterEffect <br>
+        MAYA / Fusion 360/ MAX MSP / Ardurino <br>
+        HTML / CSS / p5 </p>
+    </div>
   </div>
 
 
@@ -200,22 +231,22 @@ setTimeout(function(){
     <div class="topnav3" style="position:absolute; top:1%;">
       <a class="active" href="index.html">HOME</a>
       <a href="bio.html">ABOUT</a>
-      <a href="project.html">CV</a>
-      <a href="work.html">GALLERY</a>
+      <a href="work.html">WORKS</a>
     </div>
 
 
     <div class="topnav4">
-      <a href="mailto:tamaki.fujino@sjsu.edu"> <img src="images/mail.png" width="18px" alt="">
+      <a href="mailto:tamakifujino526@gmail.com"> <img src="images/mail.png" width="20px" alt="">
       </a>
-      <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="18px" alt="">
+      <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
       </a>
-      <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="18px" alt="">
+      <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="20px" alt="">
       </a>
-      <a href="https://www.instagram.com/instama_mm/"><img src="images/insta.png" width="18px" alt="">
+      <a href="https://www.instagram.com/tama_arttube/"><img src="images/insta.png" width="20px" alt="">
       </a>
     </div>
-<p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2020 TAMAKI FUJINO</p>
+  </div>
+  <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2021 TAMAKI FUJINO</p>
   </div>
 
 </body>
