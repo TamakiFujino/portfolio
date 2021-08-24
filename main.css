@@ -1,3 +1,4 @@
+/* font install ------------------------------ */
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=PT+Sans+Narrow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -30,6 +31,19 @@
   font-display: swap;
 }
 
+/* Basic component --------------------------------------- */
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #00ad96;
+  text-align: center;
+  height: 100%;
+  overflow: hidden;
+}
+
 .noSelect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -39,6 +53,94 @@
   user-select: none;
 }
 
+hr {
+  width: 100%;
+  border-width: 3px 0px 0px 0px;
+  border-style: solid;
+  border-color: white;
+}
+
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc {
+  display: block !important;
+}
+
+.sp {
+  display: none !important;
+}
+
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media only screen and (max-width: 768px) {
+  .pc {
+    display: none !important;
+  }
+
+  .sp {
+    display: block !important;
+  }
+}
+
+/* Text property -------------------------------------------- */
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  font-size: 80px;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  font-style: italic;
+}
+
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  font-size: 30px;
+  text-align: left;
+}
+
+h3 {
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  text-align: left;
+}
+
+h4 {
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: left;
+}
+
+h5 {
+  font-size: 17px;
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+}
+
+b {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 1000;
+}
+
+p {
+  font-size: 15px;
+  color: white;
+  text-align: left;
+  font-family: 'Cabin', sans-serif;
+}
+
+span {
+  color: white;
+  font-size:12px;
+  padding:2px;
+  display:block;
+  text-align:right;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Scroll bar ----------------------------------------- */
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -58,54 +160,7 @@
   background: none;
 }
 
-body {
-  background: #cecece;
-}
-
-b {
-  font-family: Hiragino Kaku Gothic Std;
-}
-
-.ring {
-  position: absolute;
-  top: 0px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  z-index: 1;
-  user-select: none;
-  /* CSS3 */
-  -moz-user-select: none;
-  /* Firefox */
-  -webkit-user-select: none;
-  /* Safari、Chromeなど */
-  -ms-user-select: none;
-  /* IE10かららしい */
-  -webkit-user-drag: none;
-}
-
-.play {
-  font-size: 10px;
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  -webkit- transform: translateY(-50%) translateX(-50%);
-}
-
-/*
-.preloader {
-    display:block;
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    z-index:99;
-    margin:0 auto;
-} */
-/*▼▼ ここから追加する ▼▼*/
+/* Loader component ------------------------------- */
 .loader-wrap {
   position: fixed;
   display: flex;
@@ -113,10 +168,8 @@ b {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background: #cecece;
 }
 
-/*▲▲ ここまで追加する ▲▲*/
 .loader,
 .loader:before,
 .loader:after {
@@ -187,153 +240,80 @@ b {
   }
 }
 
-/* .loader {
-  margin: 120px auto 0;
-  background: #cecece;
+/* Gallery Image Slideshow  ----------------------------- */
+* {
+  box-sizing: border-box;
 }
 
-.loader .line {
-  width: 2px;
-  height: 12px;
-  background: white;
-  margin: 0 1px;
-  display: inline-block;
-  animation: opacity-2 1000ms infinite ease-in-out;
+.mySlides {
+  display: none
 }
 
-.loader .line-1, .loader-2 .line-1 { animation-delay: 800ms; }
-.loader .line-2, .loader-2 .line-2 { animation-delay: 600ms; }
-.loader .line-3, .loader-2 .line-3 { animation-delay: 400ms; }
-.loader .line-4, .loader-2 .line-4 { animation-delay: 200ms; }
-.loader .line-6, .loader-2 .line-6 { animation-delay: 200ms; }
-.loader .line-7, .loader-2 .line-7 { animation-delay: 400ms; }
-.loader .line-8, .loader-2 .line-8 { animation-delay: 600ms; }
-.loader .line-9, .loader-2 .line-9 { animation-delay: 800ms; }
-
-@keyframes opacity-1 {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.slideshow-container img {
+  vertical-align: right;
+  width:80%;
 }
 
-@keyframes opacity-2 {
-  0% {
-    opacity: 1;
-    height: 15px;
-  }
-  50% {
-    opacity: 0;
-    height: 12px;
-  }
-  100% {
-    opacity: 1;
-    height: 15px;
-  }
-} */
-html {
-  height: 100%;
-}
-
-body {
-  text-align: center;
-  height: 100%;
-}
-
-/* .jpav {
+/* Slideshow container */
+.slideshow-container {
   position: absolute;
-  bottom: 30px;
-  right: 15%;
-} */
-/* CSS used here will be applied after bootstrap.css */
-.carousel {
-  margin-top: 30px;
+  top:18%;
+  right:-30%;
 }
 
-.col-sm-6 {
-  padding-top: 3.5%;
-  width: 40%;
-}
-
-.col-sm-6b {
-  padding-top: 0;
-  padding-left: 20px;
-  width: 50%;
-  height: 100%;
-  overflow: scroll;
-}
-
-.item .thumb {
-  width: 25%;
-  cursor: pointer;
-  float: left;
-}
-
-.item .thumb img {
-  width: 100%;
-  margin: 2px;
-}
-
-.item img {
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  margin:7px;
   width: 100%;
 }
 
-.title {
+.work_text {
   position: absolute;
-  top: 10%;
-  left: 15%;
+  top:18%;
+  left:12%;
+  width:25%;
 }
 
-h1 {
-  font-family: 'Josefin Sans', sans-serif;
-  color: white;
-  font-size: 80px;
-  position: absolute;
-  top: 40%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  font-style: italic;
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-h2 {
-  font-family: 'Josefin Sans', sans-serif;
-  color: white;
-  font-size: 30px;
-  text-align: left;
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
-h3 {
-  color: white;
-  font-family: 'Josefin Sans', sans-serif;
-  text-align: left;
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
-h4 {
-  color: white;
-  font-family: 'Josefin Sans', sans-serif;
-  text-align: left;
-}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {}
 
-p {
-  font-size: 15px;
-  color: white;
-  text-align: left;
-  font-family: 'Cabin', sans-serif;
-}
-
-/* Add a black background color to the top navigation */
+/* Top navigation component ------------------------------------------- */
+/* Top navigation - Laptop Design - Left ------------------*/
 .topnav {
   overflow: hidden;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 100px;
-  color: black;
   writing-mode: vertical-lr;
   position: absolute;
   bottom: 50px;
@@ -341,7 +321,6 @@ p {
   z-index: 2;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
   float: left;
   color: white;
@@ -350,25 +329,22 @@ p {
   font-size: 12px;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
   text-shadow: 0px 3px 10px white;
   transition: 0.5s;
   color: transparent;
 }
 
-/* Add a color to the active/current link */
 .topnav a.active {
-  /* border-bottom: 3px solid white;
-    writing-mode: vertical-lr; */
+  border-left: 3px solid white;
+  border-right: 3px solid white;
 }
 
-/* Add a black background color to the top navigation */
+/* Top navigation - Laptop Design - Right ------------------*/
 .topnav2 {
   overflow: hidden;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 100px;
-  color: black;
   writing-mode: vertical-lr;
   position: absolute;
   right: 0px;
@@ -377,7 +353,6 @@ p {
   z-index: 2;
 }
 
-/* Style the links inside the navigation bar */
 .topnav2 a {
   float: left;
   color: white;
@@ -386,18 +361,13 @@ p {
   font-size: 14px;
 }
 
-/* Change the color of links on hover */
 .topnav2 a:hover {
   text-shadow: 0px 3px 10px white;
   transition: 0.5s;
   color: transparent;
 }
 
-/* Add a color to the active/current link */
-.topnav2 a.active {
-  background: #B39BC8;
-}
-
+/* Top navigation - Smartphone Design - Left ------------------*/
 .topnav3 {
   overflow: hidden;
   font-family: 'Josefin Sans', sans-serif;
@@ -408,7 +378,6 @@ p {
   width: 100%;
 }
 
-/* Style the links inside the navigation bar */
 .topnav3 a {
   float: left;
   color: white;
@@ -417,19 +386,17 @@ p {
   font-size: 12px;
 }
 
-/* Change the color of links on hover */
 .topnav3 a:hover {
   text-shadow: 0px 3px 10px white;
   transition: 0.5s;
   color: transparent;
 }
 
-/* Add a color to the active/current link */
 .topnav3 a.active {
-  /* border-bottom: 3px solid white;
-    writing-mode: vertical-lr; */
+  border-bottom: 3px solid white;
 }
 
+/* Top navigation - Smartphone Design - Right ------------------*/
 .topnav4 {
   overflow: hidden;
   font-family: 'Josefin Sans', sans-serif;
@@ -441,7 +408,6 @@ p {
   width: 100%;
 }
 
-/* Style the links inside the navigation bar */
 .topnav4 a {
   float: left;
   color: white;
@@ -450,68 +416,23 @@ p {
   font-size: 12px;
 }
 
-/* Change the color of links on hover */
 .topnav4 a:hover {
   text-shadow: 0px 3px 10px white;
   transition: 0.5s;
   color: transparent;
 }
 
-/* Add a color to the active/current link */
-.topnav4 a.active {
-  /* border-bottom: 3px solid white;
-    writing-mode: vertical-lr; */
-}
-
-/* image gallery */
-.container {
-  display: flex;
-  width: 80%;
-  padding: 10% 15%;
-  box-sizing: border-box;
-  height: 70vh;
-  padding: 4% 2%;
-  box-sizing: border-box;
-  height: 60%;
-  margin: auto;
+.social {
+  font-family: 'Bebas Neue', cursive;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 30px;
   position: absolute;
-  top: 52%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  -webkit- transform: translateY(-50%) translateX(-50%);
-}
-
-.box {
-  flex: 1;
-  overflow: hidden;
-  transition: .5s;
-  margin: 0 2%;
-  /* box-shadow: 0 20px 30px rgba(0,0,0,.1); */
-  line-height: 0;
-}
-
-.box>img {
-  width: 200%;
-  height: calc(100% - 10vh);
-  object-fit: cover;
-  transition: .5s;
-}
-
-.box>span {
-  font-size: 3.8vh;
-  display: block;
-  text-align: center;
-  height: 10vh;
-  line-height: 2.6;
-}
-
-.box:hover {
-  flex: 1 1 50%;
-}
-
-.box:hover>img {
-  width: 100%;
-  height: 100%;
+  top: 35%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-decoration: none;
 }
 
 /* Style the tab */
@@ -583,210 +504,6 @@ p {
   -webkit- transform: translateY(-50%) translateX(-50%);
 }
 
-.box {
-  flex: 1;
-  overflow: hidden;
-  transition: .5s;
-  margin: 0 2%;
-}
-
-.box>img {
-  width: 200%;
-  height: calc(100% - 10vh);
-  object-fit: cover;
-  transition: .5s;
-}
-
-.box>span {
-  font-size: 3.8vh;
-  display: block;
-  text-align: center;
-  height: 10vh;
-  line-height: 2.6;
-}
-
-.box:hover {
-  flex: 1 1 50%;
-}
-
-.box:hover>img {
-  width: 100%;
-  height: 100%;
-}
-
-.scanlines {
-  overflow: hidden;
-  mix-blend-mode: difference;
-  z-index: -3;
-}
-
-.scanlines::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: repeating-linear-gradient(to bottom,
-    transparent 0%,
-    rgba(255, 255, 255, 0.05) .5%,
-    transparent 1%);
-  animation: fudge 7s ease-in-out alternate infinite;
-}
-
-@keyframes noise {
-  0% {
-    background-position: 1000px;
-  }
-}
-
-body, html {
-  overflow: hidden;
-  animation: noise 20ms linear infinite;
-}
-
-/* .glitch-wrapper{
-padding-top:180px;
-width:100vw;
-text-align:center;
-animation:glitch 2s linear infinite;
-margin-bottom:110px;
-} */
-.glitch-text::before {
-  /* content:' 五月蝿く生きる'; */
-  color: none;
-  text-shadow: 0px 0px 5px 10px white !IMPORTANT;
-  -webkit-filter: blur(7px);
-  -moz-filter: blur(7px);
-  -o-filter: blur(7x);
-  -ms-filter: blur(7px);
-  filter: blur(7px);
-  display: block;
-  z-index: -1;
-  font-size: 80px;
-  opacity: 1;
-}
-
-.glitch-text {
-  z-index: 2;
-  opacity: 1;
-  margin: 0 auto;
-  animation: glitch 3s infinite;
-  cursor: pointer;
-  font-size: 80px;
-  color: #ffffff;
-  font-family: 'Sawarabi Mincho', sans-serif;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 80px;
-  position: absolute;
-  top: 39%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-}
-
-/* JUST RANDOM VALUES HERE! */
-@keyframes glitch {
-  3% {
-    text-shadow: 7px 7px 0px "cecece";
-  }
-
-  6% {
-    text-shadow: -9px 4px 0px #cecece;
-    transform: translate(4px, -10px) skewX(3240deg);
-  }
-
-  7% {
-    text-shadow: 3px -4px 0px #cecece;
-  }
-
-  9% {
-    text-shadow: 0px 0px 3px white;
-    transform: translate(0px, 0px) skewX(0deg);
-  }
-
-  2%, 54% {
-    transform: translateX(0px) skew(0deg);
-  }
-
-  55% {
-    transform: translate(-2px, 6px) skew(-5530deg);
-  }
-
-  56% {
-    text-shadow: 0px 0px 3px white;
-    transform: translate(0px, 0px) skew(0deg);
-  }
-
-  57% {
-    text-shadow: 7px 7px 0px #cecece;
-    transform: translate(4px, -10px) skew(-70deg);
-  }
-
-  58% {
-    text-shadow: 0px 0px 3px white;
-    transform: translate(0px, 0px) skew(0deg);
-  }
-
-  62% {
-    text-shadow: 3px -4px 0px #cecece;
-    transform: translate(0px, 20px) skew(0deg);
-  }
-
-  63% {
-    text-shadow: 0px 0px 3px white;
-    transform: translate(4px, -2px) skew(0deg);
-  }
-
-  64% {
-    transform: translate(1px, 3px);
-    skew(-230deg);
-  }
-
-  65% {
-    transform: translate(-7px, 2px);
-    skew(120deg);
-  }
-
-  66% {
-    transform: translate(0px, 0px) skew(0deg);
-  }
-}
-
-/* パソコンで見たときは"pc"のclassがついた画像が表示される */
-.pc {
-  display: block !important;
-}
-
-.sp {
-  display: none !important;
-}
-
-/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
-@media only screen and (max-width: 768px) {
-  .pc {
-    display: none !important;
-  }
-
-  .sp {
-    display: block !important;
-  }
-}
-
-h5 {
-  font-size: 17px;
-  font-family: 'Bebas Neue', cursive;
-  text-align: center;
-}
-
-/*
-  hr {
-    height: 2px;
-    background-color: black;
-    border: none;
-    opacity: 0.5;
-  } */
 .work_sp {
   height: 100vh;
   overflow: scroll;
@@ -794,32 +511,27 @@ h5 {
   padding-bottom: 100px;
 }
 
-hr {
-  width: 90%;
-  border-width: 3px 0px 0px 0px;
-  /* 太さ */
-  border-style: solid;
-  /* 線種 */
-  border-color: white;
-  /* 線色 */
-}
-
-.social {
-  font-family: 'Bebas Neue', cursive;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 30px;
-  position: absolute;
-  top: 35%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  text-decoration: none;
-}
-
 .sp_work {
   padding-top: 80px;
   margin-bottom: 7%;
   width: 90%;
   text-align: center;
+}
+
+.play {
+  font-size: 10px;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+}
+
+.about_content {
+  width: 90%;
+  margin: auto;
+}
+
+.work_container {
+  position: relative;
 }
