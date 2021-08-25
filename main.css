@@ -131,6 +131,17 @@ p {
   font-family: 'Cabin', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color:white;
+}
+
+a:hover {
+  text-shadow: 0px 3px 10px white;
+  transition: 0.5s;
+  color: transparent;
+}
+
 span {
   color: white;
   font-size:12px;
@@ -258,7 +269,7 @@ span {
 .slideshow-container {
   position: absolute;
   top:18%;
-  right:-30%;
+  right:0%;
 }
 
 /* Caption text */

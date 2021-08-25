@@ -17,32 +17,36 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
   <script>
-  var slideIndex = 1;
-  showSlides(slideIndex);
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
 
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
 
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
+      }
+      for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-  }
   </script>
 </head>
 
@@ -91,55 +95,55 @@
 
     <div class="slideshow-container">
 
-    <div class="mySlides fade">
-      <img src="images/encircle.jpg" style="width:40%">
-      <div class="text">Yamaori Taniori (2021) Interactive digital installation</div>
-    </div>
+      <div class="mySlides fade">
+        <img src="images/rep/digitalautonomy.jpg" style="width:60%">
+        <div class="text">Digital Autonomy (2021) BFA group exhibition in New Art City</div>
+      </div>
 
-    <div class="mySlides fade">
-      <img src="images/encircle2.jpg" style="width:40%">
-      <div class="text">Hidden Histories of San Jose Japantown (2021) AR group installation</div>
-    </div>
+      <div class="mySlides fade">
+        <img src="images/rep/yamaoritaniori.jpg" style="width:60%">
+        <div class="text">Yamaori Taniori (2021) Interactive digital installation</div>
+      </div>
 
-    <div class="mySlides fade">
-      <img src="images/encircle3.jpg" style="width:40%">
-      <div class="text">Meatspace Magazine (2021) Student-led magazine, Fall 2020 "Digital Native"</div>
-    </div>
+      <div class="mySlides fade">
+        <img src="images/rep/hiddenhistories.jpg" style="width:60%">
+        <div class="text">Hidden Histories of San Jose Japantown (2021) AR group installation</div>
+      </div>
 
-    <div class="mySlides fade">
-      <img src="images/fishschool.jpg" style="width:40%">
-      <div class="text">10 Digits (2020) Interactive coding created with MAX MSP</div>
-    </div>
+      <div class="mySlides fade">
+        <img src="images/rep/meatspace.jpg" style="width:60%">
+        <div class="text">Meatspace Magazine (2021) Student-led magazine, Fall 2020 "Digital Native"</div>
+      </div>
 
-    <div class="mySlides fade">
-      <img src="images/408/40800002.jpg" style="width:40%">
-      <div class="text">Assimilation and accomodation (2020) Digital video created with MAYA</div>
-    </div>
+      <div class="mySlides fade">
+        <img src="images/rep/panda0.jpg" style="width:60%">
+        <div class="text">Assimilation and accomodation (2020) Digital video created with MAYA</div>
+      </div>
 
-    <div class="mySlides fade">
-      <img src="images/encircle3.jpg" style="width:40%">
-      <div class="text">Plastic Material (2020) 3D modeling with MAYA</div>
-    </div>
+      <div class="mySlides fade">
+        <img src="images/rep/plastic.jpg" style="width:60%">
+        <div class="text">Plastic Material (2020) 3D modeling with MAYA</div>
+      </div>
 
-    <div class="mySlides fade">
-      <img src="images/encircle3.jpg" style="width:40%">
-      <div class="text">Oil and Water (2018) Digital video</div>
-    </div>
+      <div class="mySlides fade">
+        <img src="images/rep/R408.jpg" style="width:60%">
+        <div class="text">408 (2020) Memorial piece for the deceased due to the mass shootings in 2019</div>
+      </div>
 
-    <div class="mySlides fade">
-      <img src="images/fishschool.jpg" style="width:40%">
-      <div class="text">School of Fish (2019) Digital video</div>
-    </div>
+      <div class="mySlides fade">
+        <img src="images/rep/fishschool.jpg" style="width:60%">
+        <div class="text">School of Fish (2019) Digital video</div>
+      </div>
 
-    <div class="mySlides fade">
-      <img src="images/encircle3.jpg" style="width:40%">
-      <div class="text">Poop Ribbon (2019) Installation in the stair case at San Jose State University</div>
-    </div>
+      <div class="mySlides fade">
+        <img src="images/rep/poop.jpg" style="width:60%">
+        <div class="text">Poop Ribbon (2019) Installation in the stair case at San Jose State University</div>
+      </div>
 
-    <div class="mySlides fade">
-      <img src="images/encircle3.jpg" style="width:40%">
-      <div class="text">Oil and Water (2018) Digital video</div>
-    </div>
+      <div class="mySlides fade">
+        <img src="images/rep/oil_water.jpg" style="width:60%">
+        <div class="text">Oil and Water (2018) Digital video</div>
+      </div>
 
     </div>
     <br>
@@ -147,25 +151,26 @@
     <div class="work_text">
       <h4 style="text-align:right; margin:0px;">EXHIBITION</h4>
       <hr>
-      <span onmouseover="currentSlide(1)">Yamaori Taniori (2021)</span> <br>
+      <span onmouseover="currentSlide(1)"><a href="autonomy.html">Digital Autonomy (2021)</a></span><br>
+      <span onmouseover="currentSlide(2)"><a href="yamatani.html">Yamaori Taniori (2021)</a></span><br>
+
 
       <h4 style="text-align:right; margin:0px;">PROJECT</h4>
       <hr>
-      <span onmouseover="currentSlide(2)">Hidden Histories of San Jose Japantown (2021)</span> <br>
-      <span onmouseover="currentSlide(3)">Meatspace Magazine (2020)</span> <br>
+      <span onmouseover="currentSlide(3)"><a href="hh.html">Hidden Histories of San Jose Japantown (2021)</a></span> <br>
+      <span onmouseover="currentSlide(4)"><a href="meat.html">Meatspace Magazine (2020)</a></span> <br>
 
       <h4 style="text-align:right; margin:0px;">WORK</h4>
       <hr>
-      <span onmouseover="currentSlide(4)">10 Digits (2020)</span> <br>
-      <span onmouseover="currentSlide(5)">Assimilation and Accomodation (2020)</span> <br>
-      <span onmouseover="currentSlide(6)">Plastic Material (2020)</span> <br>
-      <span onmouseover="currentSlide(7)">408 (2019)</span> <br>
-      <span onmouseover="currentSlide(8)">School of Fish (2019)</span> <br>
-      <span onmouseover="currentSlide(9)">Poop Ribbon (2019)</span> <br>
-      <span onmouseover="currentSlide(10)">Oil and Water (2018)</span> <br>
+      <span onmouseover="currentSlide(5)"><a href="panda.html">Assimilation and Accomodation (2020)</a></span> <br>
+      <span onmouseover="currentSlide(6)"><a href="plastic.html">Plastic Material (2020)</a></span> <br>
+      <span onmouseover="currentSlide(7)"><a href="408.html">408 (2019)</a></span> <br>
+      <span onmouseover="currentSlide(8)"><a href="fish.html">School of Fish (2019)</a></span> <br>
+      <span onmouseover="currentSlide(9)"><a href="poop.html">Poop Ribbon (2019)</a></span> <br>
+      <span onmouseover="currentSlide(10)"><a href="oilnwater.html">Oil and Water (2018)</a></span> <br>
 
     </div>
-</div>
+  </div>
   <!-- laptop layout end -->
 
   <!-- smartphone layout design -->
@@ -199,7 +204,7 @@
       <a href="baby.html"> <img src="images/baby.jpg" style="width:90%"> </a>
       <h5 style="font-family: senobi gothic;">It's a Boy (2019)</h5>
       <hr><br> -->
-      <!-- <a href="poop.html"> <img src="images/poop.jpg" style="width:90%"> </a>
+    <!-- <a href="poop.html"> <img src="images/poop.jpg" style="width:90%"> </a>
       <h5 style="font-family: 'Josefin Sans', sans-serif; color:white">Poop Ribbon (2019)</h5>
       <hr><br>
 
@@ -219,7 +224,7 @@
       <hr><br> -->
 
 
-      <br><br>
+    <br><br>
 
     <div class="topnav4">
       <a href="mailto:tamakifujino526@gmail.com"> <img src="images/mail.png" width="20px" alt="">
@@ -230,8 +235,8 @@
       </a>
       <a href="https://www.instagram.com/tama_arttube/"><img src="images/insta.png" width="20px" alt="">
       </a>
-      </div>
     </div>
+  </div>
 </body>
 
 </html>
