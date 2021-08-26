@@ -276,14 +276,16 @@ span {
 
 .slideshow-container img {
   vertical-align: right;
-  width: 80%;
+  width:80%;
+
 }
 
 /* Slideshow container */
 .slideshow-container {
   position: absolute;
   top: 18%;
-  right: 0%;
+  left: 35%;
+  width: 60%;
 }
 
 /* Caption text */
@@ -298,7 +300,7 @@ span {
 .work_text {
   position: absolute;
   top: 18%;
-  left: 12%;
+  left: 13%;
   width: 25%;
 }
 
@@ -454,6 +456,47 @@ span {
   color: transparent;
 }
 
+
+/* work container in the each work page */
+.work_description {
+  position: absolute;
+  top: 15%;
+  left: 13%;
+  width: 30%;
+  height: 75%;
+  overflow: scroll;
+  padding:20px;
+}
+
+.work_images {
+  position: absolute;
+  top: 18%;
+  left: 35%;
+  width: 60%;
+}
+
+.work_images img {
+  width:60%;
+}
+
+.title h2 {
+  text-align: center;
+  color:white;
+  font-size:35px;
+  padding-top:20px;
+  margin:0px;
+}
+
+.title h3 {
+  text-align: center;
+  color:white;
+  font-size:12px;
+}
+
+ /* smartphone layout each work page */
+
+
+
 .social {
   font-family: 'Bebas Neue', cursive;
   color: rgba(0, 0, 0, 0.8);
@@ -544,10 +587,20 @@ span {
 }
 
 .sp_work {
-  padding-top: 80px;
-  margin-bottom: 7%;
+  padding-top: 0%;
+  padding-bottom: 7%;
   width: 90%;
   text-align: center;
+}
+
+.sp_work h5{
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size:14px;
+}
+
+.sp_work hr{
+  width:90%;
 }
 
 .play {

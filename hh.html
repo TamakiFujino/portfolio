@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PROJECT | HIDDEN HISTORIES</title>
+  <link rel="icon" href="images/favicon.png" sizes="16x16">
+  <meta name="keywords" content="artist, tamaki fujino, tama, digital media art, tamaki, 藤野珠輝, たま, アート, デジタルメディアアート, new media art">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
+  <script src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="noindex, noarchive">
+  <meta name="format-detection" content="telephone=no">
+  <link href="stylesheet.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="loader-wrap">
+    <div class="loader"></div>
+  </div>
+  <script type="text/javascript">
+    $(function() {
+      var loader = $('.loader-wrap');
+
+      //ページの読み込みが完了したらアニメーションを非表示
+      $(window).on('load', function() {
+        loader.fadeOut();
+      });
+
+      //ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+      setTimeout(function() {
+        loader.fadeOut();
+      }, 3000);
+    });
+  </script>
+
+
+  <div class="pc">
+    <!-- navigation bar right -->
+    <div class="topnav">
+      <a href="index.html">HOME</a>
+      <a href="bio.html">ABOUT</a>
+      <a class="active" href="work.html">WORKS</a>
+    </div>
+    <!-- navigation bar left -->
+    <div class="topnav2">
+      <a href="mailto:tamakifujino526@gmail.com"> <img src="images/mail.png" width="20px" alt="">
+      </a>
+      <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
+      </a>
+      <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="20px" alt="">
+      </a>
+      <a href="https://www.instagram.com/tama_arttube/"><img src="images/insta.png" width="20px" alt="">
+      </a>
+    </div>
+    <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2021 TAMAKI FUJINO</p>
+
+    <div class="title">
+      <h2>Hidden Histories of San Jose Japantown (2021)</h2>
+      <h3>AR group installation</h3>
+    </div>
+
+    <div class="work_images">
+      <a href="//https://vimeo.com/304552478" data-lity> <img src="images/rep/oil_water.jpg"></a>
+      <p style="margin:auto; text-align:center;">Click the image to watch the documentation <br>
+        画像をクリックすると動画がご覧になれます。
+    </div>
+
+    <p class="work_description">
+
+    </p>
+  </div>
+
+
+  <div class="sp">
+    <div class="topnav3" style="position:absolute; top:1%;">
+      <a class="active" href="index.html">HOME</a>
+      <a href="bio.html">ABOUT</a>
+      <a href="work.html">WORKS</a>
+    </div>
+
+    <img src="" alt="">
+
+      <h2>Hidden Histories of San Jose Japantown (2021)</h2>
+      <h5>AR group installation</h5>
+      <hr><br>
+      <p style="font-size:15px; width:80%; margin: auto;">
+
+
+      </p>
+
+      <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2021 TAMAKI FUJINO</p>
+    </div>
+  </div>
+</body>
+
+</html>
