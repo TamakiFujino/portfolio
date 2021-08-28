@@ -42,7 +42,7 @@ function setup() {
 }
 
 function draw() {
-  background(0,173,150);
+  background(0,0,0);
 
   for (var i = 0; i < drops.length; i++) {
     drops[i].fall();

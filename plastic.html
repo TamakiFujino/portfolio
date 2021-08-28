@@ -17,7 +17,13 @@
   <meta name="format-detection" content="telephone=no">
   <link href="stylesheet.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <style media="screen">
+    html {
+      overflow: hidden;
+    }
+  </style>
 </head>
+
 <body>
 
   <div class="loader-wrap">
@@ -37,6 +43,35 @@
         loader.fadeOut();
       }, 3000);
     });
+
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
   </script>
 
 
@@ -53,25 +88,94 @@
       </a>
       <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
       </a>
-      <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="20px" alt="">
+      <a href="https://www.linkedin.com/in/tamaki-fujino-421396162/"><img src="images/linkedin.png" width="20px" alt="">
       </a>
       <a href="https://www.instagram.com/tama_arttube/"><img src="images/insta.png" width="20px" alt="">
       </a>
+        <p class="c-mark">©︎ 2021 TAMAKI FUJINO</p>
     </div>
-    <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2021 TAMAKI FUJINO</p>
 
     <div class="title">
-      <h2></h2>
-      <h3></h3>
+      <h2>Plastic Material (2020)</h2>
+      <h3>Virtual Installation - [ Mass Produce / Water Pollution / Useless / Capitalism ]</h3>
     </div>
 
-    <div class="work_images">
-      <a href="//https://vimeo.com/304552478" data-lity> <img src="images/rep/oil_water.jpg"></a>
-      <p style="margin:auto; text-align:center;">Click the image to watch the documentation <br>
-        画像をクリックすると動画がご覧になれます。
+    <!-- /image container-  -->
+    <div class ="imageSlide">
+    <div class="container">
+      <div class="mySlides">
+      <img src="images/rep/plastic.jpg" style="width:100%">
+      </div>
+
+    <div class="mySlides">
+    <img src="images/plastic2.jpg" style="width:100%">
+    </div>
+
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+    <p id="caption"></p>
+    </div>
+
+    <div class="row">
+      <div class="column">
+      <img class="demo cursor" src="images/rep/plastic.jpg" style="width:100%" onclick="currentSlide(1)">
+      </div>
+    <div class="column">
+    <img class="demo cursor" src="images/plastic2.jpg" style="width:100%" onclick="currentSlide(2)">
+    </div>
+    </div>
+    </div>
     </div>
 
     <p class="work_description">
+      Plastic Material is a virtual installation made with MAYA and body scan using Skanect and
+   Kinect.　<br>
+   <br>
+    This work is based on the issue of plastic pollution in the ocean that is popularly talked
+   about among the younger generation right now. Taking advantage of plastic pollution in the ocean as the
+   topic of modern common knowledge of everyone, this piece questions the society with AI and
+   the identity of individuals in the system of capitalism and mass production. <br>
+   I put a body scan and
+   separated into body parts with textured with a package of brand logos that contribute to plastic
+   pollution the most. In the small black room with mirrored walls, you can flow with plastic waste
+   shaped body parts and think about the concept I talk about above. <br>
+   The surface of the ocean is set
+   as the level of your face, and that is something physical installation cannot put into practice.
+   The four walls of the room
+   are made out of mirrors so that the viewer can feel the ocean is infinite and they are a tiny
+   existence there. <br><br>
+   I was inspired by
+   the game, "Detroit, Become
+   Human." This game is created
+   based on the world that Androids
+   look identical to real humans and
+   they work for humans as if they are
+   slaves of humans. When Androids
+   start to have an emotion, they are
+   disposed of just like plastic waste.
+   If technology advanced much
+   more, and a similar society became
+   possible, would humans be
+   valuable? Even now, along with
+   the society with automation taking over our jobs and there are so many people that have similar skills and background. <br>
+    <br>Would all
+   individuals be valuable? How much are we different from the plastic waste flowing in the sea that cannot be
+   distinguished individuals in the loop of being produced and wasted?
+
+   <br><br>
+   「プラスチックマテリアル」は３DモデリングソフトウェアのMAYAにSkanectとKinectデバイスによる体の形のスキャンを取り込んで作られたバーチュアルのインスタレーションです。<br>
+  現在若い人たちの間で活発に取り上げられている、プラスチックのゴミによる海の汚染をテーマにしたものです。海でのプラスチックの汚染が問題視され幅広く若い人たちに認知されていることを活用し、
+  この作品はAIに囲まれた社会と資本主義と大量生産の社会の中で個人の存在意義を問うために制作されました。<br>
+  Kinectによって得られた体の３Dスキャンを手足や頭など部位ごとに分け、そこにプラスチックの汚染に最も貢献している会社の製品のロゴを貼り付けました。このバーチュアルインスタレーションは小さく天井と床が真っ黒に塗られており、
+  壁に鏡を貼ることによって、小さい部屋でありながら永遠に続いているかのような広大な海を、この広い世界として表現しました。海面を訪れる人の目線に設定することで海面に浮かぶ人間型のプラスチックのゴミと同じように海面に浮かび、ゴミの一部になる体験ができます。
+  <br>
+  この作品はビデオゲームである「デトロイト：ビカムヒューマン」に刺激を受けて構想を練りました。そのゲームは人間に瓜二つのアンドロイドが人間の奴隷のように働かされている世界を題材にしたものです。アンドロイドが人間と同じように感情を持ち始めたとき、人間によってだたのプラスチックのゴミのように処分されてしまいます <br>
+  テクノロジーが発展し、もしそれと同じような社会が現実になれば、人間は価値のある存在でい続けることができるのでしょうか？今現在でさえ、機械が人間の仕事を奪い、たくさんの人が同じ様な背景や技術を持っている中で、
+  全ての人はこの世界に存在する価値を見出せるのでしょうか。私たちは資本主義の中で生き、大きな企業や権力に操られ生活しています。今現在問題となっている大企業によって作られた海面に浮かんでいるプラスチックのゴミは生産され、一度使われれば邪魔者だと捨てらます。私たちはそのプラスチックのゴミとどれほど違うでしょうか。
+
 
     </p>
   </div>
@@ -86,13 +190,70 @@
 
     <img src="" alt="">
 
-      <h2></h2>
-      <h5></h5>
+      <h2>Plastic Material (2020)</h2>
+      <h5>Virtual Installation - [ Mass Produce / Water Pollution / Useless / Capitalism ]</h5>
       <hr><br>
       <p style="font-size:15px; width:80%; margin: auto;">
+        Plastic Material is a virtual installation made with MAYA and body scan using Skanect and
+     Kinect.　<br>
+     <br>
+      This work is based on the issue of plastic pollution in the ocean that is popularly talked
+     about among the younger generation right now. Taking advantage of plastic pollution in the ocean as the
+     topic of modern common knowledge of everyone, this piece questions the society with AI and
+     the identity of individuals in the system of capitalism and mass production. <br>
+     I put a body scan and
+     separated into body parts with textured with a package of brand logos that contribute to plastic
+     pollution the most. In the small black room with mirrored walls, you can flow with plastic waste
+     shaped body parts and think about the concept I talk about above. <br>
+     The surface of the ocean is set
+     as the level of your face, and that is something physical installation cannot put into practice.
+     The four walls of the room
+     are made out of mirrors so that the viewer can feel the ocean is infinite and they are a tiny
+     existence there. <br><br>
+     I was inspired by
+     the game, "Detroit, Become
+     Human." This game is created
+     based on the world that Androids
+     look identical to real humans and
+     they work for humans as if they are
+     slaves of humans. When Androids
+     start to have an emotion, they are
+     disposed of just like plastic waste.
+     If technology advanced much
+     more, and a similar society became
+     possible, would humans be
+     valuable? Even now, along with
+     the society with automation taking over our jobs and there are so many people that have similar skills and background. <br>
+      <br>Would all
+     individuals be valuable? How much are we different from the plastic waste flowing in the sea that cannot be
+     distinguished individuals in the loop of being produced and wasted?
+
+     <br><br>
+     「プラスチックマテリアル」は３DモデリングソフトウェアのMAYAにSkanectとKinectデバイスによる体の形のスキャンを取り込んで作られたバーチュアルのインスタレーションです。<br>
+現在若い人たちの間で活発に取り上げられている、プラスチックのゴミによる海の汚染をテーマにしたものです。海でのプラスチックの汚染が問題視され幅広く若い人たちに認知されていることを活用し、
+この作品はAIに囲まれた社会と資本主義と大量生産の社会の中で個人の存在意義を問うために制作されました。<br>
+Kinectによって得られた体の３Dスキャンを手足や頭など部位ごとに分け、そこにプラスチックの汚染に最も貢献している会社の製品のロゴを貼り付けました。このバーチュアルインスタレーションは小さく天井と床が真っ黒に塗られており、
+壁に鏡を貼ることによって、小さい部屋でありながら永遠に続いているかのような広大な海を、この広い世界として表現しました。海面を訪れる人の目線に設定することで海面に浮かぶ人間型のプラスチックのゴミと同じように海面に浮かび、ゴミの一部になる体験ができます。
+<br>
+この作品はビデオゲームである「デトロイト：ビカムヒューマン」に刺激を受けて構想を練りました。そのゲームは人間に瓜二つのアンドロイドが人間の奴隷のように働かされている世界を題材にしたものです。アンドロイドが人間と同じように感情を持ち始めたとき、人間によってだたのプラスチックのゴミのように処分されてしまいます <br>
+テクノロジーが発展し、もしそれと同じような社会が現実になれば、人間は価値のある存在でい続けることができるのでしょうか？今現在でさえ、機械が人間の仕事を奪い、たくさんの人が同じ様な背景や技術を持っている中で、
+全ての人はこの世界に存在する価値を見出せるのでしょうか。私たちは資本主義の中で生き、大きな企業や権力に操られ生活しています。今現在問題となっている大企業によって作られた海面に浮かんでいるプラスチックのゴミは生産され、一度使われれば邪魔者だと捨てらます。私たちはそのプラスチックのゴミとどれほど違うでしょうか。
 
 
       </p>
+
+      <div class="topnav4">
+        <a href="mailto:tamakifujino526@gmail.com"> <img src="images/mail.png" width="20px" alt="">
+        </a>
+        <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
+        </a>
+        <a href="https://www.linkedin.com/in/tamaki-fujino-421396162/"><img src="images/linkedin.png" width="20px" alt="">
+        </a>
+        <a href="https://www.instagram.com/tama_arttube/"><img src="images/insta.png" width="20px" alt="">
+        </a>
+      </div>
+
+
 
       <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2021 TAMAKI FUJINO</p>
     </div>
