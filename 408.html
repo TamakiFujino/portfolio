@@ -39,6 +39,37 @@
         loader.fadeOut();
       }, 3000);
     });
+
+
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
   </script>
 
 
@@ -67,11 +98,64 @@
       <h3>Plexiglass, wood, inkjet print - [ Gun control / Mass Shooting / Allium / Memorial ]</h3>
     </div>
 
-    <div class="work_images">
-      <a href="//https://vimeo.com/304552478" data-lity> <img src="images/rep/oil_water.jpg"></a>
-      <p style="margin:auto; text-align:center;">Click the image to watch the documentation <br>
-        画像をクリックすると動画がご覧になれます。
-    </div>
+<!-- /image container-  -->
+<div class ="imageSlide">
+<div class="container">
+  <div class="mySlides">
+  <img src="images/rep/R408.jpg" style="width:100%">
+  </div>
+
+<div class="mySlides">
+<img src="images/408/408_1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+<img src="images/408/40800001.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+<img src="images/408/40800002.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+<img src="images/408/40800003.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+<img src="images/408/40800004.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+<div class="caption-container">
+<p id="caption"></p>
+</div>
+
+<div class="row">
+  <div class="column">
+  <img class="demo cursor" src="images/rep/R408.jpg" style="width:100%" onclick="currentSlide(1)">
+  </div>
+<div class="column">
+<img class="demo cursor" src="images/408/408_1.jpg" style="width:100%" onclick="currentSlide(2)">
+</div>
+<div class="column">
+<img class="demo cursor" src="images/408/40800001.jpg" style="width:100%" onclick="currentSlide(3)">
+</div>
+<div class="column">
+<img class="demo cursor" src="images/408/40800002.jpg" style="width:100%" onclick="currentSlide(4)">
+</div>
+<div class="column">
+<img class="demo cursor" src="images/408/40800003.jpg" style="width:100%" onclick="currentSlide(5)">
+</div>
+<div class="column">
+<img class="demo cursor" src="images/408/40800004.jpg" style="width:100%" onclick="currentSlide(6)">
+</div>
+</div>
+</div>
+</div>
+
+<!-- //////////////////////////////////////////////////////////////// -->
 
     <p class="work_description">
       This is a memorial piece for the people who have passed away because of mass shootings in the US.
@@ -134,8 +218,8 @@
 
     <img src="" alt="">
 
-    <h2>408 (2019)</h2>
-    <h5>Plexiglass, wood, inkjet print <br><br>
+    <h2 style="text-align:center;">408 (2019)</h2>
+    <h5 style="color:white;">Plexiglass, wood, inkjet print <br><br>
       [ Gun control / Mass Shooting / Allium / Memorial ]
     </h5>
     <hr><br>
