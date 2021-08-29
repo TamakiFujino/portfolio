@@ -625,14 +625,6 @@ span {
   box-sizing: border-box;
 }
 
-.imageSlide img {
-  vertical-align: middle;
-  -webkit-transition: opacity 1s ease-in-out;
- -moz-transition: opacity 1s ease-in-out;
- -o-transition: opacity 1s ease-in-out;
- transition: opacity 1s ease-in-out;
-}
-
 /* Position the image container (needed to position the left and right arrows) */
 .imageSlide .container {
   position: relative;
@@ -640,11 +632,6 @@ span {
   top:40px;
   left:48%;
   vertical-align:center;
-}
-
-/* Hide the images by default */
-.imageSlide .mySlides {
-  display: none;
 }
 
 
@@ -676,16 +663,6 @@ span {
   border-radius: 3px 0 0 3px;
 }
 
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  padding:auto;
-  background-color: none;
-  padding: 2px 16px;
-  font-size:10px;
-  color: black;
-}
 
 .row:after {
   content: "";
