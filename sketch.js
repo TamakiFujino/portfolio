@@ -33,16 +33,16 @@ let osc1, playing1, freq1, amp1;
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   cnv.mousePressed(playOscillator);
+  cnv.class('p5');
   osc = new p5.Oscillator('sine');
   osc1 = new p5.Oscillator('triangle');
-  for (var i = 0; i < 480; i++) {
-    drops[i] = new Drop();
-  }
+  // for (var i = 0; i < 70; i++) {
+  //   drops[i] = new Drop();
+  // }
   noCursor();
 }
 
 function draw() {
-  background(0,0,0);
 
   for (var i = 0; i < drops.length; i++) {
     drops[i].fall();
@@ -56,17 +56,11 @@ function draw() {
 
   if (playing) {
     // smooth the transitions by 0.1 seconds
-    osc.freq(freq, 0.1);
+    osc.freq(freq, 1);
     osc.amp(amp, 0.1);
-    osc1.freq(freq1, 0.1);
+    osc1.freq(freq1, 1);
     osc1.amp(amp1, 0.1);
   }
-
-  // draw rectangle
-  strokeWeight(3);
-  stroke(255,255,255);
-  noFill();
-  ellipse(mouseX, mouseY, 60, 60);
 }
 
 function playOscillator() {
@@ -81,8 +75,8 @@ function playOscillator() {
 
 function mouseReleased() {
   // ramp amplitude to 0 over 0.5 seconds
-  osc.amp(0, 0.5);
+  osc.amp(0, 1);
   playing = false;
-  osc1.amp(0, 0.5);
+  osc1.amp(0, 1);
   playing1 = false;
 }

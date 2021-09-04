@@ -2,58 +2,51 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
   <title>WORKS</title>
-  <link rel="icon" href="images/favicon.png" sizes="16x16">
-  <meta name="description" content="description in 50–300 characters (letters).">
-  <meta name="keywords" content="artist, tamaki fujino, tama, digital media art, tamaki, 藤野珠輝, たま, アート, デジタルメディアアート, new media art">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+  <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.png" sizes="16x16">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, noarchive">
+    <meta name="format-detection" content="telephone=no">
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
-  <script src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <meta name="keywords" content="artist, tamaki fujino, tama, digital media art, tamaki, 藤野珠輝, たま, アート, デジタルメディアアート, new media art">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+
+  <!-- style sheet  -->
+    <link rel="stylesheet" type="text/css" href="main.css">
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <!-- p5 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
+    <script type="text/javascript" src="sketch.js"></script>
+    <!-- <script type="text/javascript" src="drop.js"></script> -->
+
+    <!-- javascript -->
+    <script src="script.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
   <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
+  $(function() {
+    var loader = $('.loader-wrap');
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
+    //fisinish animation when loading is done
+    $(window).on('load', function() {
+      loader.fadeOut();
+    });
 
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
+    //settimeout after 3 sec
+    setTimeout(function() {
+      loader.fadeOut();
+    }, 3000);
+  });
 
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {
-        slideIndex = 1
-      }
-      if (n < 1) {
-        slideIndex = slides.length
-      }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-    }
+  $('body').bind('copy paste', function(e) {
+    e.preventDefault();
+    return false;
+  });
   </script>
 
-  <style media="screen">
-      html {
-        overflow: hidden;
-      }
-  </style>
 </head>
 
 <body>
@@ -98,54 +91,54 @@
       <p class="c-mark">©︎ 2021 TAMAKI FUJINO</p>
     </div>
 
-    <div class="slideshow-container">
+    <div class="slideshow-container-main">
 
-      <div class="mySlides fade">
+      <div class="mySlides-main fade">
         <img src="images/rep/digitalautonomy.jpg">
         <div class="text">Digital Autonomy (2021) BFA group exhibition in New Art City</div>
       </div>
 
-      <div class="mySlides fade">
+      <div class="mySlides-main fade">
         <img src="images/rep/yamaoritaniori.jpg">
         <div class="text">Yamaori Taniori (2021) Interactive digital installation</div>
       </div>
 
-      <div class="mySlides fade">
+      <div class="mySlides-main fade">
         <img src="images/rep/hiddenhistories.jpg">
         <div class="text">Hidden Histories of San Jose Japantown (2021) AR group installation</div>
       </div>
 
-      <div class="mySlides fade">
+      <div class="mySlides-main fade">
         <img src="images/rep/meatspace.jpg">
         <div class="text">Meatspace Magazine (2021) Student-led magazine, Fall 2020 "Digital Native"</div>
       </div>
 
-      <div class="mySlides fade">
+      <div class="mySlides-main fade">
         <img src="images/rep/panda0.jpg">
         <div class="text">Assimilation and accomodation (2020) Digital video created with MAYA</div>
       </div>
 
-      <div class="mySlides fade">
+      <div class="mySlides-main fade">
         <img src="images/rep/plastic.jpg">
         <div class="text">Plastic Material (2020) 3D modeling with MAYA</div>
       </div>
 
-      <div class="mySlides fade">
+      <div class="mySlides-main fade">
         <img src="images/rep/R408.jpg">
         <div class="text">408 (2020) Memorial piece for the deceased due to the mass shootings in 2019</div>
       </div>
 
-      <div class="mySlides fade">
+      <div class="mySlides-main fade">
         <img src="images/rep/fishschool.jpg">
         <div class="text">School of Fish (2019) Digital video</div>
       </div>
 
-      <div class="mySlides fade">
+      <div class="mySlides-main fade">
         <img src="images/rep/poop.jpg">
         <div class="text">Poop Ribbon (2019) Installation in the stair case at San Jose State University</div>
       </div>
 
-      <div class="mySlides fade">
+      <div class="mySlides-main fade">
         <img src="images/rep/oil_water.jpg">
         <div class="text">Oil and Water (2018) Digital video</div>
       </div>

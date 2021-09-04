@@ -2,29 +2,31 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
+
   <title>WORK | 408</title>
+
+<meta charset="utf-8">
   <link rel="icon" href="images/favicon.png" sizes="16x16">
-  <meta name="keywords" content="artist, tamaki fujino, tama, digital media art, tamaki, 藤野珠輝, たま, アート, デジタルメディアアート, new media art">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
-  <script src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="noindex, noarchive">
   <meta name="format-detection" content="telephone=no">
-  <link href="stylesheet.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-  <style media="screen">
-    html {
-      overflow: hidden;
-    }
-  </style>
+  <meta name="keywords" content="artist, tamaki fujino, tama, digital media art, tamaki, 藤野珠輝, たま, アート, デジタルメディアアート, new media art">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 
+<!-- style sheet  -->
+  <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+  <!-- p5 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
+  <script type="text/javascript" src="sketch.js"></script>
+  <!-- <script type="text/javascript" src="drop.js"></script> -->
+
+  <!-- javascript -->
+  <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
 
 <body>
@@ -33,50 +35,24 @@
     <div class="loader"></div>
   </div>
   <script type="text/javascript">
-    $(function() {
-      var loader = $('.loader-wrap');
+  $(function() {
+    var loader = $('.loader-wrap');
 
-      //ページの読み込みが完了したらアニメーションを非表示
-      $(window).on('load', function() {
-        loader.fadeOut();
-      });
-
-      //ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
-      setTimeout(function() {
-        loader.fadeOut();
-      }, 3000);
+    //fisinish animation when loading is done
+    $(window).on('load', function() {
+      loader.fadeOut();
     });
 
+    //settimeout after 3 sec
+    setTimeout(function() {
+      loader.fadeOut();
+    }, 3000);
+  });
 
-    var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-
+  $('body').bind('copy paste', function(e) {
+    e.preventDefault();
+    return false;
+  });
   </script>
 
 
