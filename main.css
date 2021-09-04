@@ -121,19 +121,22 @@ h4 {
   text-align: left;
 }
 
-.work_sp h4 {
-  text-align: center;
-}
-
 h5 {
   font-size: 17px;
   font-family: 'Bebas Neue', cursive;
   text-align: center;
 }
 
+.work_sp h4 {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  font-size:18px;
+}
+
+
 .work_sp h5 {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: #4a5882;
 }
 
@@ -160,7 +163,7 @@ a:hover {
   color: transparent;
 }
 
-span {
+.work_text span {
   color: #4a5882;
   font-size: 12px;
   padding: 2px;
@@ -197,7 +200,7 @@ span {
   justify-content: center;
   width: 100%;
   height: 100%;
-  z-index:3;
+  z-index: 3;
 }
 
 .loader,
@@ -336,11 +339,9 @@ span {
 
 .work_images {
   position: absolute;
-    width: 40%;
+  width: 40%;
   top: 50px;
   left: 50%;
-
-
   position: relative;
   width: 40%;
   height: 70%;
@@ -349,11 +350,10 @@ span {
 }
 
 .work_images img {
-  width:100%;
+  width: 100%;
 }
 
 /* sum of work in pc layout -------------------------------*/
-
 /* Caption text */
 /* .text {
   color: #f2f2f2;
@@ -362,7 +362,6 @@ span {
   margin: 7px;
   width: 100%;
 } */
-
 .work_text {
   position: absolute;
   top: 18%;
@@ -447,9 +446,11 @@ span {
 .topnav3 {
   overflow: hidden;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 100px;
   color: #4a5882;
+  background-color:  #ffd4cc;
   position: absolute;
+  top:0px;
+  padding: 10px 0px;
   z-index: 2;
   width: 100%;
 }
@@ -457,10 +458,7 @@ span {
 .topnav3 a {
   float: left;
   color: #4a5882;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 7px;
+  padding: 10px 20px;
   text-decoration: none;
   font-size: 12px;
 }
@@ -473,6 +471,7 @@ span {
 
 .topnav3 a.active {
   border-bottom: 3px solid #4a5882;
+  border-top: 3px solid #4a5882;
 }
 
 /* Top navigation - Smartphone Design - Right ------------------*/
@@ -482,7 +481,7 @@ span {
   font-size: 100px;
   color: #4a5882;
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
   z-index: 2;
   width: 100%;
   padding-top: 17px;
@@ -507,8 +506,7 @@ span {
 .work_sp {
   height: 100vh;
   overflow: scroll;
-  padding-top: 80px;
-  padding-bottom: 100px;
+  padding: 30px 0px 50px 0px;
 }
 
 .sp_work {
@@ -589,12 +587,6 @@ span {
   line-height: 1.5;
 } */
 /* in main page ---------------------------------------- */
-.text-color {
-  display: inline-block;
-  -webkit-text-fill-color: #ffd4cc;
-  /* #ffe7a3, #ffd4cc, #d0d4cc, #ffdaa5, #61b6cd */
-}
-
 .en {
   width: 1000px;
   height: 1000px;
@@ -684,4 +676,54 @@ span {
   text-align: center;
   color: #4a5882;
   font-size: 15px;
+}
+
+/* smart phone layout - individual work page */
+#work {
+  padding:15px;
+  overflow: scroll;
+  height: 100vh;
+}
+.sp_title {
+  text-align: center;
+  padding: 70px 0px 0px 0px;
+  margin: 0;
+}
+
+.sp_subtitle {
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  font-size: 13px;
+}
+
+.sp_hr {
+  width: 90%;
+}
+
+.sp_workdescription {
+  font-size: 15px;
+  width: 85%;
+  padding: 20px 20px 80px 20px;
+  margin: auto;
+}
+
+.sp_thumbnail {
+  width:85%;
+}
+
+.sp_workimage {
+  width:100%;
+  margin:auto;
+  padding: 15px 0px 15px 0px;
+}
+
+.sp_cmark {
+  position: absolute;
+  bottom: 0%;
+  padding: 15px 0px;
+  float:right;
+  font-size: 12px;
+  width:100%;
+  font-family: 'Josefin Sans', sans-serif;
+  z-index: 2;
 }

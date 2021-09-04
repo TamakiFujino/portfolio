@@ -23,34 +23,55 @@
 </head>
 
 <body>
+    <style>
+      .tablink {
+        background-color: transparent;
+        color: #4a5882;
+        float: center;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 50px;
+        margin-top: 50px;
 
-  <!-- loader animation -->
-  <div class="loader-wrap">
-    <div class="loader"></div>
-  </div>
+      }
 
-  <script type="text/javascript">
-  $(function() {
-    var loader = $('.loader-wrap');
+      .tablink:hover {
+        background-color: transparent;
+      }
 
-    //fisinish animation when loading is done
-    $(window).on('load', function() {
-      loader.fadeOut();
-    });
+      .tablink a {
+        background-color: transparent;
+      }
 
-    //settimeout after 3 sec
-    setTimeout(function() {
-      loader.fadeOut();
-    }, 3000);
-  });
+      .tablink:hover {
+        text-shadow: 0px 3px 10px white;
+        transition: 0.5s;
+        color: transparent;
+      }
 
-  $('body').bind('copy paste', function(e) {
-    e.preventDefault();
-    return false;
-  });
-  </script>
-  <!-- loader animation -->
+      /* Style the tab content */
+      .tabcontent {
+        background-color: none;
+        display: none;
+        padding: 0px;
+        text-align: center;
+        line-height: 1.5;
+        width: 85%;
+        height: 75%;
+        overflow: scroll;
+      }
 
+      #EN {
+        background-color: transparent;
+      }
+
+      #JP {
+        background-color: transparent;
+      }
+    </style>
 
   <!-- laptop width design -->
   <div class="pc">
@@ -77,55 +98,6 @@
   <!-- laptop width design -->
 
 
-  <style>
-    .tablink {
-      background-color: transparent;
-      color: #4a5882;
-      float: center;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      font-size: 17px;
-      width: 50px;
-      margin-top: 50px;
-
-    }
-
-    .tablink:hover {
-      background-color: transparent;
-    }
-
-    .tablink a {
-      background-color: transparent;
-    }
-
-    .tablink:hover {
-      text-shadow: 0px 3px 10px white;
-      transition: 0.5s;
-      color: transparent;
-    }
-
-    /* Style the tab content */
-    .tabcontent {
-      background-color: none;
-      display: none;
-      padding: 0px;
-      text-align: center;
-      line-height: 1.5;
-      width: 80%;
-      height: 75%;
-      overflow: scroll;
-    }
-
-    #EN {
-      background-color: transparent;
-    }
-
-    #JP {
-      background-color: transparent;
-    }
-  </style>
 
   <button class="tablink" onclick="openCity('EN')" id="defaultOpen">EN</button>
   <button class="tablink" onclick="openCity('JP')">JP</button>
@@ -224,6 +196,29 @@
 
 
 
+  <div class="sp">
+    <div class="topnav3" style="position:absolute; top:1%;">
+      <a href="index.html">HOME</a>
+      <a class="active" href="bio.html">ABOUT</a>
+      <a href="work.html">WORKS</a>
+    </div>
+
+
+    <div class="topnav4">
+      <a href="mailto:tamakifujino526@gmail.com"> <img src="images/mail.png" width="20px" alt="">
+      </a>
+      <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
+      </a>
+      <a href="https://www.linkedin.com/in/tamaki-fujino-421396162/"><img src="images/linkedin.png" width="20px" alt="">
+      </a>
+      <a href="https://www.instagram.com/tama_arttube/"><img src="images/insta.png" width="20px" alt="">
+      </a>
+    </div>
+
+    <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2021 TAMAKI FUJINO</p>
+  </div>
+
+
   <script>
     function openCity(cityName, elmnt, color) {
       var i, tabcontent, tablinks;
@@ -243,28 +238,33 @@
     document.getElementById("defaultOpen").click();
   </script>
 
-
-  <div class="sp">
-    <div class="topnav3" style="position:absolute; top:1%;">
-      <a class="active" href="index.html">HOME</a>
-      <a href="bio.html">ABOUT</a>
-      <a href="work.html">WORKS</a>
-    </div>
-
-
-    <div class="topnav4">
-      <a href="mailto:tamakifujino526@gmail.com"> <img src="images/mail.png" width="20px" alt="">
-      </a>
-      <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
-      </a>
-      <a href="https://www.linkedin.com/in/tamaki-fujino-421396162/"><img src="images/linkedin.png" width="20px" alt="">
-      </a>
-      <a href="https://www.instagram.com/tama_arttube/"><img src="images/insta.png" width="20px" alt="">
-      </a>
-    </div>
-
-    <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2021 TAMAKI FUJINO</p>
+  <!-- loader animation -->
+  <div class="loader-wrap">
+    <div class="loader"></div>
   </div>
+
+  <script type="text/javascript">
+  $(function() {
+    var loader = $('.loader-wrap');
+
+    //fisinish animation when loading is done
+    $(window).on('load', function() {
+      loader.fadeOut();
+    });
+
+    //settimeout after 3 sec
+    setTimeout(function() {
+      loader.fadeOut();
+    }, 3000);
+  });
+
+  $('body').bind('copy paste', function(e) {
+    e.preventDefault();
+    return false;
+  });
+  </script>
+
+
 
 </body>
 
