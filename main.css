@@ -353,69 +353,22 @@ span {
 }
 
 /* sum of work in pc layout -------------------------------*/
-.mySlides-main {
-  display: none
-}
-
-.slideshow-container-main img {
-  vertical-align: right;
-  width:80%;
-}
-
-/* Slideshow container */
-.slideshow-container-main {
-  position: absolute;
-  top: 18%;
-  left: 35%;
-  width: 60%;
-}
 
 /* Caption text */
-.text {
+/* .text {
   color: #f2f2f2;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 12px;
   margin: 7px;
   width: 100%;
-}
+} */
 
 .work_text {
   position: absolute;
   top: 18%;
-  left: 13%;
-  width: 25%;
+  left: 10%;
+  width: 28%;
 }
-
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
-
 
 /* Top navigation component ------------------------------------------- */
 /* Top navigation - Laptop Design - Left ------------------*/

@@ -4,66 +4,91 @@
 <head>
   <title>WORKS</title>
   <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.png" sizes="16x16">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="noindex, noarchive">
-    <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="images/favicon.png" sizes="16x16">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="noindex, noarchive">
+  <meta name="format-detection" content="telephone=no">
 
-    <meta name="keywords" content="artist, tamaki fujino, tama, digital media art, tamaki, 藤野珠輝, たま, アート, デジタルメディアアート, new media art">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <meta name="keywords" content="artist, tamaki fujino, tama, digital media art, tamaki, 藤野珠輝, たま, アート, デジタルメディアアート, new media art">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 
   <!-- style sheet  -->
-    <link rel="stylesheet" type="text/css" href="main.css">
-      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
 
-    <!-- javascript -->
-    <script src="script.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <!-- javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-  <script>
-  $(function() {
-    var loader = $('.loader-wrap');
+  <style media="screen">
 
-    //fisinish animation when loading is done
-    $(window).on('load', function() {
-      loader.fadeOut();
-    });
+    /* Slideshow container */
 
-    //settimeout after 3 sec
-    setTimeout(function() {
-      loader.fadeOut();
-    }, 3000);
-  });
+    .slideshow-container img {
+      max-width: 50%;
+      position: absolute;
+      left:40%;
+      top:17%;
+      margin: auto;
+    }
 
-  $('body').bind('copy paste', function(e) {
-    e.preventDefault();
-    return false;
-  });
-  </script>
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Caption text */
+.text {
+  color:#ffd4cc;
+  font-family: 'Josefin Sans', sans-serif;
+      background-color: #4a5882;
+      font-size: 12px;
+      padding: 7px;
+      position: absolute;
+      top:9%;
+      left:0;
+      right:0;
+      margin:auto;
+      width:80%;
+
+
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+      to {
+        opacity: 1
+      }
+    }
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+      to {
+        opacity: 1
+      }
+    }
+  </style>
 
 </head>
 
 <body>
+  <!-- loader animation -->
+  <div class="loader-wrap">
+    <div class="loader"></div>
+  </div>
 
   <!-- laptop width design -->
   <div class="pc">
-    <!-- loader animation -->
-    <div class="loader-wrap">
-      <div class="loader"></div>
-    </div>
-    <script type="text/javascript">
-      $(function() {
-        var loader = $('.loader-wrap');
-        //ページの読み込みが完了したらアニメーションを非表示
-        $(window).on('load', function() {
-          loader.fadeOut();
-        });
-        //ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
-        setTimeout(function() {
-          loader.fadeOut();
-        }, 3000);
-      });
-    </script>
 
     <!-- navigation bar right -->
     <div class="topnav">
@@ -85,54 +110,54 @@
       <p class="c-mark">©︎ 2021 TAMAKI FUJINO</p>
     </div>
 
-    <div class="slideshow-container-main">
+    <div class="slideshow-container">
 
-      <div class="mySlides-main fade">
+      <div class="mySlides fade">
         <img src="images/rep/digitalautonomy.jpg">
         <div class="text">Digital Autonomy (2021) BFA group exhibition in New Art City</div>
       </div>
 
-      <div class="mySlides-main fade">
+      <div class="mySlides fade">
         <img src="images/rep/yamaoritaniori.jpg">
         <div class="text">Yamaori Taniori (2021) Interactive digital installation</div>
       </div>
 
-      <div class="mySlides-main fade">
+      <div class="mySlides fade">
         <img src="images/rep/hiddenhistories.jpg">
         <div class="text">Hidden Histories of San Jose Japantown (2021) AR group installation</div>
       </div>
 
-      <div class="mySlides-main fade">
+      <div class="mySlides fade">
         <img src="images/rep/meatspace.jpg">
         <div class="text">Meatspace Magazine (2021) Student-led magazine, Fall 2020 "Digital Native"</div>
       </div>
 
-      <div class="mySlides-main fade">
+      <div class="mySlides fade">
         <img src="images/rep/panda0.jpg">
         <div class="text">Assimilation and accomodation (2020) Digital video created with MAYA</div>
       </div>
 
-      <div class="mySlides-main fade">
+      <div class="mySlides fade">
         <img src="images/rep/plastic.jpg">
         <div class="text">Plastic Material (2020) 3D modeling with MAYA</div>
       </div>
 
-      <div class="mySlides-main fade">
+      <div class="mySlides fade">
         <img src="images/rep/R408.jpg">
         <div class="text">408 (2020) Memorial piece for the deceased due to the mass shootings in 2019</div>
       </div>
 
-      <div class="mySlides-main fade">
+      <div class="mySlides fade">
         <img src="images/rep/fishschool.jpg">
         <div class="text">School of Fish (2019) Digital video</div>
       </div>
 
-      <div class="mySlides-main fade">
+      <div class="mySlides fade">
         <img src="images/rep/poop.jpg">
         <div class="text">Poop Ribbon (2019) Installation in the stair case at San Jose State University</div>
       </div>
 
-      <div class="mySlides-main fade">
+      <div class="mySlides fade">
         <img src="images/rep/oil_water.jpg">
         <div class="text">Oil and Water (2018) Digital video</div>
       </div>
@@ -174,37 +199,37 @@
     </div>
 
 
-  <p style="position: absolute; bottom: 0%; right: 5%; font-size: 12px; z-index:3;">©︎ 2021 TAMAKI FUJINO</p>
+    <p style="position: absolute; bottom: 0%; right: 5%; font-size: 12px; z-index:3;">©︎ 2021 TAMAKI FUJINO</p>
 
 
 
 
-      <div class="work_sp" style="text-align:center; padding-top: 60px; padding-bottom:60px;">
-        <h4>Exhibition</h4>
-        <hr>
+    <div class="work_sp" style="text-align:center; padding-top: 60px; padding-bottom:60px;">
+      <h4>Exhibition</h4>
+      <hr>
 
-        <a href="autonomy.html"> <img src="images/rep/digitalautonomy.jpg" style="width:90%"> </a>
-        <h5>Digital Autonomy (2021)</h5>
-        <br>
+      <a href="autonomy.html"> <img src="images/rep/digitalautonomy.jpg" style="width:90%"> </a>
+      <h5>Digital Autonomy (2021)</h5>
+      <br>
 
-        <a href="yamatani.html"> <img src="images/rep/yamaoritaniori.jpg" style="width:90%"> </a>
-        <h5 style>Yamaori Taniori (2021)</h5>
-        <br>
+      <a href="yamatani.html"> <img src="images/rep/yamaoritaniori.jpg" style="width:90%"> </a>
+      <h5 style>Yamaori Taniori (2021)</h5>
+      <br>
 
-        <h4>Project</h4>
-        <hr>
+      <h4>Project</h4>
+      <hr>
 
-        <a href="hh.html"> <img src="images/rep/hiddenhistories.jpg" style="width:90%"> </a>
-        <h5>Hidden Histories of San Jose Japantown (2021)</h5>
-        <br>
+      <a href="hh.html"> <img src="images/rep/hiddenhistories.jpg" style="width:90%"> </a>
+      <h5>Hidden Histories of San Jose Japantown (2021)</h5>
+      <br>
 
-        <a href="meat.html"> <img src="images/rep/meatspace.jpg" style="width:90%"> </a>
-        <h5 style>Meatspace Magazine (2020)</h5>
-        <br>
+      <a href="meat.html"> <img src="images/rep/meatspace.jpg" style="width:90%"> </a>
+      <h5 style>Meatspace Magazine (2020)</h5>
+      <br>
 
 
-<h4>Work</h4>
-<hr>
+      <h4>Work</h4>
+      <hr>
       <a href="panda.html"> <img src="images/rep/panda0.jpg" style="width:90%"> </a>
       <h5>Assimilation and Accomodation (2020)</h5>
       <br>
@@ -229,20 +254,42 @@
       <h5>Oil and Water (2018)</h5>
       <br>
 
-    <br><br>
+      <br><br>
 
-    <div class="topnav4">
-      <a href="mailto:tamakifujino526@gmail.com"> <img src="images/mail.png" width="20px" alt="">
-      </a>
-      <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
-      </a>
-      <a href="https://www.linkedin.com/in/tamaki-fujino-421396162/"><img src="images/linkedin.png" width="20px" alt="">
-      </a>
-      <a href="https://www.instagram.com/tama_arttube/"><img src="images/insta.png" width="20px" alt="">
-      </a>
+      <div class="topnav4">
+        <a href="mailto:tamakifujino526@gmail.com"> <img src="images/mail.png" width="20px" alt="">
+        </a>
+        <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
+        </a>
+        <a href="https://www.linkedin.com/in/tamaki-fujino-421396162/"><img src="images/linkedin.png" width="20px" alt="">
+        </a>
+        <a href="https://www.instagram.com/tama_arttube/"><img src="images/insta.png" width="20px" alt="">
+        </a>
+      </div>
     </div>
   </div>
-  </div>
+
+  <script src="script.js"></script>
+  <script>
+    $(function() {
+      var loader = $('.loader-wrap');
+
+      //fisinish animation when loading is done
+      $(window).on('load', function() {
+        loader.fadeOut();
+      });
+
+      //settimeout after 3 sec
+      setTimeout(function() {
+        loader.fadeOut();
+      }, 3000);
+    });
+
+    $('body').bind('copy paste', function(e) {
+      e.preventDefault();
+      return false;
+    });
+  </script>
 </body>
 
 </html>
