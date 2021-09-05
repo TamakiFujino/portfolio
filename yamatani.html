@@ -1,45 +1,88 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>EXHIBITION | YAMAORI TANIORI</title>
-  <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.png" sizes="16x16">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="noindex, noarchive">
-    <meta name="format-detection" content="telephone=no">
 
-    <meta name="keywords" content="artist, tamaki fujino, tama, digital media art, tamaki, 藤野珠輝, たま, アート, デジタルメディアアート, new media art">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="icon" href="images/favicon.png" sizes="16x16">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="noindex, noarchive">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="keywords" content="artist, tamaki fujino, tama, digital media art, tamaki, 藤野珠輝, たま, アート, デジタルメディアアート, new media art">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 
   <!-- style sheet  -->
-    <link rel="stylesheet" type="text/css" href="main.css">
-      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
 
-    <!-- javascript -->
-    <script src="script.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
+
 <body>
+
+  <style>
+    .tablink_yt {
+      background-color: #4a5882;
+      color: #ffd4cc;
+      float: center;
+      border: 3px #4a5882;
+      padding: 10px;
+      font-size: 15px;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .tablink_yt:hover {
+      background-color: transparent;
+    }
+
+    .tablink_yt a {
+      background-color: transparent;
+    }
+
+    .tablink_yt:hover {
+      text-shadow: 0px 3px 10px white;
+      transition: 0.5s;
+      color: transparent;
+    }
+
+    /* Style the tab content */
+    .tabcontent_yt {
+      background-color: none;
+      display: none;
+      padding: 0px;
+      text-align: center;
+      line-height: 1.5;
+      width: 100%;
+      height: 100%;
+    }
+
+    #AS {
+      background-color: transparent;
+    }
+
+    #YT {
+      background-color: transparent;
+    }
+
+    #PN {
+      background-color: transparent;
+    }
+
+    #GT {
+      background-color: transparent;
+    }
+
+    .tablink_yt a.active {
+      border-left: 3px solid #4a5882;
+      border-right: 3px solid #4a5882;
+    }
+  </style>
 
   <div class="loader-wrap">
     <div class="loader"></div>
   </div>
-  <script type="text/javascript">
-    $(function() {
-      var loader = $('.loader-wrap');
-
-      //ページの読み込みが完了したらアニメーションを非表示
-      $(window).on('load', function() {
-        loader.fadeOut();
-      });
-
-      //ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
-      setTimeout(function() {
-        loader.fadeOut();
-      }, 3000);
-    });
-  </script>
 
 
   <div class="pc">
@@ -55,52 +98,374 @@
       </a>
       <a href="https://www.youtube.com/channel/UCAdaqmp1xAQ88yY6iprptxQ"><img src="images/youtube.png" width="20px" alt="">
       </a>
-      <a href="https://vimeo.com/user15705724"><img src="images/vimeo.png" width="20px" alt="">
+      <a href="https://www.linkedin.com/in/tamaki-fujino-421396162/"><img src="images/linkedin.png" width="20px" alt="">
       </a>
       <a href="https://www.instagram.com/tama_arttube/"><img src="images/insta.png" width="20px" alt="">
       </a>
-        <p class="c-mark">©︎ 2021 TAMAKI FUJINO</p>
+      <p class="c-mark">©︎ 2021 TAMAKI FUJINO</p>
     </div>
-
 
     <div class="title">
-      <h2>WORK IN PROGRESS</h2>
-      <h3></h3>
+      <h2>Yamaori Taniori (2021)</h2>
+      <h3>This exhibition consists of total four pieces; they are all touchable and interactive</h3>
     </div>
 
-    <!-- <div class="work_images">
-      <a href="//https://vimeo.com/304552478" data-lity> <img src="images/rep/oil_water.jpg"></a>
-      <p style="margin:auto; text-align:center;">Click the image to watch the documentation <br>
-        画像をクリックすると動画がご覧になれます。
-    </div> -->
+    <button class="tablink_yt" onclick="openCity('YT')" id="defaultOpen">"Yamaori Taniori"</button>
+    <button class="tablink_yt" onclick="openCity('AS')">"Artist Statement"</button>
+    <button class="tablink_yt" onclick="openCity('PN')">"000-000-0000"</button>
+    <button class="tablink_yt" onclick="openCity('GT')">"Greeking Tree"</button>
 
-    <p class="work_description">
+    <div id="YT" class="tabcontent_yt">
+      <!-- /image container-  -->
+      <div class="imageSlide">
+        <div class="container">
+          <div class="mySlidesyt">
+            <img src="images/yt/yt1.jpg" style="width:100%">
+          </div>
 
-    </p>
+          <div class="mySlidesyt">
+            <img src="images/yt/yt1.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesyt">
+            <img src="images/yt/yt2.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesyt">
+            <img src="images/yt/yt3.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesyt">
+            <img src="images/yt/yt4.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesyt">
+            <img src="images/yt/yt4.jpg" style="width:100%">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+          <div class="row">
+            <div class="column">
+              <img class="demoyt cursor" src="images/yt/yt1.jpg" style="width:100%" onclick="currentSlide(1)">
+            </div>
+            <div class="column">
+              <img class="demoyt cursor" src="images/yt/yt1.jpg" style="width:100%" onclick="currentSlide(2)">
+            </div>
+            <div class="column">
+              <img class="demoyt cursor" src="images/yt/yt2.jpg" style="width:100%" onclick="currentSlide(3)">
+            </div>
+            <div class="column">
+              <img class="demoyt cursor" src="images/yt/yt3.jpg" style="width:100%" onclick="currentSlide(4)">
+            </div>
+            <div class="column">
+              <img class="demoyt cursor" src="images/yt/yt4.jpg" style="width:100%" onclick="currentSlide(5)">
+            </div>
+            <div class="column">
+              <img class="demoyt cursor" src="images/yt/yt4.jpg" style="width:100%" onclick="currentSlide(6)">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <p class="work_description" style="margin-top:30px;">
+        Cultural gap, political conflict, stereotypes, art history, and digital media art --- this exhibition illustrates all the things I have learned since I came to the United States from Japan. The most significant change within myself in the
+        four years was understanding that information is delivered based on someone’s perspective, thus the reality of this world is not equal to what people think is real. Their truth is not the truth.
+        <br><br>
+        Yamaori and taniori can be translated into mountain fold and valley fold; they refer to how to fold when you do origami. The reason why I titled the exhibition Yamaori Taniori is to give a hint of myself who is deeply influenced by Japanese
+        culture. More than that, I discovered that we are living in a world like a bellow which is formed with the repetition of yamaori and taniori. When you see the paper as the whole world, the areas of yamaori are where you can see, and the ones
+        of taniori are where you cannot see. We tend to consume the information on the area of yamaori because they are easily reachable. Because of that, we might be missing the greater hidden part of the reality of this world. In this piece, over
+        the dotted lines that indicate yamaori and taniori, I placed colors of visible lights. We cannot see the electromagnetic spectrum outside of infrared and ultraviolet, but it does not mean there is nothing outside them. Also, in this
+        exhibition, I wanted to emphasize that the information sitting on the taniori area can be revealed by our hands when you are being a sender and receiver of the information.
+        <br><br><br>
+
+        文化の違い、政治的な対立、偏見、アートの歴史、デジタルメディアアート -- この展示では私がアメリカに来てからの四年間で学んだ全てのことを体現するものです。この四年間で自分自身に訪れた最も大きな変化は、情報というのは誰かの視点を通して伝えられるということを理解するようになったことです。したがってこの世界の現実と私たちが真実と思っていることは同じではないということです。
+        <br><br>
+        展示の名前を山折り谷折りという名前にした理由は、私が日本人で日本の文化の影響を大きく受けているというヒントを与えるためです。さらに、なぜ山折り谷折りという名前が展示のテーマに適切だと考えたのは、紙全体がこの世界、現実だとすると、山折りの部分が私たちの目に見える部分で、谷折りの部分が目に見えない部分になります。私たちはこの山折りと谷折りのでできた蛇腹のような世界に生きているのではないかと思いました。その上で、私たちは目に見える、理解しやすい部分の情報のみを消費し、本当の現実の大部分を見逃しているのでは？という上記で述べた、アメリカで学んだことをうまく表現しているのではないかと思いました。山折り谷折りを表す点線に、可視光のイラストを重ね、目に見えないからといってこの世界に存在しないわけではないということを強調しました。また、この展示を通して、谷折りの部分に位置する情報は常にその部分にいるのではなく、私たちの情報の伝える側の工夫や、受け取る側の努力で理解しやすい情報に変えることができるのではという考えを伝えたいという想いが込められています。
+      </p>
+    </div>
+
+    <div id="AS" class="tabcontent_yt">
+      <!-- /image container-  -->
+      <div class="imageSlide">
+        <div class="container">
+          <div class="mySlidesas">
+            <img src="images/yt/as1.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesas">
+            <img src="images/yt/as2.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesas">
+            <img src="images/yt/as3.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesas">
+            <img src="images/yt/as4.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesas">
+            <img src="images/yt/as5.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesas">
+            <img src="images/yt/as6.jpg" style="width:100%">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="images/yt/as1.jpg" style="width:100%" onclick="currentSlide(1)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/as2.jpg" style="width:100%" onclick="currentSlide(2)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/as3.jpg" style="width:100%" onclick="currentSlide(3)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/as4.jpg" style="width:100%" onclick="currentSlide(4)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/as5.jpg" style="width:100%" onclick="currentSlide(5)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/as6.jpg" style="width:100%" onclick="currentSlide(6)">
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="work_description" style="margin-top:30px;">
+
+        I liked making art, but not viewing art when I started dreaming of being an artist. Therefore, going to an art museum was not the most exciting thing for me. Taking art classes, however, I find myself enjoying viewing art pieces more when I
+        know about the artist and the stories behind the pieces. The artist statement plays an important role when it comes to an exhibition because it includes that information. For my exhibition, I decided to create my artist statement in braille
+        with bubble wrap reconstructed with resin. The reason why I chose bubble wrap to create braille is I wanted to bring a contrast of significance between the visuality and content. Bubble wraps are one of the ordinal single-use objects you are
+        familiar with. What if the things we least think important have the most important information?
+        <br><br>
+        This is also the representation of how people avoid information that is time-consuming and not familiar. Today, with the increased popularity of visual-focused media such as YouTube and Instagram, I consider people are more attracted to and
+        believe in the information that is more visually appealing and quickly consumable. Because they have physical disabilities, it does not mean they have learning disabilities. Because they have a lot of tattoos, it does not mean they are evil.
+        Because they cannot speak your language well, it does not mean they cannot think.
+        <br><br>
+        [ WHAT THE BRAILLE SAYS ]<br>
+        What is reality? What is the truth? When people believed in geocentric theory their definition of truth distorted their reality. Over 400 years have passed since then and it seems that the development of technology has improved our perception
+        of reality. However, because of the increase in available information, we spend less time critically thinking. We limit ourselves by never questioning the knowledge we are given. Perhaps we aren’t different from the geocentrists of the past.
+        Our understanding of truth may be barring us from groundbreaking discoveries, the true identity of humankind, and the future possibility of eliminating stereotypes. As said by Hito Steyerl, “Images do not represent reality, they create
+        reality, they are second nature.”
+
+
+        <br><br><br>
+        私がアーティストになることを志し始めた頃、アートを制作するのが好きでしたが、アートを見ることは好きではありませんでした。したがって美術館に行くことは、私が最も興奮するようなものではありませんでした。しかし、アートの授業を受けて、私がアーティストについて知っていて作品の背景を知っている時、作品を鑑賞するのをより楽しんでいる自分を見つけました。特に展示では、アーティストステートメントからそれらの情報を知ることができるので、とても重要な役割を果たします。この展示では自分自身のアーティストステートメントを緩衝材であるプチプチをレジンで作り、それを用いた点字で表すことにしました。それによって見た目と内容に大きな対比をもたらすことを可能にしました。プチプチはみなさんが身近な日常にありふれた使い捨ての物体の一つです。「もし普段一番重要でないと考えている物体が一番重要な情報を含んでいるとしたら？」
+        <br><br>
+        また、この作品は現代の人々が理解するのに時間がかかったり、普段身近でない情報を避ける様子を表したものです。現代の世の中ではYouTubeやインスタグラムなどの視覚情報に焦点を置いたメディアが人気となり、多くの人がより視覚的に魅力的で短時間で理解しやすい情報に惹きつけられ信じてしまうようになってしまったのではないかと思います。身体的な障害があるからといって彼らに学習障害があるわけではありません。タトゥーがたくさん体にあるからといって彼らが悪党なわけではありません。あなたが使っている言語が話せないからといって彼らに考える能力があるわけではありません。
+        <br><br>
+
+        [ 点字の内容 ]<br>
+        現実とは何か？真実とは何か？人々が天動説を信じていた頃、彼らの真実が現実の世界を歪めました。400年以上がたちテクノロジーの発展は私たちの現実への理解を正確にしたように思われます。しかし手に届く情報が溢れ、私たちは深く物事について考えることをやめました。与えられた情報に疑問を抱くこともなく、私たちは自分たち自身で能力を制限しているのではないでしょうか。もしかしたら私たちは400年前の天動説を唱えていた人たちと全く変わらないのかもしれません。私たちの真実と捉えている物事が私たちから新しい発見、私たちの生きる意味や、偏見をなくすことから遠ざけているのでしょうか。ヒト・ヤスタルはこのように述べました。「視覚情報は現実を表しているのではなく、現実を作り出すのだ。視覚情報と現実世界は全く別物である。」  </p>
+    </div>
+
+    <div id="PN" class="tabcontent_yt">
+      <!-- /image container-  -->
+      <div class="imageSlide">
+        <div class="container">
+          <div class="mySlidespn">
+            <img src="images/yt/pn1.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidespn">
+            <img src="images/yt/pn2.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidespn">
+            <img src="images/yt/pn3.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidespn">
+            <img src="images/yt/pn1.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidespn">
+            <img src="images/yt/pn2.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidespn">
+            <img src="images/yt/pn3.jpg" style="width:100%">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="images/yt/pn1.jpg" style="width:100%" onclick="currentSlide(1)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/pn2.jpg" style="width:100%" onclick="currentSlide(2)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/pn3.jpg" style="width:100%" onclick="currentSlide(3)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/pn1.jpg" style="width:100%" onclick="currentSlide(4)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/pn2.jpg" style="width:100%" onclick="currentSlide(5)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/pn3.jpg" style="width:100%" onclick="currentSlide(6)">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <p class="work_description" style="margin-top:30px;">
+        When you type in your phone number, it generates the filter that corresponds to the number.
+        CV dazzle by Adam Harvey made me realize digital media artists can reveal how the digital world works and how we are influenced by that. Inspired by that, this piece helps you discover who we are and how we are recognized by the digital
+        world. The data and information in the modern world are created for machines to read effectively, ignoring how humans read them.
+        <br><br>
+        In the machine-centered world, one of the biggest identities of us is our phone number randomly assigned by phone companies, rather than your name or number. We almost stopped using phone numbers to call someone anymore. The people who do not
+        have phone numbers will be excluded from society as you cannot make a credit card and create an account to sign up for a service. The wooden frame imitates the world that is formed with yamaori and taniori. By putting your face into the area
+        of taniori, I wanted to reveal your identity that is not usually visible.
+        <br><br><br>
+        この作品は、あなたの電話番号を入力すると、その番号に基づいたフィルターを生み出します。アダム・ハーベイのCV
+        dazzleという作品によって、どのように現代のデジタルの世界が動いていて、それにどのように私たちが影響されているのかということをデジタルメディアアーティストは明らかにすることができると気付かされました。その作品に影響を受け、この作品ではあなたがデジタルの世界でどんな存在であって、そのよう識別されるのかを発見して欲しいと願い制作しました。現代世界のデータや情報は機械が効率よく読み取りやすいように作られており、人間がどのようにそれらを読むかとはかけ離れたものになっています。
+        <br><br>
+
+        そのような機械が中心に設計された世界の中では、私たち人間の最も大きな自己同一性を生み出すものの一つが携帯会社によって無作為に選ばれた電話番号になりつつあります。電話番号は今や電話をかけるための番号ではなくなり、電話番号を持たない人はクレジットカードやサービスを登録する際にアカウントが作れないように電話番号を持たなければ社会から排除されるようになりました。木のフレームは山折、谷折りによって作られた世界を表しています。谷折りの部分にあたる穴に顔を当てはめることにって、普段は感じることのできないあなたの自己同一性を見つめてみて欲しいとの願いを込めて作品を制作しました。  </p>
+    </div>
+
+    <div id="GT" class="tabcontent_yt">
+      <!-- /image container-  -->
+      <div class="imageSlide">
+        <div class="container">
+          <div class="mySlidesgt">
+            <img src="images/yt/gt1.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesgt">
+            <img src="images/yt/gt1.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesgt">
+            <img src="images/yt/gt2.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesgt">
+            <img src="images/yt/gt6.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesgt">
+            <img src="images/yt/gt4.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlidesgt">
+            <img src="images/yt/gt5.jpg" style="width:100%">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="images/yt/gt1.jpg" style="width:100%" onclick="currentSlide(1)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/gt1.jpg" style="width:100%" onclick="currentSlide(2)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/gt2.jpg" style="width:100%" onclick="currentSlide(3)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/gt6.jpg" style="width:100%" onclick="currentSlide(4)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/gt4.jpg" style="width:100%" onclick="currentSlide(5)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/yt/gt5.jpg" style="width:100%" onclick="currentSlide(6)">
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="work_description" style="margin-top:30px;">
+        This piece is installed in the center of the room because I created it to think about what we can do after learning messages of other pieces in this exhibition. The things I consider to create this pieces are:
+         The information that you least think important may contain the most important information.
+        As a sender and receiver of information, we have the capacity to reveal the information that we usually cannot reach.
+        Because information is created for machines to read effectively in this digital world, we are missing the true nature of the information.
+<br><br>
+Considering those, I created a hypothesis that defies what I consider normal and true. This piece is especially to reconsider the definition of life. This idea was deeply inspired by the video game Detroit: Become Human, and it gave me a lot of questions; are androids alive? If so, what makes androids alive? Is it language, communication, emotions, belief, identity, or expressing those to be understood by others? In that game, I was easily able to empathize with the claim of androids that they are alive because they have the same shape as us humans. Then, I found the article that researchers found that plants are feeling pain. Therefore, for this piece, I created a plant that is made with the same material as androids are made with, to think about if the machine plant has emotions, identity, and has a tool to vocalize those, we consider it as a life or not.
+<br><br><br>
+        初めの作品が点字の作品で、普段意味のないと思っているものが実は一番大切な情報を含んでいたり意味があるかもしれないということ。
+        二つ目の紫外線赤外線の作品が、私たちの行動で普段目に見えないもの、重要視されていないものを目に見えるように、重要視されるように変えれるかもしれないということ
+        コンピューターと生きる上で、情報は今コンピューターが読み取りやすいように作られているから、自分が一番よく知っていると思っている情報も実は本質が見えていないかもしれないということ
+<br><br>
+      これらのことを念頭において、私が考える当たり前で正しいと思っていることを否定するような仮説を立てることにしました。この作品は特に生命の定義を再考するためのものです。この考え方はビデオゲームの「デトロイト ビカムヒューマン」に大きく刺激を受け、たくさんの疑問を与えてくれました。アンドロイドは生きているのか？もしそうだとすれば、何がアンドロイドを生かさせているのか？それは言語か、コミュニケーションか、感情か、信念か、自己同一性か、それらを理解してもうために表現することか？ゲームの中ではそのようにアンドロイドの彼らが生きているという主張に共感することができましたが、それはもしかすると、彼らが私たち人間と同じ形をしているからなのではと思いました。そんなことを考えている時、植物も痛みを感じているという研究結果があることを知りました。そこでこの作品では、アンドロイドを作るのに使われるのと同じ素材を用いて、植物を作りました。もしその植物がアンドロイドのように、感情や自己同一性、またそれを表す方法があれば、私たちはその機械の植物を生命として捉えることができるのでしょうか？  </p>
+    </div>
   </div>
 
 
-  <div class="sp">
-    <div class="topnav3" style="position:absolute; top:1%;">
+  <div class="sp" id="work">
+    <div class="topnav3">
       <a href="index.html">HOME</a>
       <a href="bio.html">ABOUT</a>
       <a class="active" href="work.html">WORKS</a>
     </div>
 
-    <img src="" alt="">
+    <h2 class="sp_title">Digital Autonomy (2021)</h2>
+    <h3 class="sp_subtitle">BFA group exhibition in New Art City</h3>
+    <img class="sp_thumbnail" src="images/rep/digitalautonomy.jpg" alt="">
+    <hr class="sp_hr"><br>
+    <p class="sp_workdescription">work-in-progress</p>
 
-      <h2 class="sp_title">Yamaori Taniori (2021)</h2>
-      <h3 class="sp_subtitle">Interactive digital installation</h3>
-        <img class="sp_thumbnail" src="images/rep/yamaoritaniori.jpg" alt="">
-      <hr class="sp_hr"><br>
-      <p class="sp_workdescription">
-work-in-progress
-
-      </p>
-
-      <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2021 TAMAKI FUJINO</p>
-    </div>
+    <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px;">©︎ 2021 TAMAKI FUJINO</p>
   </div>
+
+  <script type="text/javascript">
+    // tab function
+    function openCity(cityName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent_yt");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink_yt");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(cityName).style.display = "block";
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
+
+  <script type="text/javascript">
+    //loader animation
+    $(function() {
+      var loader = $('.loader-wrap');
+
+      //fisinish animation when loading is done
+      $(window).on('load', function() {
+        loader.fadeOut();
+      });
+
+      //settimeout after 3 sec
+      setTimeout(function() {
+        loader.fadeOut();
+      }, 3000);
+    });
+
+    $('body').bind('copy paste', function(e) {
+      e.preventDefault();
+      return false;
+    });
+  </script>
+
+  <!-- javascript -->
+  <script src="script.js"></script>
 </body>
 
 </html>

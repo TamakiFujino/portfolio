@@ -1,28 +1,69 @@
 var slideIndex = 1;
-showSlides(slideIndex);
+showSlidesas(slideIndex);
+showSlidesyt(slideIndex);
+showSlidespn(slideIndex);
+showSlidesgt(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlidesas(slideIndex += n);
+  showSlidesyt(slideIndex += n);
+  showSlidespn(slideIndex += n);
+  showSlidesgt(slideIndex += n);
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlidesas(slideIndex = n);
+  showSlidesyt(slideIndex = n);
+  showSlidespn(slideIndex = n);
+  showSlidesgt(slideIndex = n);
 }
 
-function showSlides(n) {
+////////////////////////////////////artist statement
+
+function showSlidesas(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+  var slidesas = document.getElementsByClassName("mySlidesas");
+  if (n > slidesas.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slidesas.length}
+  for (i = 0; i < slidesas.length; i++) {
+      slidesas[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+  slidesas[slideIndex-1].style.display = "block";
+}
+
+//////////////////////////////////////yamaori taniori
+
+function showSlidesyt(n) {
+  var i;
+  var slidesyt = document.getElementsByClassName("mySlidesyt");
+  if (n > slidesyt.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slidesyt.length}
+  for (i = 0; i < slidesyt.length; i++) {
+      slidesyt[i].style.display = "none";
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  slidesyt[slideIndex-1].style.display = "block";
+}
+
+////////////////////////////////////phone number
+function showSlidespn(n) {
+  var i;
+  var slidespn = document.getElementsByClassName("mySlidespn");
+  if (n > slidespn.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slidespn.length}
+  for (i = 0; i < slidespn.length; i++) {
+      slidespn[i].style.display = "none";
+  }
+  slidespn[slideIndex-1].style.display = "block";
+}
+
+////////////////////////////////////greeking tree
+function showSlidesgt(n) {
+  var i;
+  var slidesgt = document.getElementsByClassName("mySlidesgt");
+  if (n > slidesgt.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slidesgt.length}
+  for (i = 0; i < slidesgt.length; i++) {
+      slidesgt[i].style.display = "none";
+  }
+  slidesgt[slideIndex-1].style.display = "block";
 }
