@@ -31,7 +31,7 @@ let osc, playing, freq, amp;
 let osc1, playing1, freq1, amp1;
 
 function setup() {
-  let cnv = createCanvas(windowWidth, windowHeight);
+  let cnv = createCanvas(windowWidth/2, windowHeight/2);
   cnv.mousePressed(playOscillator);
   cnv.class('p5');
   osc = new p5.Oscillator('sine');
@@ -43,7 +43,7 @@ function setup() {
 }
 
 function draw() {
-
+background(28, 110, 205);
   for (var i = 0; i < drops.length; i++) {
     drops[i].fall();
     drops[i].show();
