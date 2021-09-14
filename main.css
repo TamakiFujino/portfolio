@@ -407,7 +407,6 @@ a:hover {
 }
 
 .topnav a.active {
-  /* border-left: 7px solid black; */
   border-right: 7px solid black;
 }
 
@@ -442,10 +441,9 @@ a:hover {
 /* Top navigation - Smartphone Design - Left ------------------*/
 .topnav3 {
   overflow: hidden;
-  background-color:  white;
   font-family: 'Ubuntu', sans-serif;
   position: absolute;
-  top:0px;
+  top: 0px;
   padding: 10px 0px;
   z-index: 2;
   width: 100%;
