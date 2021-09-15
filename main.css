@@ -349,20 +349,7 @@ a:hover {
 }
 
 /* sum of work in pc layout -------------------------------*/
-/* Caption text */
-/* .text {
-  color: #f2f2f2;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 12px;
-  margin: 7px;
-  width: 100%;
-} */
-.work_text {
-  position: absolute;
-  top: 18%;
-  left: 10%;
-  width: 28%;
-}
+
 
 /* Top navigation component ------------------------------------------- */
 /* Top navigation - Laptop Design - Left ------------------*/
