@@ -71,20 +71,18 @@ hr {
 /* Text property -------------------------------------------- */
 h1 {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 75px;
-  opacity: 0.9;
+  font-size: 25px;
+  color:white;
+  opacity: 1;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  font-style: italic;
-  width: 85%;
-  background: -webkit-linear-gradient(314deg, #ffe7a3, white, #d0d4cc, #ffdaa5, #61b6cd);
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+  /* background: -webkit-linear-gradient(314deg, #ffe7a3, white, #d0d4cc, #ffdaa5, #61b6cd);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: 0;
+  -webkit-text-fill-color: transparent; */
+  z-index: 2;
 }
 
 h2 {

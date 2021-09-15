@@ -18,7 +18,8 @@ class Drop {
   show() {
     var l = map(this.z, 0, 20, 10, 20);
     var thickness = map(this.z, 0, 20, 1, 1);
-    strokeWeight(thickness);
+    strokeWeight(5);
+    strokeCap(SQUARE);
     stroke(255,255,255);
     line(this.x, this.y, this.x, this.y + l);
   }
@@ -33,12 +34,11 @@ let osc1, playing1, freq1, amp1;
 function setup() {
   let cnv = createCanvas(windowWidth/2, windowHeight/2);
   cnv.mousePressed(playOscillator);
-  cnv.class('p5');
   osc = new p5.Oscillator('sine');
   osc1 = new p5.Oscillator('triangle');
-  // for (var i = 0; i < 70; i++) {
-  //   drops[i] = new Drop();
-  // }
+  for (var i = 0; i < 70; i++) {
+    drops[i] = new Drop();
+  }
   noCursor();
 }
 

@@ -14,13 +14,16 @@
 
 <!-- style sheet  -->
   <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="cube.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
     <!-- p5 -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
-    <script type="text/javascript" src="sketch.js"></script>
-    <script type="text/javascript" src="drop.js"></script>
+    <!-- <script type="text/javascript" src="sketch.js"></script>
+    <script type="text/javascript" src="drop.js"></script> -->
 
   <!-- javascript -->
   <script src="script.js"></script>
@@ -61,6 +64,29 @@
 
     <!-- Design Applicable to laptop width -->
     <div class="pc">
+      <!-- main cube animation -->
+
+<!-- CONTROLS -->
+<div class="cube">
+</div>
+    <!-- <input type="radio" checked id="radio-front" name="select-face"/> -->
+    <!-- <input type="radio" id="radio-left" name="select-face"/>
+    <input type="radio" id="radio-right" name="select-face"/>
+    <input type="radio" id="radio-top" name="select-face"/>
+    <input type="radio" id="radio-bottom" name="select-face"/> -->
+    <!-- <input type="radio" id="radio-back" name="select-face"/> -->
+<div class="separator"></div>
+<div class="space3d">
+    <div class="_3dbox">
+      <div class="_3dface _3dface--front"></div>
+      <div class="_3dface _3dface--top"></div>
+      <div class="_3dface _3dface--bottom"></div>
+      <div class="_3dface _3dface--left"></div>
+      <div class="_3dface _3dface--right"></div>
+      <div class="_3dface _3dface--back"></div>
+    </div>
+</div>
+
       <!-- navigation bar right -->
       <div class="topnav">
         <a class="active" href="index.html">HOME</a>
@@ -82,12 +108,6 @@
       </div>
     </div>
 
-<div class="en">
-  <style media="screen">
-    span {
-      -webkit-text-fill-color: gray;
-    }
-  </style>
     </div>
     <!-- end of laptop width deisgn -->
 
