@@ -1,12 +1,10 @@
-
+/*
 .separator {
   margin-top: 40px;
-}
-
-
+} */
 /* 3D Cube */
 .space3d {
-  padding-top:150px;
+  padding-top: 150px;
   perspective: 1000px;
   width: 350px;
   height: 350px;
@@ -23,14 +21,15 @@
   height: 100%;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg);
+
 }
 
 ._3dface {
   overflow: hidden;
   position: absolute;
-  border: 7px solid black;
   line-height: 350px;
   opacity: 1;
+    border: 7px solid black;
 }
 
 ._3dface--front {
@@ -73,52 +72,106 @@
   transform: rotateY(180deg) translate3d(0, 0, 175px);
 }
 
-#radio-left:checked ~ .space3d ._3dbox {
+input {
+  display: none;
+}
+
+label {
+  padding: 20px 20px 20px 40px;
+  color: white;
+  left: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+label::before,
+label::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 30%;
+}
+
+label::before {
+  background-color: none;
+  border: 7px solid black;
+  height: 30px;
+  width: 30px;
+  right: 22px;
+}
+
+label::after {
+  background-color: blue;
+  opacity: 0;
+  height: 35px;
+  width: 35px;
+  left: 9px;
+  z-index: -2;
+  animation-name: animation1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+input:checked+label::after {
+  opacity: 1;
+}
+
+@keyframes animation1 {
+   from {background-color:blue;}
+   to {background-color:yellow;}
+}
+
+#radio-front:checked~.space3d ._3dbox {}
+
+#radio-left:checked~.space3d ._3dbox {
   transform: rotateY(90deg);
 }
 
-#radio-right:checked ~ .space3d ._3dbox {
+#radio-right:checked~.space3d ._3dbox {
   transform: rotateY(-90deg);
 }
 
-#radio-bottom:checked ~ .space3d ._3dbox {
+#radio-bottom:checked~.space3d ._3dbox {
   transform: rotateX(90deg);
 }
 
-#radio-top:checked ~ .space3d ._3dbox {
+#radio-top:checked~.space3d ._3dbox {
   transform: rotateX(-90deg);
 }
 
-#radio-back:checked ~ .space3d ._3dbox {
+#radio-back:checked~.space3d ._3dbox {
   transform: rotateY(180deg);
 }
 
 ._3dface--front {
-  background:blue;
+  background: blue;
   background-size: 100%;
 }
 
 ._3dface--left {
-  background:pink;
+  background: blue;
   background-size: auto 100%;
 }
 
 ._3dface--right {
-  background:yellow;
+  background: blue;
   background-size: auto 100%;
 }
 
 ._3dface--top {
-  background: red;
+  background: blue;
   background-size: auto 100%;
 }
 
 ._3dface--bottom {
-  background: green;
+  background: blue;
   background-size: auto 100%;
 }
 
 ._3dface--back {
-  background: orange;
+  background: blue;
   background-size: auto 100%;
 }

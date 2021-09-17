@@ -71,18 +71,15 @@ hr {
 /* Text property -------------------------------------------- */
 h1 {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 25px;
-  color:white;
+  font-size: 12px;
+  color:black;
   opacity: 1;
   position: absolute;
-    top: 50%;
+    bottom: 5%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     -webkit- transform: translateY(-50%) translateX(-50%);
-  /* background: -webkit-linear-gradient(314deg, #ffe7a3, white, #d0d4cc, #ffdaa5, #61b6cd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  z-index: 2;
+  z-index: -2;
 }
 
 h2 {
