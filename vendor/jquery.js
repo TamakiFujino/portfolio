@@ -807,7 +807,7 @@
                         if ( (m = match[1]) ) {
                             if ( nodeType === 9 ) {
                                 elem = context.getElementById( m );
-                                // Check parentNode to catch when Blackberry 4.6 returns
+                                // Check parentNode to catch when blackberry 4.6 returns
                                 // nodes that are no longer in the document (jQuery #6963)
                                 if ( elem && elem.parentNode ) {
                                     // Handle the case where IE, Opera, and Webkit return items
@@ -1122,7 +1122,7 @@
                     Expr.find["ID"] = function( id, context ) {
                         if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
                             var m = context.getElementById( id );
-                            // Check parentNode to catch when Blackberry 4.6 returns
+                            // Check parentNode to catch when blackberry 4.6 returns
                             // nodes that are no longer in the document #6963
                             return m && m.parentNode ? [ m ] : [];
                         }
@@ -2821,7 +2821,7 @@
                     } else {
                         elem = document.getElementById( match[2] );
 
-                        // Check parentNode to catch when Blackberry 4.6 returns
+                        // Check parentNode to catch when blackberry 4.6 returns
                         // nodes that are no longer in the document #6963
                         if ( elem && elem.parentNode ) {
                             // Handle the case where IE and Opera return items
@@ -4689,7 +4689,7 @@
                 cur = event.target;
 
             // Find delegate handlers
-            // Black-hole SVG <use> instance trees (#13180)
+            // black-hole SVG <use> instance trees (#13180)
             // Avoid non-left-click bubbling in Firefox (#3861)
             if ( delegateCount && cur.nodeType && (!event.button || event.type !== "click") ) {
 
@@ -10131,7 +10131,7 @@
             }
 
             // If we don't have gBCR, just use 0,0 rather than error
-            // BlackBerry 5, iOS 3 (original iPhone)
+            // blackBerry 5, iOS 3 (original iPhone)
             if ( typeof elem.getBoundingClientRect !== strundefined ) {
                 box = elem.getBoundingClientRect();
             }

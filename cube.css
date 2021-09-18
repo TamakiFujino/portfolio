@@ -2,6 +2,15 @@
 .separator {
   margin-top: 40px;
 } */
+
+/* .radio-buttons {
+  top:0px;
+  left:0;
+  right:0;
+  margin:auto;
+} */
+
+
 /* 3D Cube */
 .space3d {
   padding-top: 150px;
@@ -79,9 +88,11 @@ input {
 label {
   padding: 20px 20px 20px 40px;
   color: white;
-  left: 15px;
+  left: 12px;
   cursor: pointer;
   position: relative;
+  z-index:4;
+  top:-10px;
 }
 
 label::before,
@@ -90,8 +101,8 @@ label::after {
   display: block;
   border-radius: 50%;
   position: absolute;
-  transform: translateY(-50%);
-  top: 30%;
+  /* transform: translateY(0%); */
+  bottom: 0%;
 }
 
 label::before {
@@ -99,15 +110,15 @@ label::before {
   border: 7px solid black;
   height: 30px;
   width: 30px;
-  right: 22px;
+  right: 20px;
 }
 
 label::after {
-  background-color: blue;
   opacity: 0;
   height: 35px;
   width: 35px;
-  left: 9px;
+  left: 0px;
+  bottom:0px;
   z-index: -2;
   animation-name: animation1;
   animation-duration: 2s;
@@ -120,8 +131,8 @@ input:checked+label::after {
 }
 
 @keyframes animation1 {
-   from {background-color:blue;}
-   to {background-color:yellow;}
+   from {background-color:none;}
+   to {background-color:#e8c022;}
 }
 
 #radio-front:checked~.space3d ._3dbox {}
@@ -147,31 +158,38 @@ input:checked+label::after {
 }
 
 ._3dface--front {
-  background: blue;
+    background: url('images/bedge-grunge.png');
+  background: #2f6cb5;
+
   background-size: 100%;
 }
 
 ._3dface--left {
-  background: blue;
+    background: url('images/bedge-grunge.png');
+  background: #e1a3c2;
   background-size: auto 100%;
 }
 
 ._3dface--right {
-  background: blue;
+    background: url('images/bedge-grunge.png');
+    background: #1d9069;
   background-size: auto 100%;
 }
 
 ._3dface--top {
-  background: blue;
+    background: url('images/bedge-grunge.png');
+    background: #e56b41;
   background-size: auto 100%;
 }
 
 ._3dface--bottom {
-  background: blue;
+  background: url('images/bedge-grunge.png');
+    background: #e9e6dd;
   background-size: auto 100%;
 }
 
 ._3dface--back {
-  background: blue;
+    background: url('images/bedge-grunge.png');
+    background: #e9bc20;
   background-size: auto 100%;
 }

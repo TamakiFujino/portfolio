@@ -64,27 +64,32 @@
 
     <!-- Design Applicable to laptop width -->
     <div class="pc">
-      <!-- main cube animation -->
+<!-- <div class="main-square">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div> -->
+    <!-- main cube animation -->
 
 <!-- CONTROLS -->
 
+
     <input type="radio" checked id="radio-front" name="select-face"class="radio-f"/>
-    <label for="radio-front">1</label>
+    <label for="radio-front"></label>
 
     <input type="radio" id="radio-left" name="select-face" class="radio-l"/>
-    <label for="radio-left">2</label>
+    <label for="radio-left"></label>
 
     <input type="radio" id="radio-right" name="select-face" class="radio-r"/>
-  <label for="radio-right">3</label>
+  <label for="radio-right"></label>
 
     <input type="radio" id="radio-top" name="select-face" class="radio-t"/>
-  <label for="radio-top">4</label>
+  <label for="radio-top"></label>
 
     <input type="radio" id="radio-bottom" name="select-face" class="radio-b"/>
-    <label for="radio-bottom">5</label>
+    <label for="radio-bottom"></label>
 
     <input type="radio" id="radio-back" name="select-face" class="radio-ba"/>
-    <label for="radio-back">6</label>
+    <label for="radio-back"></label>
+
 
 <div class="separator"></div>
 <div class="space3d">
@@ -97,12 +102,9 @@
       <div class="_3dface _3dface--back"></div>
     </div>
 </div>
-
-
-</div>
       <!-- navigation bar right -->
       <div class="topnav">
-        <a class="active" href="index.html">HOME</a>
+        <a class="active" href="test.html">HOME</a>
         <a href="bio.html">ABOUT</a>
         <a href="work.html">WORKS</a>
       </div>
@@ -128,8 +130,148 @@
 
 
     <!-- Design Applicable to smartphone width -->
+    <div class="noSelect">
     <div class="sp">
+      <!-- <style media="screen">
+      /* 3D Cube */
+      .space3d {
+        padding-top: 150px;
+        perspective: 1000px;
+        width: 180px;
+        height: 180px;
+        text-align: center;
+        display: inline-block;
+      }
 
+      ._3dbox {
+        display: inline-block;
+        transition: all 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        text-align: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transform: rotateX(0deg) rotateY(0deg);
+
+      }
+
+      ._3dface {
+        overflow: hidden;
+        position: absolute;
+        line-height: 180px;
+        opacity: 1;
+          border: 7px solid black;
+      }
+
+      ._3dface--front {
+        width: 180px;
+        height: 180px;
+        transform: translate3d(0, 0, 90px);
+      }
+
+      ._3dface--top {
+        width: 180px;
+        height: 180px;
+        transform: rotateX(90deg) translate3d(0, 0, 90px);
+      }
+
+      ._3dface--bottom {
+        width: 180px;
+        height: 180px;
+        transform: rotateX(-90deg) translate3d(0, 0, 90px);
+      }
+
+      ._3dface--left {
+        width: 180px;
+        height: 180px;
+        left: 50%;
+        margin-left: -90px;
+        transform: rotateY(-90deg) translate3d(0, 0, 90px);
+      }
+
+      ._3dface--right {
+        width: 180px;
+        height: 180px;
+        left: 50%;
+        margin-left: -90px;
+        transform: rotateY(90deg) translate3d(0, 0, 90px);
+      }
+
+      ._3dface--back {
+        width: 180px;
+        height: 90px;
+        transform: rotateY(180deg) translate3d(0, 0, 90px);
+      }
+
+      abel {
+        padding: 20px 20px 20px 40px;
+        color: white;
+        left: 15px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      label::before,
+      label::after {
+        content: "";
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 30%;
+      }
+
+      label::before {
+        background-color: none;
+        border: 7px solid black;
+        height: 30px;
+        width: 30px;
+        right: 22px;
+      }
+
+      label::after {
+        background-color: #266cb2;
+        opacity: 0;
+        height: 35px;
+        width: 35px;
+        left: 9px;
+        z-index: -2;
+        animation-name: animation1;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      </style> -->
+      <input type="radio" checked id="radio-front" name="select-face"class="radio-f"/>
+      <label for="radio-front">1</label>
+
+      <input type="radio" id="radio-left" name="select-face" class="radio-l"/>
+      <label for="radio-left">2</label>
+
+      <input type="radio" id="radio-right" name="select-face" class="radio-r"/>
+      <label for="radio-right">3</label>
+
+      <input type="radio" id="radio-top" name="select-face" class="radio-t"/>
+      <label for="radio-top">4</label>
+
+      <input type="radio" id="radio-bottom" name="select-face" class="radio-b"/>
+      <label for="radio-bottom">5</label>
+
+      <input type="radio" id="radio-back" name="select-face" class="radio-ba"/>
+      <label for="radio-back">6</label>
+
+      <div class="separator"></div>
+      <div class="space3d">
+      <div class="_3dbox">
+        <div class="_3dface _3dface--front"></div>
+        <div class="_3dface _3dface--top"></div>
+        <div class="_3dface _3dface--bottom"></div>
+        <div class="_3dface _3dface--left"></div>
+        <div class="_3dface _3dface--right"></div>
+        <div class="_3dface _3dface--back"></div>
+      </div>
+      </div>
       <!-- <img class="ring" src="images/ring2.png" width=400 alt=""> -->
 
       <div class="topnav3">
@@ -156,6 +298,7 @@
     </div>
 
   </div>
+</div>
 
 </body>
 

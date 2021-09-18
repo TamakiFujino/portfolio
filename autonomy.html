@@ -26,6 +26,115 @@
     <div class="loader"></div>
   </div>
 
+  <style media="screen">
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+
+    .frame-large {
+      width: 74%;
+      height: 80%;
+      border: 7px solid black;
+      position: absolute;
+      top: 10%;
+      right: 13%;
+      box-shadow: 10px 10px 15px grey;
+    }
+
+    .frame-text {
+      height: 20%;
+      width: 100%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      font-size: 18px;
+      z-index: 0;
+      line-height: 25px;
+    }
+
+    .frame-title {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      padding: 0%;
+      border-bottom: 7px solid black;
+    }
+
+    .frame-title h2 {
+      color: black;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 26px;
+      text-align: center;
+      padding: 0px;
+    }
+
+    .frame-title h3 {
+      color: black;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 14px;
+      text-align: center;
+      padding: 0px;
+    }
+
+    .frame-description {
+      width: 35%;
+      height: 80%;
+      position: absolute;
+      top: 20%;
+      left: 0%;
+      border-right: 7px solid black;
+      color: black;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 14px;
+      text-align: right;
+      z-index: 0;
+      overflow-x: hidden;
+    }
+
+    .frame-listing {
+      width: 90%;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      padding: 20px;
+      overflow: scroll;
+    }
+
+
+    .frame-listing h4 {
+      padding: 15px 5px 10px 0px;
+    }
+
+    .frame-image {
+      width: 65%;
+      text-align: center;
+      height: auto;
+      position: absolute;
+      top: 22%;
+      left: 35%;
+      margin: auto;
+      z-index: 3;
+    }
+
+    .frame-display {
+      width: 73%;
+      position:absolute;
+      top:0;
+      bottom:0;
+      right:0;
+      left:0;
+      margin:auto;
+    }
+  </style>
+
 
   <div class="pc">
     <!-- navigation bar right -->
@@ -47,140 +156,148 @@
       <p class="c-mark">©︎ 2021 TAMAKI FUJINO</p>
     </div>
 
-    <div class="title">
-      <h2>Digital Autonomy (2021)</h2>
-      <h3>BFA group exhibition in New Art City</h3>
-    </div>
 
-    <!-- /image container-  -->
-    <div class="imageSlide">
-      <div class="container">
-        <div class="mySlides">
-          <video width="100%" controls>
-            <source src="images/autonomy/nac.mp4" type="video/mp4">
-          </video>
-        </div>
+    <div class="frame-large">
 
-        <div class="mySlides">
-          <img src="images/autonomy/nac_sc1.png" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <img src="images/autonomy/website.png" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <img src="images/autonomy/lobby.png" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <video width="100%" controls>
-            <source src="images/autonomy/gif1.mp4" type="video/mp4">
-          </video>
-        </div>
-
-        <div class="mySlides">
-          <video width="100%" controls>
-            <source src="images/autonomy/gif2.mp4" type="video/mp4">
-          </video>
-        </div>
-
-        <!-- <div class="mySlides">
-      <img src="images/poop/poop00007.jpg" style="width:100%">
-      </div> -->
-
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-
-        <div class="caption-container">
-          <p id="caption"></p>
-        </div>
-
-        <div class="row">
-          <div class="column">
-            <img class="demo cursor" src="images/autonomy/davideo_thumb.png" style="width:100%" onclick="currentSlide(1)">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="images/autonomy/nac_sc1.png" style="width:100%" onclick="currentSlide(2)">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="images/autonomy/website.png" style="width:100%" onclick="currentSlide(3)">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="images/autonomy/lobby.png" style="width:100%" onclick="currentSlide(4)">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="images/autonomy/gif_thumb1.png" style="width:100%" onclick="currentSlide(5)">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="images/autonomy/gif_thumb2.png" style="width:100%" onclick="currentSlide(6)">
-          </div>
-          <!-- <div class="column">
-      <img class="demo cursor" src="images/poop/poop00007.jpg" style="width:100%" onclick="currentSlide(7)">
-      </div> -->
+      <div class="frame-text">
+        <div class="frame-title">
+          <h2>Digital Autonomy (2021)</h2>
+          <h3>BFA group exhibition in New Art City</h3>
         </div>
       </div>
+
+      <!-- /image container-  -->
+      <div class="frame-image">
+        <div class="frame-display">
+
+          <div class="imageSlide">
+            <div class="container">
+              <div class="mySlides">
+                <video width="100%" controls>
+                  <source src="images/autonomy/nac.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="mySlides">
+                <img src="images/autonomy/nac_sc1.png" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <img src="images/autonomy/website.png" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <img src="images/autonomy/lobby.png" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <video width="100%" controls>
+                  <source src="images/autonomy/gif1.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="mySlides">
+                <video width="100%" controls>
+                  <source src="images/autonomy/gif2.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+              <div class="row">
+                <div class="column">
+                  <img class="demo cursor" src="images/autonomy/davideo_thumb.png" style="width:100%" onclick="currentSlide(1)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/autonomy/nac_sc1.png" style="width:100%" onclick="currentSlide(2)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/autonomy/website.png" style="width:100%" onclick="currentSlide(3)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/autonomy/lobby.png" style="width:100%" onclick="currentSlide(4)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/autonomy/gif_thumb1.png" style="width:100%" onclick="currentSlide(5)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/autonomy/gif_thumb2.png" style="width:100%" onclick="currentSlide(6)">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="frame-description">
+        <div class="frame-listing">
+          <p>
+            <b>[ ABOUT ]</b><br><br>
+
+            <a href="https://sjsu-dma-bfa.github.io/2021s/" class="inwork-link"> Click here for Digital Autonomy website</a><br><br>
+
+            Digital Autonomy is an exhibition of digital photography, video, painting, sculpture,
+            and unclassifiable media hosted on New Art City that explores the multitude of interdependent signals
+            crisscrossing the spatio-temporal void. While never physically co-present,
+            Seniors in their culminating semester of their BFA degree in Digital Media Art
+            came together in digital space and found synaptic resonance;
+            a cognitive sympathy fostered by digital signals.
+            <br><br>
+            The name itself, Digital Autonomy, is a linguistic performance of cognitive dissidence.
+            All digital objects are destined for translation, an act that requires a source, processor,
+            and intended receiver. It begs the question; can any digital-thing, be autonomous?
+            <br><br>
+            Digital Autonomy asks the viewer to engage in fantasy, consider the physicality of the bodies they inhabit,
+            cast spells over networks, and pokes holes in the cultures of post-colonial frameworks.
+            As we begin to slowly emerge from our socially distant adaptations,
+            the work imagines new possibilities for the kind of world we are passing into.
+            The artists in Digital Autonomy suggest new forms of relationships between signals, objects,
+            and environments; redefining body & space on their own terms. <br>(From Digital Autonomy webpage) <br><br><br>
+
+            <b>[ COLLABORATION ]</b><br><br>
+
+            I contributed the project as a lead of the web design team,
+            collaborating with other teams. <br><br><br>
+
+            <b>[ INSTALLATION ]</b><br><br>
+
+            My piece in this project is about digital identity.
+            I created MAX MSP patch that generates face filters.
+            This filters are generated based on the input of your phone number.
+            This piece was initially created for my BFA solo exhibition.
+            <br><br>
+            <a href="yamatani.html" class="inwork-link">See the documentation from here.</a><br><br>
+            <br><br>
+            For this online exhibition on New Art City,
+            I have re-created filters using 10 examples from the MAX MSP patch.
+            You can try those filters on Instagram.   <br><br>
+            <a href="https://www.instagram.com/tama_arttube/" class="inwork-link">Try filters on Instagram</a><br><br>
+            CV dazzle by Adam Harvey made me realize
+            digital media artists can reveal how the digital world works and how we are influenced by that.
+            Inspired by that, this piece helps you discover who we are and how we are recognized by the digital world.
+            The data and information in the modern world are created for machines to read effectively,
+            ignoring how humans read them.  In the machine-centered world,
+            one of the biggest identities of us is our phone number randomly assigned by phone companies,
+            rather than your name or number.
+            We almost stopped using phone numbers to call someone anymore.
+            The people who do not have phone numbers will be excluded from society
+            as you cannot make a credit card and create an account to sign up for a service.
+            <br>
+            The lobby object represents a bellow created with the repetition of Yamaori and Taniori. Yamaori and Taniori indicates how to fold when you do origami. I did not put any texture on the object since the object itself represents the nature
+            of
+            everything. Without any covering, you cannot tell which area are concave and convex of the bellow.
+
+          </p>
+        </div>
+      </div>
+      <!-- end of frame design -->
     </div>
-
-    <p class="work_description">
-
-      <b>[ ABOUT ]</b><br><br>
-
-      <a href="https://sjsu-dma-bfa.github.io/2021s/" class="inwork-link"> Click here for Digital Autonomy website</a><br><br>
-
-      Digital Autonomy is an exhibition of digital photography, video, painting, sculpture,
-      and unclassifiable media hosted on New Art City that explores the multitude of interdependent signals
-      crisscrossing the spatio-temporal void. While never physically co-present,
-      Seniors in their culminating semester of their BFA degree in Digital Media Art
-      came together in digital space and found synaptic resonance;
-      a cognitive sympathy fostered by digital signals.
-      <br><br>
-      The name itself, Digital Autonomy, is a linguistic performance of cognitive dissidence.
-      All digital objects are destined for translation, an act that requires a source, processor,
-      and intended receiver. It begs the question; can any digital-thing, be autonomous?
-      <br><br>
-      Digital Autonomy asks the viewer to engage in fantasy, consider the physicality of the bodies they inhabit,
-      cast spells over networks, and pokes holes in the cultures of post-colonial frameworks.
-      As we begin to slowly emerge from our socially distant adaptations,
-      the work imagines new possibilities for the kind of world we are passing into.
-      The artists in Digital Autonomy suggest new forms of relationships between signals, objects,
-      and environments; redefining body & space on their own terms. <br>(From Digital Autonomy webpage) <br><br><br>
-
-      <b>[ COLLABORATION ]</b><br><br>
-
-      I contributed the project as a lead of the web design team,
-      collaborating with other teams. <br><br><br>
-
-      <b>[ INSTALLATION ]</b><br><br>
-
-      My piece in this project is about digital identity.
-      I created MAX MSP patch that generates face filters.
-      This filters are generated based on the input of your phone number.
-      This piece was initially created for my BFA solo exhibition.
-      <br><br>
-      <a href="yamatani.html" class="inwork-link">See the documentation from here.</a><br><br>
-      <br><br>
-      For this online exhibition on New Art City,
-      I have re-created filters using 10 examples from the MAX MSP patch.
-      You can try those filters on Instagram.   <br><br>
-      <a href="https://www.instagram.com/tama_arttube/" class="inwork-link">Try filters on Instagram</a><br><br>
-      CV dazzle by Adam Harvey made me realize
-      digital media artists can reveal how the digital world works and how we are influenced by that.
-      Inspired by that, this piece helps you discover who we are and how we are recognized by the digital world.
-      The data and information in the modern world are created for machines to read effectively,
-      ignoring how humans read them.  In the machine-centered world,
-      one of the biggest identities of us is our phone number randomly assigned by phone companies,
-      rather than your name or number.
-      We almost stopped using phone numbers to call someone anymore.
-      The people who do not have phone numbers will be excluded from society
-      as you cannot make a credit card and create an account to sign up for a service.
-      <br>
-      The lobby object represents a bellow created with the repetition of Yamaori and Taniori. Yamaori and Taniori indicates how to fold when you do origami. I did not put any texture on the object since the object itself represents the nature of
-      everything. Without any covering, you cannot tell which area are concave and convex of the bellow.
-
-
-
-    </p>
   </div>
 
 

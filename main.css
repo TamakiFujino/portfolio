@@ -5,13 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
 /* Basic component --------------------------------------- */
 html {
   height: 100%;
+  background-image: url('images/bedge-grunge.png');
+  background-repeat: repeat;
   background-color: white;
   overflow: hidden;
+  /* border: 10px solid black; */
 }
 
 body {
@@ -30,12 +33,12 @@ body {
 
 canvas {
   border: 7px solid black;
-  position:absolute;
-  top:0;
-  bottom:0;
-  right:0;
-  left:0;
-  margin:auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 hr {
@@ -54,11 +57,11 @@ hr {
 
 .sp {
   display: none !important;
-  padding-bottom:100px;
+  padding-bottom: 100px;
 }
 
 /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 850px) {
   .pc {
     display: none !important;
   }
@@ -70,16 +73,44 @@ hr {
 
 /* Text property -------------------------------------------- */
 h1 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 12px;
-  color:black;
-  opacity: 1;
+  font-family: 'Titillium Web', sans-serif;
+  color: #e6e3da;
+  -webkit-text-stroke-width: 4px;
+ -webkit-text-stroke-color: black;
   position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit- transform: translateY(-50%) translateX(-50%);
+  opacity:0.3;
+  /* bottom: 50%;
+  left: 50%; */
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
   z-index: -2;
+}
+
+.main-square {
+  width:80%;
+  height:120%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.main-square p {
+  font-family: 'Titillium Web', sans-serif;
+  color: #f4c424;
+  /* -webkit-text-stroke-width: 4px;
+ -webkit-text-stroke-color: black; */
+  font-size:120px;
+  text-align: center;
+  opacity:0.5;
+  position: absolute;
+  top: -10;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 h2 {
@@ -110,9 +141,8 @@ h5 {
 .work_sp h4 {
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
-  font-size:18px;
+  font-size: 18px;
 }
-
 
 .work_sp h5 {
   font-family: 'Ubuntu', sans-serif;
@@ -127,14 +157,14 @@ b {
 
 p {
   font-size: 15px;
-  color:black;
+  color: black;
   text-align: left;
   font-family: 'Ubuntu', sans-serif;
 }
 
 a {
   text-decoration: none;
-  color:black;
+  color: black;
 }
 
 a:hover {
@@ -155,21 +185,25 @@ a:hover {
 /* Scroll bar ----------------------------------------- */
 ::-webkit-scrollbar {
   width: 7px;
+  opacity:0.1;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: none;
+  opacity:0.1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: black;
+  background: none;
+  opacity:0.1;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: none;
+  opacity:0.1;
 }
 
 /* Loader component ------------------------------- */
@@ -256,25 +290,21 @@ a:hover {
 /* Gallery Image Slideshow  with thubnail ----------------------------- */
 .container {
   position: relative;
-  width: 40%;
-  height: 70%;
-  top: 40px;
-  left: 50%;
 }
 
 /* Hide the images by default */
-.mySlides {
-  display: none;
-}
 .mySlidesas {
   display: none;
 }
+
 .mySlidesyt {
   display: none;
 }
+
 .mySlidespn {
   display: none;
 }
+
 .mySlidesgt {
   display: none;
 }
@@ -298,12 +328,12 @@ a:hover {
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: -50px;
   border-radius: 3px 0 0 3px;
 }
 
 .prev {
-  left: 0;
+  left: -50px;
   border-radius: 3px 0 0 3px;
 }
 
@@ -329,7 +359,7 @@ a:hover {
   opacity: 1;
 }
 
-.work_images {
+/* .work_images {
   position: absolute;
   width: 40%;
   top: 50px;
@@ -343,11 +373,8 @@ a:hover {
 
 .work_images img {
   width: 100%;
-}
-
+} */
 /* sum of work in pc layout -------------------------------*/
-
-
 /* Top navigation component ------------------------------------------- */
 /* Top navigation - Laptop Design - Left ------------------*/
 .c-mark {
@@ -399,7 +426,7 @@ a:hover {
   font-size: 100px;
   writing-mode: vertical-lr;
   position: absolute;
-  right: 0px;
+  right: 5px;
   top: 50px;
   height: 100%;
   padding: 30px;
@@ -505,7 +532,29 @@ a:hover {
 .about_content {
   width: 90%;
   margin: auto;
+  /* background-color:#e8c023;
+  background-image:url('images/bedge-grunge.png'); */
+  /* border:7px solid black; */
 }
+
+.about_content p {
+  padding:30px 40px;
+}
+
+.about_content h3 {
+  padding:20px 40px 5px 40px;
+}
+
+/* .bio-sectiontitle {
+  margin-top:50px;
+  border:7px solid black;
+  width:90%;
+  margin: auto;
+  padding: 20px 0px;
+  background-color:#de5e37;
+  background-image:url('images/bedge-grunge.png');
+  border-bottom:none;
+} */
 
 /* Style the tab */
 .tab {
@@ -516,7 +565,7 @@ a:hover {
   vertical-align: middle;
   position: absolute;
   top: 8%;
-  left: 45%;
+  left: 40%;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -547,13 +596,10 @@ a:hover {
 /* Style the tab content */
 .tabcontent {
   display: none;
-  /* padding: 20px 20px; */
-  border-top: none;
-  width: 65%;
+  width: 100%;
   margin: 0 auto;
-  background-color: none;
+  overflow: scroll;
 }
-
 
 /* in main page ---------------------------------------- */
 /* .en {
@@ -573,7 +619,6 @@ a:hover {
   -moz-animation: AnimationName 18s ease infinite;
   animation: AnimationName 18s ease infinite;
 } */
-
 /* @-webkit-keyframes AnimationName {
   0% {
     background-position: 9% 0%
@@ -615,47 +660,23 @@ a:hover {
     background-position: 9% 0%
   }
 } */
-
 /* in individual work page ---------------------------------- */
 .inwork-link {
-  color: white;
-  background-color: black;
-  padding: 6px;
+  color: #2560a4;
   font-style: bold;
-}
-
-.work_description {
-  position: absolute;
-  top: 150px;
-  left: 13%;
-  width: 30%;
-  height: 65%;
-  overflow: scroll;
-  padding: 20px;
-}
-
-.title h2 {
-  text-align: center;
-  color: black;
-  font-size: 35px;
-  padding-top: 40px;
-  margin: 0px;
-}
-
-.title h3 {
-  text-align: center;
-  color: black;
-  font-size: 15px;
+  line-height: 20px;
+  font-family: 'Secular One', sans-serif;
 }
 
 /* smart phone layout - individual work page */
 #work {
-  padding:10px;
+  padding: 10px;
   overflow: scroll;
   height: 100vh;
   width: 100%;
-  margin:auto;
+  margin: auto;
 }
+
 .sp_title {
   text-align: center;
   padding: 60px 0px 0px 0px;
@@ -679,12 +700,12 @@ a:hover {
 }
 
 .sp_thumbnail {
-  width:90%;
+  width: 90%;
 }
 
 .sp_workimage {
-  width:100%;
-  margin:auto;
+  width: 100%;
+  margin: auto;
   padding: 15px 0px 15px 0px;
 }
 
@@ -692,9 +713,115 @@ a:hover {
   position: absolute;
   bottom: 0%;
   padding: 15px 0px;
-  float:right;
+  float: right;
   font-size: 12px;
-  width:100%;
+  width: 100%;
   font-family: 'Ubuntu', sans-serif;
   z-index: 2;
+}
+
+/* work frame design ------------------------------------ */
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+
+.frame-large {
+  width: 74%;
+  height: 80%;
+  border: 7px solid black;
+  position: absolute;
+  top: 10%;
+  right: 13%;
+  box-shadow: 10px 10px 15px grey;
+}
+
+.frame-text {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 0;
+}
+
+.frame-title {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding:0%;
+  border-bottom: 7px solid black;
+}
+
+.frame-title h2 {
+  color: black;
+  font-family: 'Secular One', sans-serif;
+  font-size: 26px;
+  text-align: center;
+  padding: 0px;
+}
+
+.frame-title h3 {
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding:0px;
+  position:absolute;
+  bottom:25px;
+  right:0;
+  left:0;
+  margin:auto;
+}
+
+.frame-description {
+  width: 35%;
+  height: 80%;
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  border-right: 7px solid black;
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  text-align: right;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+.frame-listing {
+  width: 90%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 20px;
+  overflow: scroll;
+}
+
+
+.frame-listing h4 {
+  padding: 15px 5px 10px 0px;
+}
+
+
+.frame-image {
+  width: 65%;
+  text-align: center;
+  height: auto;
+  position: absolute;
+  top: 22%;
+  left: 35%;
+  margin: auto;
+  z-index: 3;
+}
+
+.frame-display {
+  width: 78%;
 }
