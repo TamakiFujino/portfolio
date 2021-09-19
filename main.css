@@ -530,7 +530,6 @@ a:hover {
 
 /* in bio page ------------------------------------ */
 .about_content {
-  width: 90%;
   margin: auto;
   /* background-color:#e8c023;
   background-image:url('images/bedge-grunge.png'); */
@@ -538,23 +537,13 @@ a:hover {
 }
 
 .about_content p {
-  padding:30px 40px;
+  padding:1%;
 }
 
 .about_content h3 {
-  padding:20px 40px 5px 40px;
+  padding:1%;
 }
 
-/* .bio-sectiontitle {
-  margin-top:50px;
-  border:7px solid black;
-  width:90%;
-  margin: auto;
-  padding: 20px 0px;
-  background-color:#de5e37;
-  background-image:url('images/bedge-grunge.png');
-  border-bottom:none;
-} */
 
 /* Style the tab */
 .tab {
@@ -601,65 +590,6 @@ a:hover {
   overflow: scroll;
 }
 
-/* in main page ---------------------------------------- */
-/* .en {
-  width: 1000px;
-  height: 1000px;
-  opacity:0.7;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  background: linear-gradient(314deg, #ffe7a3, white, #d0d4cc, #ffdaa5, #61b6cd);
-  background-size: 1000% 1000%;
-  -webkit-animation: AnimationName 18s ease infinite;
-  -moz-animation: AnimationName 18s ease infinite;
-  animation: AnimationName 18s ease infinite;
-} */
-/* @-webkit-keyframes AnimationName {
-  0% {
-    background-position: 9% 0%
-  }
-
-  50% {
-    background-position: 92% 100%
-  }
-
-  100% {
-    background-position: 9% 0%
-  }
-}
-
-@-moz-keyframes AnimationName {
-  0% {
-    background-position: 9% 0%
-  }
-
-  50% {
-    background-position: 92% 100%
-  }
-
-  100% {
-    background-position: 9% 0%
-  }
-}
-
-@keyframes AnimationName {
-  0% {
-    background-position: 9% 0%
-  }
-
-  50% {
-    background-position: 92% 100%
-  }
-
-  100% {
-    background-position: 9% 0%
-  }
-} */
 /* in individual work page ---------------------------------- */
 .inwork-link {
   color: #2560a4;
