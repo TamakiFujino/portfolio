@@ -14,14 +14,15 @@ let t;
 // }
 
 function setup() {
-  createCanvas(850, 300);
+  createCanvas(850, 500);
+  // background('rgba(0,0,0,0.1)');
 
   //pose detection set up
   video = createCapture(VIDEO);
   video.hide();
   tint(0, 0);
   //fill(0);
-  rect(600,400,0,0);
+  // rect(600,400,0,0);
   poseNet = ml5.poseNet(video, modelReady);
   poseNet.on('pose', gotPoses);
 
@@ -54,12 +55,12 @@ function modelReady() {
 
 
 function draw() {
-  background(0);
   image(video, 0, 0);
-
+  noStroke();
+  background('rgba(0,0,0,0)');
+  rect(0, 100, 850, 300);
 
   if (pose) {
-    // t = text(pose.nose.x, 0, 0);
     // t.style('z-index', '2');
     // bubbleNose.show();
     // bubbleNose.x = pose.nose.x;
@@ -105,6 +106,7 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // onex_speed();
         polySynth.play('G2', 10, 0, 1);
+        fill(10);
       }
     }
 
@@ -112,6 +114,7 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // twox_speed();
         polySynth.play('G3', 10, 0, 1);
+        fill(20);
       }
     }
 
@@ -119,6 +122,7 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // fourx_speed();
         polySynth.play('D2', 10, 0, 1);
+        fill(30);
       }
     }
 
@@ -127,6 +131,7 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // sixx_speed();
         polySynth.play('D3', 10, 0, 1);
+        fill(40);
       }
     }
 
@@ -134,6 +139,7 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // eightx_speed();
         polySynth.play('A2', 10, 0, 1);
+        fill(50);
       }
     }
 
@@ -141,6 +147,7 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // twlx_speed();
         polySynth.play('C2', 10, 0, 1);
+        fill(60);
       }
     }
 
@@ -148,10 +155,12 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // sixtx_speed();
         polySynth.play('C3', 10, 0, 1);
+        fill(70);
       }
     }
 
   }
+
 }
 
 function halfx_speed() {
