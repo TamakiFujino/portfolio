@@ -5,6 +5,7 @@ let pose;
 let button;
 
 let polySynth;
+let t;
 
 //////////////////////////////////////////////
 
@@ -13,7 +14,7 @@ let polySynth;
 // }
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(850, 300);
 
   //pose detection set up
   video = createCapture(VIDEO);
@@ -53,12 +54,13 @@ function modelReady() {
 
 
 function draw() {
-  //background(0);
+  background(0);
   image(video, 0, 0);
 
 
-
   if (pose) {
+    // t = text(pose.nose.x, 0, 0);
+    // t.style('z-index', '2');
     // bubbleNose.show();
     // bubbleNose.x = pose.nose.x;
     // bubbleNose.y = pose.nose.y;

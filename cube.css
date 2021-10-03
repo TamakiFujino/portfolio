@@ -7,7 +7,7 @@
   border-radius: 50%;
   /* position: relative; */
   background-image: url('images/bedge-grunge20.png');
-  background: radial-gradient(circle at 50% 40%, #656360, #403d36 66%, #0c0902 100%);
+  background: radial-gradient(circle at 50% 40%, rgba(50,50,50,0.4), rgba(20,20,20,0.7) 66%, rgba(0,0,0,1) 100%);
 }
 
 
