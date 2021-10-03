@@ -4,22 +4,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
 
 /* Basic component --------------------------------------- */
 html {
   height: 100%;
   background-image: url('images/bedge-grunge.png');
   background-repeat: repeat;
-  background-color: white;
+  background-color: #e0dedb;
   overflow: hidden;
-  /* border: 10px solid black; */
 }
 
 body {
+  padding:0;
+  margin:0;
   text-align: center;
   height: 100%;
+  /* background: #74716a; */
+    background-image: url('images/bedge-grunge.png');
+    background: linear-gradient(270deg, #b9b9b9, #5f5f5f, #494949, #c1c1c1);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 .noSelect {
@@ -32,18 +58,18 @@ body {
 }
 
 canvas {
-  border: 7px solid black;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   margin: auto;
+  z-index: -3;
 }
 
 hr {
   width: 100%;
-  border: 4px solid black;
+  border: 2px solid #e0dedb;
 }
 
 .work_sp hr {
@@ -73,17 +99,14 @@ hr {
 
 /* Text property -------------------------------------------- */
 h1 {
-  font-family: 'Titillium Web', sans-serif;
-  color: #e6e3da;
-  -webkit-text-stroke-width: 4px;
- -webkit-text-stroke-color: black;
+  font-family: 'Epilogue', sans-serif;
+  color: #e0dedb;
   position: absolute;
-  opacity:0.3;
-  /* bottom: 50%;
-  left: 50%; */
+  left: 50%;
+  top:30%;
   transform: translateY(-50%) translateX(-50%);
   -webkit- transform: translateY(-50%) translateX(-50%);
-  z-index: -2;
+  z-index: -1;
 }
 
 .main-square {
@@ -97,38 +120,23 @@ h1 {
   margin: auto;
 }
 
-.main-square p {
-  font-family: 'Titillium Web', sans-serif;
-  color: #f4c424;
-  /* -webkit-text-stroke-width: 4px;
- -webkit-text-stroke-color: black; */
-  font-size:120px;
-  text-align: center;
-  opacity:0.5;
-  position: absolute;
-  top: -10;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-}
 
 h2 {
-  font-family: 'Ubuntu', sans-serif;
-  color: black;
+  font-family: 'Epilogue', sans-serif;
+  color: #e0dedb;
   font-size: 30px;
   text-align: left;
 }
 
 h3 {
-  color: black;
-  font-family: 'Ubuntu', sans-serif;
+  color: #e0dedb;
+  font-family: 'Epilogue', sans-serif;
   text-align: left;
 }
 
 h4 {
-  color: black;
-  font-family: 'Ubuntu', sans-serif;
+  color: #e0dedb;
+  font-family: 'Epilogue', sans-serif;
   text-align: left;
 }
 
@@ -139,52 +147,52 @@ h5 {
 }
 
 .work_sp h4 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Epilogue', sans-serif;
   text-align: center;
   font-size: 18px;
 }
 
 .work_sp h5 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Epilogue', sans-serif;
   font-size: 14px;
-  color: black;
+  color: #e0dedb;
 }
 
 b {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Epilogue', sans-serif;
   font-weight: 1000;
 }
 
 p {
   font-size: 15px;
-  color: black;
+  color: #e0dedb;
   text-align: left;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Epilogue', sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #e0dedb;
 }
 
 a:hover {
-  text-shadow: 0px 3px 10px white;
+  text-shadow: 0px 3px 10px #e0dedb;
   transition: 0.5s;
   color: transparent;
 }
 
 .work_text span {
-  color: black;
+  color: #e0dedb;
   font-size: 12px;
   padding: 2px;
   display: block;
   text-align: right;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Epilogue', sans-serif;
 }
 
 /* Scroll bar ----------------------------------------- */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 3px;
   opacity:0.1;
 }
 
@@ -220,7 +228,7 @@ a:hover {
 .loader,
 .loader:before,
 .loader:after {
-  background: black;
+  background: #e0dedb;
   -webkit-animation: load1 1s infinite ease-in-out;
   animation: load1 1s infinite ease-in-out;
   width: 1em;
@@ -228,7 +236,7 @@ a:hover {
 }
 
 .loader {
-  color: black;
+  color: #e0dedb;
   text-indent: -9999em;
   margin: 88px auto;
   position: relative;
@@ -318,7 +326,7 @@ a:hover {
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: black;
+  color: #e0dedb;
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
@@ -379,8 +387,8 @@ a:hover {
 /* Top navigation - Laptop Design - Left ------------------*/
 .c-mark {
   overflow: hidden;
-  color: black;
-  font-family: 'Ubuntu', sans-serif;
+  color: #e0dedb;
+  font-family: 'Epilogue', sans-serif;
   font-size: 12px;
   writing-mode: vertical-lr;
   position: absolute;
@@ -392,7 +400,7 @@ a:hover {
 /* ---------------------------------------------- */
 .topnav {
   overflow: hidden;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Epilogue', sans-serif;
   font-size: 100px;
   writing-mode: vertical-lr;
   position: absolute;
@@ -403,26 +411,26 @@ a:hover {
 
 .topnav a {
   float: left;
-  color: black;
+  color: #e0dedb;
   padding: 20px 20px;
   text-decoration: none;
   font-size: 12px;
 }
 
 .topnav a:hover {
-  text-shadow: 0px 3px 10px white;
+  text-shadow: 0px 3px 10px #e0dedb;
   transition: 0.5s;
   color: transparent;
 }
 
 .topnav a.active {
-  border-right: 7px solid black;
+  border-right: 3px solid #e0dedb;
 }
 
 /* Top navigation - Laptop Design - Right ------------------*/
 .topnav2 {
   overflow: hidden;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Epilogue', sans-serif;
   font-size: 100px;
   writing-mode: vertical-lr;
   position: absolute;
@@ -435,14 +443,14 @@ a:hover {
 
 .topnav2 a {
   float: left;
-  color: black;
+  color: #e0dedb;
   padding: 20px 20px;
   text-decoration: none;
   font-size: 14px;
 }
 
 .topnav2 a:hover {
-  text-shadow: 0px 3px 10px white;
+  text-shadow: 0px 3px 10px #e0dedb;
   transition: 0.5s;
   color: transparent;
 }
@@ -450,7 +458,7 @@ a:hover {
 /* Top navigation - Smartphone Design - Left ------------------*/
 .topnav3 {
   overflow: hidden;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Epilogue', sans-serif;
   position: absolute;
   top: 0px;
   padding: 10px 0px;
@@ -460,28 +468,28 @@ a:hover {
 
 .topnav3 a {
   float: left;
-  color: black;
+  color: #e0dedb;
   padding: 10px 20px;
   text-decoration: none;
   font-size: 12px;
 }
 
 .topnav3 a:hover {
-  text-shadow: 0px 3px 10px white;
+  text-shadow: 0px 3px 10px #e0dedb;
   transition: 0.5s;
   color: transparent;
 }
 
 .topnav3 a.active {
-  border-bottom: 7px solid black;
+  border-bottom: 3px solid #e0dedb;
 }
 
 /* Top navigation - Smartphone Design - Right ------------------*/
 .topnav4 {
   overflow: hidden;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Epilogue', sans-serif;
   font-size: 100px;
-  color: black;
+  color: #e0dedb;
   position: absolute;
   bottom: 10px;
   z-index: 2;
@@ -492,14 +500,14 @@ a:hover {
 
 .topnav4 a {
   float: left;
-  color: white;
+  color: #e0dedb;
   padding: 0px 10px;
   text-decoration: none;
   font-size: 12px;
 }
 
 .topnav4 a:hover {
-  text-shadow: 0px 3px 10px white;
+  text-shadow: 0px 3px 10px #e0dedb;
   transition: 0.5s;
   color: transparent;
 }
@@ -519,8 +527,8 @@ a:hover {
 }
 
 .sp_work h5 {
-  color: black;
-  font-family: 'Ubuntu', sans-serif;
+  color: #e0dedb;
+  font-family: 'Epilogue', sans-serif;
   font-size: 14px;
 }
 
@@ -533,7 +541,7 @@ a:hover {
   margin: auto;
   /* background-color:#e8c023;
   background-image:url('images/bedge-grunge.png'); */
-  /* border:7px solid black; */
+  /* border:7px solid #e0dedb; */
 }
 
 .about_content p {
@@ -567,14 +575,14 @@ a:hover {
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 20px;
-  color: black;
-  font-family: 'Ubuntu', sans-serif;
+  color: #e0dedb;
+  font-family: 'Epilogue', sans-serif;
   text-align: center;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  text-shadow: 0px 3px 10px white;
+  text-shadow: 0px 3px 10px #e0dedb;
   transition: 0.5s;
   color: transparent;
 }
@@ -592,7 +600,7 @@ a:hover {
 
 /* in individual work page ---------------------------------- */
 .inwork-link {
-  color: #2560a4;
+  color: yellow;
   font-style: bold;
   line-height: 20px;
   font-family: 'Secular One', sans-serif;
@@ -646,7 +654,7 @@ a:hover {
   float: right;
   font-size: 12px;
   width: 100%;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Epilogue', sans-serif;
   z-index: 2;
 }
 
@@ -660,11 +668,11 @@ a:hover {
 .frame-large {
   width: 74%;
   height: 80%;
-  border: 7px solid black;
+  border: none;
   position: absolute;
   top: 10%;
   right: 13%;
-  box-shadow: 10px 10px 15px grey;
+  /* box-shadow: 10px 10px 15px grey; */
 }
 
 .frame-text {
@@ -684,11 +692,11 @@ a:hover {
   left: 0;
   margin: auto;
   padding:0%;
-  border-bottom: 7px solid black;
+  border-bottom: none;
 }
 
 .frame-title h2 {
-  color: black;
+  color: #e0dedb;
   font-family: 'Secular One', sans-serif;
   font-size: 26px;
   text-align: center;
@@ -696,8 +704,8 @@ a:hover {
 }
 
 .frame-title h3 {
-  color: black;
-  font-family: 'Ubuntu', sans-serif;
+  color: #e0dedb;
+  font-family: 'Epilogue', sans-serif;
   font-size: 14px;
   text-align: center;
   padding:0px;
@@ -714,9 +722,9 @@ a:hover {
   position: absolute;
   top: 20%;
   left: 0%;
-  border-right: 7px solid black;
-  color: black;
-  font-family: 'Ubuntu', sans-serif;
+  border-right: none;
+  color: #e0dedb;
+  font-family: 'Epilogue', sans-serif;
   font-size: 14px;
   text-align: right;
   z-index: 0;

@@ -1,3 +1,56 @@
+
+.ball {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 50%;
+  /* position: relative; */
+  background-image: url('images/bedge-grunge20.png');
+  background: radial-gradient(circle at 50% 40%, #656360, #403d36 66%, #0c0902 100%);
+}
+
+
+.ball .shadow {
+position: absolute;
+top:0px;
+left:0px;
+width: 100%;
+height: 100%;
+background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+-webkit-transform: rotateX(90deg) translateZ(-250px);
+-moz-transform: rotateX(90deg) translateZ(-250px);
+-ms-transform: rotateX(90deg) translateZ(-25px);
+-o-transform: rotateX(90deg) translateZ(-250px);
+transform: rotateX(90deg) translateZ(-250px);
+}
+
+.stage {
+  /* size of sphere */
+  position:absolute;
+  top: 45%;
+  left: 49%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+  width: 400px;
+  height: 400px;
+  display: inline-block;
+  margin: 20px;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -ms-perspective: 1200px;
+  -o-perspective: 1200px;
+  perspective: 1200px;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+
+body {
+  background: linear-gradient(to bottom, rgba(52, 52, 52, 0.2) 0%, rgba(100, 100, 100, 0.5) 60%, #343434 100%);
+}
 /*
 .separator {
   margin-top: 40px;
@@ -12,7 +65,7 @@
 
 
 /* 3D Cube */
-.space3d {
+/* .space3d {
   padding-top: 150px;
   perspective: 1000px;
   width: 350px;
@@ -38,7 +91,7 @@
   position: absolute;
   line-height: 350px;
   opacity: 1;
-    border: 7px solid black;
+    border: 7px solid #e0dedb;
 }
 
 ._3dface--front {
@@ -87,7 +140,7 @@ input {
 
 label {
   padding: 20px 20px 20px 40px;
-  color: white;
+  color: #e0dedb;
   left: 12px;
   cursor: pointer;
   position: relative;
@@ -102,12 +155,12 @@ label::after {
   border-radius: 50%;
   position: absolute;
   /* transform: translateY(0%); */
-  bottom: 0%;
+  /* bottom: 0%;
 }
 
 label::before {
   background-color: none;
-  border: 7px solid black;
+  border: 7px solid #e0dedb;
   height: 30px;
   width: 30px;
   right: 20px;
@@ -192,4 +245,4 @@ input:checked+label::after {
     background: url('images/bedge-grunge.png');
     background: #e9bc20;
   background-size: auto 100%;
-}
+} */

@@ -22,8 +22,9 @@
     <!-- p5 -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
-    <!-- <script type="text/javascript" src="sketch.js"></script>
-    <script type="text/javascript" src="drop.js"></script> -->
+    <script type="text/javascript" src="sketch.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.2/dist/ml5.min.js"></script>
+    <!-- <script type="text/javascript" src="drop.js"></script>  -->
 
   <!-- javascript -->
   <script src="script.js"></script>
@@ -72,7 +73,7 @@
 <!-- CONTROLS -->
 
 
-    <input type="radio" checked id="radio-front" name="select-face"class="radio-f"/>
+    <!-- <input type="radio" checked id="radio-front" name="select-face"class="radio-f"/>
     <label for="radio-front"></label>
 
     <input type="radio" id="radio-left" name="select-face" class="radio-l"/>
@@ -101,7 +102,19 @@
       <div class="_3dface _3dface--right"></div>
       <div class="_3dface _3dface--back"></div>
     </div>
-</div>
+</div> -->
+
+
+<section class="stage">
+      <figure class="ball">
+        <span class="shadow"></span>
+        <span class="iris"></span>
+      </figure>
+</section>
+
+<h1 style="font-size:180px; z-index:-1;">TAMAKI FUJINO</h1>
+
+
       <!-- navigation bar right -->
       <div class="topnav">
         <a class="active" href="index.html">HOME</a>
@@ -152,7 +165,7 @@
       </div>
 
       <!-- credit text -->
-      <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px; color:black;">©︎ 2021 TAMAKI FUJINO</p>
+      <p style="position: absolute; bottom: 2%; right: 5%; font-size: 12px; color:#e0dedb;">©︎ 2021 TAMAKI FUJINO</p>
     </div>
 
   </div>

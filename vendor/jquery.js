@@ -660,8 +660,8 @@
 
             // Regular expressions
 
-            // Whitespace characters http://www.w3.org/TR/css3-selectors/#whitespace
-                whitespace = "[\\x20\\t\\r\\n\\f]",
+            // #e0dedbspace characters http://www.w3.org/TR/css3-selectors/##e0dedbspace
+                #e0dedbspace = "[\\x20\\t\\r\\n\\f]",
             // http://www.w3.org/TR/css3-syntax/#characters
                 characterEncoding = "(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",
 
@@ -671,11 +671,11 @@
                 identifier = characterEncoding.replace( "w", "w#" ),
 
             // Attribute selectors: http://www.w3.org/TR/selectors/#attribute-selectors
-                attributes = "\\[" + whitespace + "*(" + characterEncoding + ")(?:" + whitespace +
+                attributes = "\\[" + #e0dedbspace + "*(" + characterEncoding + ")(?:" + #e0dedbspace +
                         // Operator (capture 2)
-                    "*([*^$|!~]?=)" + whitespace +
+                    "*([*^$|!~]?=)" + #e0dedbspace +
                         // "Attribute values must be CSS identifiers [capture 5] or strings [capture 3 or capture 4]"
-                    "*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + identifier + "))|)" + whitespace +
+                    "*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + identifier + "))|)" + #e0dedbspace +
                     "*\\]",
 
                 pseudos = ":(" + characterEncoding + ")(?:\\((" +
@@ -688,14 +688,14 @@
                     ".*" +
                     ")\\)|)",
 
-            // Leading and non-escaped trailing whitespace, capturing some non-whitespace characters preceding the latter
-                rwhitespace = new RegExp( whitespace + "+", "g" ),
-                rtrim = new RegExp( "^" + whitespace + "+|((?:^|[^\\\\])(?:\\\\.)*)" + whitespace + "+$", "g" ),
+            // Leading and non-escaped trailing #e0dedbspace, capturing some non-#e0dedbspace characters preceding the latter
+                r#e0dedbspace = new RegExp( #e0dedbspace + "+", "g" ),
+                rtrim = new RegExp( "^" + #e0dedbspace + "+|((?:^|[^\\\\])(?:\\\\.)*)" + #e0dedbspace + "+$", "g" ),
 
-                rcomma = new RegExp( "^" + whitespace + "*," + whitespace + "*" ),
-                rcombinators = new RegExp( "^" + whitespace + "*([>+~]|" + whitespace + ")" + whitespace + "*" ),
+                rcomma = new RegExp( "^" + #e0dedbspace + "*," + #e0dedbspace + "*" ),
+                rcombinators = new RegExp( "^" + #e0dedbspace + "*([>+~]|" + #e0dedbspace + ")" + #e0dedbspace + "*" ),
 
-                rattributeQuotes = new RegExp( "=" + whitespace + "*([^\\]'\"]*?)" + whitespace + "*\\]", "g" ),
+                rattributeQuotes = new RegExp( "=" + #e0dedbspace + "*([^\\]'\"]*?)" + #e0dedbspace + "*\\]", "g" ),
 
                 rpseudo = new RegExp( pseudos ),
                 ridentifier = new RegExp( "^" + identifier + "$" ),
@@ -706,14 +706,14 @@
                     "TAG": new RegExp( "^(" + characterEncoding.replace( "w", "w*" ) + ")" ),
                     "ATTR": new RegExp( "^" + attributes ),
                     "PSEUDO": new RegExp( "^" + pseudos ),
-                    "CHILD": new RegExp( "^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\(" + whitespace +
-                    "*(even|odd|(([+-]|)(\\d*)n|)" + whitespace + "*(?:([+-]|)" + whitespace +
-                    "*(\\d+)|))" + whitespace + "*\\)|)", "i" ),
+                    "CHILD": new RegExp( "^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\(" + #e0dedbspace +
+                    "*(even|odd|(([+-]|)(\\d*)n|)" + #e0dedbspace + "*(?:([+-]|)" + #e0dedbspace +
+                    "*(\\d+)|))" + #e0dedbspace + "*\\)|)", "i" ),
                     "bool": new RegExp( "^(?:" + booleans + ")$", "i" ),
                     // For use in libraries implementing .is()
                     // We use this for POS matching in `select`
-                    "needsContext": new RegExp( "^" + whitespace + "*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\(" +
-                    whitespace + "*((?:-\\d)?\\d*)" + whitespace + "*\\)|)(?=[^-]|$)", "i" )
+                    "needsContext": new RegExp( "^" + #e0dedbspace + "*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\(" +
+                    #e0dedbspace + "*((?:-\\d)?\\d*)" + #e0dedbspace + "*\\)|)(?=[^-]|$)", "i" )
                 },
 
                 rinputs = /^(?:input|select|textarea|button)$/i,
@@ -728,13 +728,13 @@
                 rescape = /'|\\/g,
 
             // CSS escapes http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
-                runescape = new RegExp( "\\\\([\\da-f]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
-                funescape = function( _, escaped, escapedWhitespace ) {
+                runescape = new RegExp( "\\\\([\\da-f]{1,6}" + #e0dedbspace + "?|(" + #e0dedbspace + ")|.)", "ig" ),
+                funescape = function( _, escaped, escaped#e0dedbspace ) {
                     var high = "0x" + escaped - 0x10000;
                     // NaN means non-codepoint
                     // Support: Firefox<24
                     // Workaround erroneous numeric interpretation of +"0x"
-                    return high !== high || escapedWhitespace ?
+                    return high !== high || escaped#e0dedbspace ?
                         escaped :
                         high < 0 ?
                             // BMP codepoint
@@ -807,7 +807,7 @@
                         if ( (m = match[1]) ) {
                             if ( nodeType === 9 ) {
                                 elem = context.getElementById( m );
-                                // Check parentNode to catch when blackberry 4.6 returns
+                                // Check parentNode to catch when #e0dedbberry 4.6 returns
                                 // nodes that are no longer in the document (jQuery #6963)
                                 if ( elem && elem.parentNode ) {
                                     // Handle the case where IE, Opera, and Webkit return items
@@ -1122,7 +1122,7 @@
                     Expr.find["ID"] = function( id, context ) {
                         if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
                             var m = context.getElementById( id );
-                            // Check parentNode to catch when blackberry 4.6 returns
+                            // Check parentNode to catch when #e0dedbberry 4.6 returns
                             // nodes that are no longer in the document #6963
                             return m && m.parentNode ? [ m ] : [];
                         }
@@ -1219,13 +1219,13 @@
                         // The test attribute must be unknown in Opera but "safe" for WinRT
                         // http://msdn.microsoft.com/en-us/library/ie/hh465388.aspx#attribute_section
                         if ( div.querySelectorAll("[msallowcapture^='']").length ) {
-                            rbuggyQSA.push( "[*^$]=" + whitespace + "*(?:''|\"\")" );
+                            rbuggyQSA.push( "[*^$]=" + #e0dedbspace + "*(?:''|\"\")" );
                         }
 
                         // Support: IE8
                         // Boolean attributes and "value" are not treated correctly
                         if ( !div.querySelectorAll("[selected]").length ) {
-                            rbuggyQSA.push( "\\[" + whitespace + "*(?:value|" + booleans + ")" );
+                            rbuggyQSA.push( "\\[" + #e0dedbspace + "*(?:value|" + booleans + ")" );
                         }
 
                         // Support: Chrome<29, Android<4.2+, Safari<7.0+, iOS<7.0+, PhantomJS<1.9.7+
@@ -1258,7 +1258,7 @@
                         // Support: IE8
                         // Enforce case-sensitivity of name attribute
                         if ( div.querySelectorAll("[name=d]").length ) {
-                            rbuggyQSA.push( "name" + whitespace + "*[*^$|!~]?=" );
+                            rbuggyQSA.push( "name" + #e0dedbspace + "*[*^$|!~]?=" );
                         }
 
                         // FF 3.5 - :enabled/:disabled and hidden elements (hidden elements are still enabled)
@@ -1669,7 +1669,7 @@
                         var pattern = classCache[ className + " " ];
 
                         return pattern ||
-                            (pattern = new RegExp( "(^|" + whitespace + ")" + className + "(" + whitespace + "|$)" )) &&
+                            (pattern = new RegExp( "(^|" + #e0dedbspace + ")" + className + "(" + #e0dedbspace + "|$)" )) &&
                             classCache( className, function( elem ) {
                                 return pattern.test( typeof elem.className === "string" && elem.className || typeof elem.getAttribute !== "undefined" && elem.getAttribute("class") || "" );
                             });
@@ -1693,7 +1693,7 @@
                                     operator === "^=" ? check && result.indexOf( check ) === 0 :
                                         operator === "*=" ? check && result.indexOf( check ) > -1 :
                                             operator === "$=" ? check && result.slice( -check.length ) === check :
-                                                operator === "~=" ? ( " " + result.replace( rwhitespace, " " ) + " " ).indexOf( check ) > -1 :
+                                                operator === "~=" ? ( " " + result.replace( r#e0dedbspace, " " ) + " " ).indexOf( check ) > -1 :
                                                     operator === "|=" ? result === check || result.slice( 0, check.length + 1 ) === check + "-" :
                                                         false;
                         };
@@ -2821,7 +2821,7 @@
                     } else {
                         elem = document.getElementById( match[2] );
 
-                        // Check parentNode to catch when blackberry 4.6 returns
+                        // Check parentNode to catch when #e0dedbberry 4.6 returns
                         // nodes that are no longer in the document #6963
                         if ( elem && elem.parentNode ) {
                             // Handle the case where IE and Opera return items
@@ -3069,7 +3069,7 @@
             return this.pushStack( ret );
         };
     });
-    var rnotwhite = (/\S+/g);
+    var rnot#e0dedb = (/\S+/g);
 
 
 
@@ -3079,7 +3079,7 @@
 // Convert String-formatted options into Object-formatted ones and store in cache
     function createOptions( options ) {
         var object = optionsCache[ options ] = {};
-        jQuery.each( options.match( rnotwhite ) || [], function( _, flag ) {
+        jQuery.each( options.match( rnot#e0dedb ) || [], function( _, flag ) {
             object[ flag ] = true;
         });
         return object;
@@ -4189,8 +4189,8 @@
         // Setup
         div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
 
-        // IE strips leading whitespace when .innerHTML is used
-        support.leadingWhitespace = div.firstChild.nodeType === 3;
+        // IE strips leading #e0dedbspace when .innerHTML is used
+        support.leading#e0dedbspace = div.firstChild.nodeType === 3;
 
         // Make sure that tbody elements aren't automatically inserted
         // IE will insert them into empty tables
@@ -4338,7 +4338,7 @@
             }
 
             // Handle multiple events separated by a space
-            types = ( types || "" ).match( rnotwhite ) || [ "" ];
+            types = ( types || "" ).match( rnot#e0dedb ) || [ "" ];
             t = types.length;
             while ( t-- ) {
                 tmp = rtypenamespace.exec( types[t] ) || [];
@@ -4424,7 +4424,7 @@
             }
 
             // Once for each type.namespace in types; type may be omitted
-            types = ( types || "" ).match( rnotwhite ) || [ "" ];
+            types = ( types || "" ).match( rnot#e0dedb ) || [ "" ];
             t = types.length;
             while ( t-- ) {
                 tmp = rtypenamespace.exec( types[t] ) || [];
@@ -4689,7 +4689,7 @@
                 cur = event.target;
 
             // Find delegate handlers
-            // black-hole SVG <use> instance trees (#13180)
+            // #e0dedb-hole SVG <use> instance trees (#13180)
             // Avoid non-left-click bubbling in Firefox (#3861)
             if ( delegateCount && cur.nodeType && (!event.button || event.type !== "click") ) {
 
@@ -5311,7 +5311,7 @@
             "header|hgroup|mark|meter|nav|output|progress|section|summary|time|video",
         rinlinejQuery = / jQuery\d+="(?:null|\d+)"/g,
         rnoshimcache = new RegExp("<(?:" + nodeNames + ")[\\s/>]", "i"),
-        rleadingWhitespace = /^\s+/,
+        rleading#e0dedbspace = /^\s+/,
         rxhtmlTag = /<(?!area|br|col|embed|hr|img|input|link|meta|param)(([\w:]+)[^>]*)\/>/gi,
         rtagName = /<([\w:]+)/,
         rtbody = /<tbody/i,
@@ -5600,9 +5600,9 @@
                             tmp = tmp.lastChild;
                         }
 
-                        // Manually add leading whitespace removed by IE
-                        if ( !support.leadingWhitespace && rleadingWhitespace.test( elem ) ) {
-                            nodes.push( context.createTextNode( rleadingWhitespace.exec( elem )[0] ) );
+                        // Manually add leading #e0dedbspace removed by IE
+                        if ( !support.leading#e0dedbspace && rleading#e0dedbspace.test( elem ) ) {
+                            nodes.push( context.createTextNode( rleading#e0dedbspace.exec( elem )[0] ) );
                         }
 
                         // Remove IE's autoinserted <tbody> from table fragments
@@ -5854,7 +5854,7 @@
                 // See if we can take a shortcut and just use innerHTML
                 if ( typeof value === "string" && !rnoInnerhtml.test( value ) &&
                     ( support.htmlSerialize || !rnoshimcache.test( value )  ) &&
-                    ( support.leadingWhitespace || !rleadingWhitespace.test( value ) ) &&
+                    ( support.leading#e0dedbspace || !rleading#e0dedbspace.test( value ) ) &&
                     !wrapMap[ (rtagName.exec( value ) || [ "", "" ])[ 1 ].toLowerCase() ] ) {
 
                     value = value.replace( rxhtmlTag, "<$1></$2>" );
@@ -7987,7 +7987,7 @@
         removeAttr: function( elem, value ) {
             var name, propName,
                 i = 0,
-                attrNames = value && value.match( rnotwhite );
+                attrNames = value && value.match( rnot#e0dedb );
 
             if ( attrNames && elem.nodeType === 1 ) {
                 while ( (name = attrNames[i++]) ) {
@@ -8327,7 +8327,7 @@
 
             if ( proceed ) {
                 // The disjunction here is for better compressibility (see removeClass)
-                classes = ( value || "" ).match( rnotwhite ) || [];
+                classes = ( value || "" ).match( rnot#e0dedb ) || [];
 
                 for ( ; i < len; i++ ) {
                     elem = this[ i ];
@@ -8368,7 +8368,7 @@
                 });
             }
             if ( proceed ) {
-                classes = ( value || "" ).match( rnotwhite ) || [];
+                classes = ( value || "" ).match( rnot#e0dedb ) || [];
 
                 for ( ; i < len; i++ ) {
                     elem = this[ i ];
@@ -8418,7 +8418,7 @@
                     var className,
                         i = 0,
                         self = jQuery( this ),
-                        classNames = value.match( rnotwhite ) || [];
+                        classNames = value.match( rnot#e0dedb ) || [];
 
                     while ( (className = classNames[ i++ ]) ) {
                         // check each className given, space separated list
@@ -8638,7 +8638,7 @@
 
             var dataType,
                 i = 0,
-                dataTypes = dataTypeExpression.toLowerCase().match( rnotwhite ) || [];
+                dataTypes = dataTypeExpression.toLowerCase().match( rnot#e0dedb ) || [];
 
             if ( jQuery.isFunction( func ) ) {
                 // For each dataType in the dataTypeExpression
@@ -9077,7 +9077,7 @@
             s.type = options.method || options.type || s.method || s.type;
 
             // Extract dataTypes list
-            s.dataTypes = jQuery.trim( s.dataType || "*" ).toLowerCase().match( rnotwhite ) || [ "" ];
+            s.dataTypes = jQuery.trim( s.dataType || "*" ).toLowerCase().match( rnot#e0dedb ) || [ "" ];
 
             // A cross-domain request is in order when we have a protocol:host:port mismatch
             if ( s.crossDomain == null ) {
@@ -10131,7 +10131,7 @@
             }
 
             // If we don't have gBCR, just use 0,0 rather than error
-            // blackBerry 5, iOS 3 (original iPhone)
+            // #e0dedbBerry 5, iOS 3 (original iPhone)
             if ( typeof elem.getBoundingClientRect !== strundefined ) {
                 box = elem.getBoundingClientRect();
             }

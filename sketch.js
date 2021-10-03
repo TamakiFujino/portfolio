@@ -1,82 +1,189 @@
-class Drop {
+let video;
+let vid;
+let poseNet;
+let pose;
+let button;
 
-  constructor() {
-    this.x = random(mouseX, width);
-    this.y = random(mouseY, -100);
-    this.z = random(0, 20);
-    this.yspeed = map(this.z, 0, 10, 2, 10);
-  }
-  fall() {
-    this.y = this.y + this.yspeed;
-    var g = map(this.z, 0, 20, 0, 0.2);
-    this.yspeed = this.yspeed + g;
-    if (this.y > height) {
-      this.y = random(mouseX, mouseY);
-      this.yspeed = random(mouseX, mouseY);
-    }
-  }
-  show() {
-    var l = map(this.z, 0, 20, 10, 20);
-    var thickness = map(this.z, 0, 20, 1, 1);
-    strokeWeight(5);
-    strokeCap(SQUARE);
-    stroke(255,255,255);
-    line(this.x, this.y, this.x, this.y + l);
-  }
-}
+let polySynth;
 
+//////////////////////////////////////////////
 
-var drops = [];
-let array = [];
-let osc, playing, freq, amp;
-let osc1, playing1, freq1, amp1;
+// function windowResized (){
+//   resizeCanvas(windowWidth, windowHeight);
+// }
 
 function setup() {
-  let cnv = createCanvas(windowWidth/2, windowHeight/2);
-  cnv.mousePressed(playOscillator);
-  osc = new p5.Oscillator('sine');
-  osc1 = new p5.Oscillator('triangle');
-  for (var i = 0; i < 70; i++) {
-    drops[i] = new Drop();
-  }
-  noCursor();
+  createCanvas(600, 400);
+
+  //pose detection set up
+  video = createCapture(VIDEO);
+  video.hide();
+  tint(0, 0);
+  //fill(0);
+  rect(600,400,0,0);
+  poseNet = ml5.poseNet(video, modelReady);
+  poseNet.on('pose', gotPoses);
+
+  // vid = createVideo(['wave.mp4', 'wave.mov'], vidLoad);
+  // vid.size(windowWidth, windowHeight);
+playSynth();
+polySynth = new p5.PolySynth();
 }
+
+
+/////////////////////////////////////poseNet setup
+
+// function vidLoad() {
+//   vid.loop();
+//   vid.volume(0);
+// }
+
+
+function gotPoses(poses) {
+  if (poses.length > 0) {
+    pose = poses[0].pose;
+    skeleton = poses[0].skeleton;
+  }
+}
+
+function modelReady() {
+  console.log('model ready');
+}
+//////////////////////////////////////////////////
+
 
 function draw() {
-background(28, 110, 205);
-  for (var i = 0; i < drops.length; i++) {
-    drops[i].fall();
-    drops[i].show();
-  }
+  //background(0);
+  image(video, 0, 0);
 
-  freq = constrain(map(mouseX, 0, width, 100, 800), 100, 800);
-  amp = constrain(map(mouseY, height, 0, 0, 0.2), 0.4, 0.05);
-  freq1 = constrain(map(mouseX, 0, width, 30, 500), 100, 500);
-  amp1 = constrain(map(mouseY, height, 0, 0, 0.2), 0, 0.2);
 
-  if (playing) {
-    // smooth the transitions by 0.1 seconds
-    osc.freq(freq, 1);
-    osc.amp(amp, 0.1);
-    osc1.freq(freq1, 1);
-    osc1.amp(amp1, 0.1);
+
+  if (pose) {
+    // bubbleNose.show();
+    // bubbleNose.x = pose.nose.x;
+    // bubbleNose.y = pose.nose.y;
+    //
+    // bubbleRArm.show();
+    // bubbleRArm.x = pose.rightWrist.x;
+    // bubbleRArm.y = pose.rightWrist.y;
+    //
+    // bubbleLArm.show();
+    // bubbleLArm.x = pose.leftWrist.x;
+    // bubbleLArm.y = pose.leftWrist.y;
+    //
+    // bubbleREye.show();
+    // bubbleREye.x = pose.rightKnee.x;
+    // bubbleREye.y = pose.rightKnee.y;
+    //
+    // bubbleLEye.show();
+    // bubbleLEye.x = pose.leftKnee.x;
+    // bubbleLEye.y = pose.leftKnee.y;
+    //
+    // bubbleREar.show();
+    // bubbleREar.x = pose.rightEar.x;
+    // bubbleREar.y = pose.rightEar.y;
+    //
+    // bubbleLEar.show();
+    // bubbleLEar.x = pose.leftEar.x;
+    // bubbleLEar.y = pose.leftEar.y;
+    //
+    // bubbleRShoulder.show();
+    // bubbleRShoulder.x = pose.rightShoulder.x;
+    // bubbleRShoulder.y = pose.rightShoulder.y;
+    //
+
+    if (pose.nose.x > 0 && pose.nose.x < 75) {
+      for (let i = 0; i <= 120; i++) {
+        // halfx_speed();
+        polySynth.play('E2', 10, 0, );
+
+      }
+    }
+    if (pose.nose.x > 75 && pose.nose.x < 150) {
+      for (let i = 0; i <= 120; i++) {
+        // onex_speed();
+        polySynth.play('G2', 10, 0, 1);
+      }
+    }
+
+    if (pose.nose.x > 150 && pose.nose.x < 225) {
+      for (let i = 0; i <= 120; i++) {
+        // twox_speed();
+        polySynth.play('G3', 10, 0, 1);
+      }
+    }
+
+    if (pose.nose.x > 225 && pose.nose.x < 300) {
+      for (let i = 0; i <= 120; i++) {
+        // fourx_speed();
+        polySynth.play('D2', 10, 0, 1);
+      }
+    }
+
+
+    if (pose.nose.x > 300 && pose.nose.x < 375) {
+      for (let i = 0; i <= 120; i++) {
+        // sixx_speed();
+        polySynth.play('D3', 10, 0, 1);
+      }
+    }
+
+    if (pose.nose.x > 375 && pose.nose.x < 450) {
+      for (let i = 0; i <= 120; i++) {
+        // eightx_speed();
+        polySynth.play('A2', 10, 0, 1);
+      }
+    }
+
+    if (pose.nose.x > 450 && pose.nose.x < 525) {
+      for (let i = 0; i <= 120; i++) {
+        // twlx_speed();
+        polySynth.play('C2', 10, 0, 1);
+      }
+    }
+
+    if (pose.nose.x > 525 && pose.nose.x < 600) {
+      for (let i = 0; i <= 120; i++) {
+        // sixtx_speed();
+        polySynth.play('C3', 10, 0, 1);
+      }
+    }
+
   }
 }
 
-function playOscillator() {
-  // starting an oscillator on a user gesture will enable audio
-  // in browsers that have a strict autoplay policy.
-  // See also: userStartAudio();
-  osc.start();
-  playing = true;
-  osc1.start();
-  playing1 = true;
+function halfx_speed() {
+  vid.speed(0.5);
 }
 
-function mouseReleased() {
-  // ramp amplitude to 0 over 0.5 seconds
-  osc.amp(0, 1);
-  playing = false;
-  osc1.amp(0, 1);
-  playing1 = false;
+function onex_speed() {
+  vid.speed(0.7);
+}
+
+function twox_speed() {
+  vid.speed(1);
+}
+
+function fourx_speed() {
+  vid.speed(2);
+}
+
+function sixx_speed() {
+  vid.speed(4);
+}
+
+function eightx_speed() {
+  vid.speed(6);
+}
+
+function twlx_speed() {
+  vid.speed(8);
+}
+
+function sixtx_speed() {
+  vid.speed(16);
+}
+
+function playSynth () {
+  userStartAudio();
 }
