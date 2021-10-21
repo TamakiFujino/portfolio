@@ -11,10 +11,9 @@
 /* Basic component --------------------------------------- */
 html {
   height: 100%;
-  background-image: url('images/bedge-grunge.png');
-  background-repeat: repeat;
-  /* background-color: #e0dedb; */
   overflow: hidden;
+  /* background-image: image('images/bedge-grunge.png');
+  background-repeat: repeat; */
 }
 
 body {
@@ -22,7 +21,6 @@ body {
   margin:0;
   text-align: center;
   height: 100%;
-  /* background: #74716a; */
 
     background: linear-gradient(18deg, #cdcdec, #3235ab, #6365c4);
     background-size: 600% 600%;

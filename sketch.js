@@ -11,32 +11,33 @@ let t;
 //////////////////////////////////////////////
 
 function setup() {
-  createCanvas(850, 300);
-  background(255);
+  createCanvas(windowWidth, windowHeight);
 
   //pose detection set up
   video = createCapture(VIDEO);
   video.hide();
   tint(0, 0);
-  //fill(0);
-  // rect(600,400,0,0);
+
   poseNet = ml5.poseNet(video, modelReady);
   poseNet.on('pose', gotPoses);
 
-  // vid = createVideo(['wave.mp4', 'wave.mov'], vidLoad);
-  // vid.size(windowWidth, windowHeight);
-playSynth();
-polySynth = new p5.PolySynth();
+  vid = createVideo(
+   ['bg_safari.mov'],
+   vidLoad
+ );
+  vid.size(windowWidth, windowHeight);
+  playSynth();
+  polySynth = new p5.PolySynth();
 
 }
 
 
 /////////////////////////////////////poseNet setup
 
-// function vidLoad() {
-//   vid.loop();
-//   vid.volume(0);
-// }
+function vidLoad() {
+  vid.loop();
+  vid.volume(0);
+}
 
 
 function gotPoses(poses) {
@@ -53,8 +54,9 @@ function modelReady() {
 
 
 function draw() {
+  clear();
+  // background(220, 10);
   image(video, 0, 0);
-  background(0);
 
   if (pose) {
     // t.style('z-index', '2');
@@ -95,15 +97,12 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // halfx_speed();
         polySynth.play('E2', 10, 0, );
-        background(0);
-
       }
     }
     if (pose.nose.x > 75 && pose.nose.x < 150) {
       for (let i = 0; i <= 120; i++) {
         // onex_speed();
         polySynth.play('G2', 10, 0, 1);
-        background(10);
       }
     }
 
@@ -111,7 +110,6 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // twox_speed();
         polySynth.play('G3', 10, 0, 1);
-        background(20);
       }
     }
 
@@ -119,7 +117,6 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // fourx_speed();
         polySynth.play('D2', 10, 0, 1);
-        background(30);
       }
     }
 
@@ -128,7 +125,6 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // sixx_speed();
         polySynth.play('D3', 10, 0, 1);
-        background(40);
       }
     }
 
@@ -136,7 +132,6 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // eightx_speed();
         polySynth.play('A2', 10, 0, 1);
-        background(50);
       }
     }
 
@@ -144,7 +139,6 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // twlx_speed();
         polySynth.play('C2', 10, 0, 1);
-        background(60);
       }
     }
 
@@ -152,7 +146,6 @@ function draw() {
       for (let i = 0; i <= 120; i++) {
         // sixtx_speed();
         polySynth.play('C3', 10, 0, 1);
-        background(70);
       }
     }
 
@@ -192,6 +185,6 @@ function sixtx_speed() {
   vid.speed(16);
 }
 
-function playSynth () {
+function playSynth() {
   userStartAudio();
 }
