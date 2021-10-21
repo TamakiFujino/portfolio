@@ -13,7 +13,7 @@ html {
   height: 100%;
   background-image: url('images/bedge-grunge.png');
   background-repeat: repeat;
-  background-color: #e0dedb;
+  /* background-color: #e0dedb; */
   overflow: hidden;
 }
 
@@ -24,9 +24,8 @@ body {
   height: 100%;
   /* background: #74716a; */
 
-    background: linear-gradient(270deg, #b9b9b9, #5f5f5f, #494949, #c1c1c1);
-    /* background-image: url('images/bedge-grunge.png'); */
-    background-size: 800% 800%;
+    background: linear-gradient(18deg, #cdcdec, #3235ab, #6365c4);
+    background-size: 600% 600%;
 
     -webkit-animation: AnimationName 30s ease infinite;
     -moz-animation: AnimationName 30s ease infinite;
@@ -34,19 +33,19 @@ body {
 }
 
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
 }
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
 }
 @keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
 }
 
 .noSelect {
@@ -674,6 +673,7 @@ a:hover {
   position: absolute;
   top: 10%;
   right: 13%;
+  /* background-color:rgba(255,255,255,0.3); */
   /* box-shadow: 10px 10px 15px grey; */
 }
 
