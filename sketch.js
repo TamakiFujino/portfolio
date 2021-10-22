@@ -4,8 +4,8 @@ let poseNet;
 let pose;
 let button;
 
-let polySynth;
-let t;
+// let polySynth;
+// let t;
 
 
 //////////////////////////////////////////////
@@ -26,8 +26,8 @@ function setup() {
    vidLoad
  );
   vid.size(1400, windowHeight);
-  playSynth();
-  polySynth = new p5.PolySynth();
+  // playSynth();
+  // polySynth = new p5.PolySynth();
 }
 
 // function windowResized() {
@@ -96,36 +96,36 @@ function draw() {
 
     if (pose.nose.x > 0 && pose.nose.x < 75) {
         halfx_speed();
-        polySynth.play('E2', 10, 0, );
+        // polySynth.play('E2', 10, 0, );
     }
     else if (pose.nose.x > 75 && pose.nose.x < 150) {
         onex_speed();
-        polySynth.play('G2', 10, 0, 1);
+        // polySynth.play('G2', 10, 0, 1);
     }
     else if (pose.nose.x > 150 && pose.nose.x < 225) {
         twox_speed();
-        polySynth.play('G3', 10, 0, 1);
+        // polySynth.play('G3', 10, 0, 1);
     }
 
     else if (pose.nose.x > 225 && pose.nose.x < 300) {
         fourx_speed();
-        polySynth.play('D2', 10, 0, 1);
+        // polySynth.play('D2', 10, 0, 1);
     }
     else if (pose.nose.x > 300 && pose.nose.x < 375) {
         sixx_speed();
-        polySynth.play('D3', 10, 0, 1);
+        // polySynth.play('D3', 10, 0, 1);
     }
     else if (pose.nose.x > 375 && pose.nose.x < 450) {
         eightx_speed();
     }
     else if (pose.nose.x > 450 && pose.nose.x < 525) {
         twlx_speed();
-        polySynth.play('C2', 10, 0, 1);
+        // polySynth.play('C2', 10, 0, 1);
     }
 
     else if (pose.nose.x > 525 && pose.nose.x < 600) {
         sixtx_speed();
-        polySynth.play('C3', 10, 0, 1);
+        // polySynth.play('C3', 10, 0, 1);
     }
 
   }
@@ -164,6 +164,6 @@ function sixtx_speed() {
   vid.speed(8);
 }
 
-function playSynth() {
-  userStartAudio();
-}
+// function playSynth() {
+//   userStartAudio();
+// }
