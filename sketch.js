@@ -22,15 +22,17 @@ function setup() {
   poseNet.on('pose', gotPoses);
 
   vid = createVideo(
-   ['bg_safari.mov'],
+   [''],
    vidLoad
  );
-  vid.size(windowWidth, windowHeight);
+  vid.size(1400, windowHeight);
   playSynth();
   polySynth = new p5.PolySynth();
-
 }
 
+// function windowResized() {
+//    resizeCanvas(windowWidth, windowHeight);
+// }
 
 /////////////////////////////////////poseNet setup
 
@@ -54,7 +56,6 @@ function modelReady() {
 
 
 function draw() {
-  clear();
   // background(220, 10);
   image(video, 0, 0);
 
@@ -94,59 +95,37 @@ function draw() {
     //
 
     if (pose.nose.x > 0 && pose.nose.x < 75) {
-      for (let i = 0; i <= 120; i++) {
-        // halfx_speed();
+        halfx_speed();
         polySynth.play('E2', 10, 0, );
-      }
     }
-    if (pose.nose.x > 75 && pose.nose.x < 150) {
-      for (let i = 0; i <= 120; i++) {
-        // onex_speed();
+    else if (pose.nose.x > 75 && pose.nose.x < 150) {
+        onex_speed();
         polySynth.play('G2', 10, 0, 1);
-      }
     }
-
-    if (pose.nose.x > 150 && pose.nose.x < 225) {
-      for (let i = 0; i <= 120; i++) {
-        // twox_speed();
+    else if (pose.nose.x > 150 && pose.nose.x < 225) {
+        twox_speed();
         polySynth.play('G3', 10, 0, 1);
-      }
     }
 
-    if (pose.nose.x > 225 && pose.nose.x < 300) {
-      for (let i = 0; i <= 120; i++) {
-        // fourx_speed();
+    else if (pose.nose.x > 225 && pose.nose.x < 300) {
+        fourx_speed();
         polySynth.play('D2', 10, 0, 1);
-      }
     }
-
-
-    if (pose.nose.x > 300 && pose.nose.x < 375) {
-      for (let i = 0; i <= 120; i++) {
-        // sixx_speed();
+    else if (pose.nose.x > 300 && pose.nose.x < 375) {
+        sixx_speed();
         polySynth.play('D3', 10, 0, 1);
-      }
     }
-
-    if (pose.nose.x > 375 && pose.nose.x < 450) {
-      for (let i = 0; i <= 120; i++) {
-        // eightx_speed();
-        polySynth.play('A2', 10, 0, 1);
-      }
+    else if (pose.nose.x > 375 && pose.nose.x < 450) {
+        eightx_speed();
     }
-
-    if (pose.nose.x > 450 && pose.nose.x < 525) {
-      for (let i = 0; i <= 120; i++) {
-        // twlx_speed();
+    else if (pose.nose.x > 450 && pose.nose.x < 525) {
+        twlx_speed();
         polySynth.play('C2', 10, 0, 1);
-      }
     }
 
-    if (pose.nose.x > 525 && pose.nose.x < 600) {
-      for (let i = 0; i <= 120; i++) {
-        // sixtx_speed();
+    else if (pose.nose.x > 525 && pose.nose.x < 600) {
+        sixtx_speed();
         polySynth.play('C3', 10, 0, 1);
-      }
     }
 
   }
@@ -154,35 +133,35 @@ function draw() {
 }
 
 function halfx_speed() {
-  vid.speed(0.5);
+  vid.speed(0.2);
 }
 
 function onex_speed() {
-  vid.speed(0.7);
+  vid.speed(0.5);
 }
 
 function twox_speed() {
-  vid.speed(1);
+  vid.speed(0.7);
 }
 
 function fourx_speed() {
-  vid.speed(2);
+  vid.speed(1);
 }
 
 function sixx_speed() {
-  vid.speed(4);
+  vid.speed(2);
 }
 
 function eightx_speed() {
-  vid.speed(6);
+  vid.speed(4);
 }
 
 function twlx_speed() {
-  vid.speed(8);
+  vid.speed(6);
 }
 
 function sixtx_speed() {
-  vid.speed(16);
+  vid.speed(8);
 }
 
 function playSynth() {
