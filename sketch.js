@@ -22,7 +22,7 @@ function setup() {
   poseNet.on('pose', gotPoses);
 
   vid = createVideo(
-   ['movie-webm.webm', 'vp9output.mp4'],
+   ['chrome.webm'],
    vidLoad
  );
   vid.size(1400, windowHeight);
