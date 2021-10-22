@@ -21,3 +21,12 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
+
+//////////////////////////////// main animation
+var animation = bodymovin.loadAnimation ({
+  container: document.getElementById('bm'),
+  renderer: 'svg',
+  loop: true,
+  autoplay:true,
+  path: 'data.json'
+})
