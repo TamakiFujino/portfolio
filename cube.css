@@ -47,9 +47,9 @@ transform: rotateX(90deg) translateZ(-250px);
   perspective-origin: 50% 50%;
 }
 
-body {
+/* body {
   background: linear-gradient(to bottom, rgba(205,205,236,255) 0%, rgba(99,101,196,200) 60%, rgba(58,60,179,255) 100%);
-}
+} */
 /*
 .separator {
   margin-top: 40px;

@@ -11,7 +11,7 @@ let button;
 //////////////////////////////////////////////
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1300, windowHeight);
 
   //pose detection set up
   video = createCapture(VIDEO);
@@ -25,7 +25,7 @@ function setup() {
    ['chrome.webm'],
    vidLoad
  );
-  vid.size(1400, windowHeight);
+  vid.size(1300, windowHeight);
   // playSynth();
   // polySynth = new p5.PolySynth();
 }
@@ -60,6 +60,10 @@ function draw() {
   image(video, 0, 0);
 
   if (pose) {
+
+    noFill();
+    strokeWeight(3);
+    ellipse(60,60,60,60);
     // t.style('z-index', '2');
     // bubbleNose.show();
     // bubbleNose.x = pose.nose.x;
@@ -105,27 +109,33 @@ function draw() {
     else if (pose.nose.x > 150 && pose.nose.x < 225) {
         twox_speed();
         // polySynth.play('G3', 10, 0, 1);
+        stroke('rgb(64,66,129)');
     }
 
     else if (pose.nose.x > 225 && pose.nose.x < 300) {
         fourx_speed();
         // polySynth.play('D2', 10, 0, 1);
+        stroke('rgb(58,60,179)');
     }
     else if (pose.nose.x > 300 && pose.nose.x < 375) {
         sixx_speed();
         // polySynth.play('D3', 10, 0, 1);
+        stroke('rgb(99,101,196)');
     }
     else if (pose.nose.x > 375 && pose.nose.x < 450) {
         eightx_speed();
+        stroke('rgb(134,132,230)');
     }
     else if (pose.nose.x > 450 && pose.nose.x < 525) {
         twlx_speed();
         // polySynth.play('C2', 10, 0, 1);
+        stroke('rgb(171,172,223)');
     }
 
     else if (pose.nose.x > 525 && pose.nose.x < 600) {
         sixtx_speed();
         // polySynth.play('C3', 10, 0, 1);
+        stroke('rgb(205,205,236)');
     }
 
   }
