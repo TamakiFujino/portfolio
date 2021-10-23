@@ -32,15 +32,11 @@ body {
   user-select: none;
 }
 
-/* canvas {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  z-index: -3;
-} */
+canvas {
+  text-align: center;
+  position:static;
+  top:0;
+}
 
 hr {
   width: 100%;
@@ -58,7 +54,6 @@ hr {
 
 .sp {
   display: none !important;
-  padding-bottom: 100px;
 }
 
 /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
@@ -419,11 +414,12 @@ a:hover {
 .topnav3 {
   overflow: hidden;
   font-family: 'Epilogue', sans-serif;
-  position: absolute;
+  position: fixed;
   top: 0px;
   padding: 10px 0px;
   z-index: 2;
   width: 100%;
+  margin:0;
 }
 
 .topnav3 a {
