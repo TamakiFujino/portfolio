@@ -709,7 +709,7 @@ a:hover {
 
 /* /work page */
 .frame-image {
-  width: 53%;
+  width: 400px;
   position:absolute;
   right:0;
   bottom:4%;
@@ -760,4 +760,8 @@ a:hover {
   right: 10%;
   margin: auto;
   z-index: -1;
+}
+
+.work-title{
+  font-size:55px;
 }

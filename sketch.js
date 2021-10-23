@@ -22,28 +22,20 @@ function setup() {
   poseNet.on('pose', gotPoses);
 
   vid = createVideo(
-   ['chrome.webm'],vidLoad );
+   ['chrome.webm'],vidLoad);
+   vid.size(windowWidth, windowHeight);
   // playSynth();
   // polySynth = new p5.PolySynth();
-
-  // if (windowWidth < 850) {
-  //   // vid.size(0,0);
-  //   noStroke();
-  // }
-  // else if (widowWidth > 850 {
-  //   vid.size(1300, windowHeight);
-  // }
 }
 
-// function windowResized() {
-//    resizeCanvas(windowWidth, windowHeight);
-// }
+function windowResized() {
+   resizeCanvas(windowWidth, windowHeight);
+}
 
 /////////////////////////////////////poseNet setup
 
 function vidLoad() {
   vid.loop();
-  vid.volume(0);
 }
 
 
@@ -141,10 +133,6 @@ function draw() {
         sixtx_speed();
         // polySynth.play('C3', 10, 0, 1);
         stroke('rgb(205,205,236)');
-    }
-
-    else if (windowWidth < 850) {
-      stroke('rgba(255,255,255,0.01)')
     }
 
   }
