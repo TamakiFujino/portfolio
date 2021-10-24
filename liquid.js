@@ -10,8 +10,8 @@ function setup() {
     ['chrome.webm'],
     vidLoad
   );
-  vid.size(300, 300);
-  vid.position(0, 0, 'absolute');
+  vid.size(1400, 1400);
+  vid.position(0, -400, 'static');
 
   video = createCapture(VIDEO);
   video.hide();
