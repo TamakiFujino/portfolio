@@ -7,7 +7,7 @@ function setup() {
   noCanvas();
 
   vid = createVideo(
-    ['safari18.webm'],
+    ['chrome.webm'],
     vidLoad
   );
   vid.size(1400, 1400);
