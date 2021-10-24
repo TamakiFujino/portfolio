@@ -33,9 +33,9 @@ body {
 }
 
 canvas {
-  text-align: center;
   position:static;
   top:0;
+  left:0;
 }
 
 hr {
