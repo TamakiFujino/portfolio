@@ -492,6 +492,19 @@ a:hover {
   width: 90%;
 }
 
+.sp-container {
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  margin:auto;
+  overflow-y: scroll;
+  margin-top:60px;
+  margin-bottom:60px;
+  padding-bottom:70px;
+}
+
 /* in bio page ------------------------------------ */
 .about_content {
   margin: auto;
