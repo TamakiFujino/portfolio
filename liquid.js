@@ -11,7 +11,7 @@ function setup() {
     vidLoad
   );
   vid.size(1400, 1400);
-  vid.position(-200, -400, 'fixed');
+  vid.position(-200, 0, 'fixed');
 
   video = createCapture(VIDEO);
   video.hide();
