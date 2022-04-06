@@ -7,11 +7,12 @@ function setup() {
   noCanvas();
 
   vid = createVideo(
-    ['chrome.webm'],
+    ['video.webm'],
     vidLoad
   );
-  vid.size(1400, 1400);
-  vid.position(0, -400, 'static');
+
+    vid.position(0, 0, 'static');
+    vid.size(windowWidth, windowHeight);
 
   video = createCapture(VIDEO);
   video.hide();
@@ -19,7 +20,6 @@ function setup() {
 
   poseNet = ml5.poseNet(video, modelReady);
   poseNet.on('pose', gotPoses);
-
 }
 
 
@@ -126,6 +126,6 @@ function sixtx_speed() {
   vid.speed(8);
 }
 
-function playSynth() {
-  userStartAudio();
-}
+// function playSynth() {
+//   userStartAudio();
+// }

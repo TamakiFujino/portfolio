@@ -22,8 +22,8 @@ function setup() {
   // poseNet.on('pose', gotPoses);
 
   vid = createVideo(
-   ['chrome.webm'],vidLoad);
-   vid.size(windowWidth, windowHeight);
+   ['video.webm'],vidLoad);
+   vid.size(windowWidth, AUTO);
   // playSynth();
   // polySynth = new p5.PolySynth();
 }
@@ -36,6 +36,10 @@ function setup() {
 
 function vidLoad() {
   vid.loop();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 
